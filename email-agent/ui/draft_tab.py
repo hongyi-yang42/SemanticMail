@@ -1,4 +1,4 @@
-"""Tab 4 — ✍️ Context-Aware Reply Drafter (Module 4)."""
+"""Tab 4 — 📊 Baseline Comparison."""
 
 from __future__ import annotations
 
@@ -6,11 +6,15 @@ import json
 
 import streamlit as st
 
-from llm.cache import cached_call_llm
+from llm.cache import cached_call_llm, cached_call_baseline_llm
 from prompts.draft import (
     DRAFT_SYSTEM_PROMPT,
     format_draft_user_prompt,
     get_inline_subtext_prompt,
+)
+from prompts.baseline_gptoss import (
+    BASELINE_GPTOSS_SYSTEM_PROMPT,
+    format_baseline_gptoss_user_prompt,
 )
 
 # ---------------------------------------------------------------------------
@@ -23,6 +27,92 @@ try:
     _HAS_SUBTEXT_MODULE = True
 except ImportError:
     _HAS_SUBTEXT_MODULE = False
+
+
+# ---------------------------------------------------------------------------
+# Hardcoded signal scorecard (per thread)
+# ---------------------------------------------------------------------------
+
+SIGNAL_SCORECARD = {
+    "Thread A: 师生推荐信": {
+        "signals": [
+            "Greeting shift: 'Hi Li Wei' → 'Li Wei'",
+            "Enthusiasm drop: 'Sure, happy to help!' → 'I will review when I get a chance'",
+            "5-day reply gap (Jan 13 → Jan 18)",
+            "Loss of warmth markers (exclamation marks, emojis)",
+        ],
+        "gptoss_baseline": {
+            "Greeting shift: 'Hi Li Wei' → 'Li Wei'": False,
+            "Enthusiasm drop: 'Sure, happy to help!' → 'I will review when I get a chance'": False,
+            "5-day reply gap (Jan 13 → Jan 18)": False,
+            "Loss of warmth markers (exclamation marks, emojis)": False,
+        },
+        "deepseek_naive": {
+            "Greeting shift: 'Hi Li Wei' → 'Li Wei'": False,
+            "Enthusiasm drop: 'Sure, happy to help!' → 'I will review when I get a chance'": False,
+            "5-day reply gap (Jan 13 → Jan 18)": False,
+            "Loss of warmth markers (exclamation marks, emojis)": False,
+        },
+        "semanticmail_smart": {
+            "Greeting shift: 'Hi Li Wei' → 'Li Wei'": True,
+            "Enthusiasm drop: 'Sure, happy to help!' → 'I will review when I get a chance'": True,
+            "5-day reply gap (Jan 13 → Jan 18)": True,
+            "Loss of warmth markers (exclamation marks, emojis)": True,
+        },
+    },
+    "Thread B: 实习跟进": {
+        "signals": [
+            "Timeline vagueness: 'the coming weeks', 'still finalizing'",
+            "Indirect refusal: 'encourage you to make the best choice for your career'",
+            "Professional politeness masking no intent to hire",
+            "Escalation signal: competing offer deadline introduced",
+        ],
+        "gptoss_baseline": {
+            "Timeline vagueness: 'the coming weeks', 'still finalizing'": False,
+            "Indirect refusal: 'encourage you to make the best choice for your career'": False,
+            "Professional politeness masking no intent to hire": False,
+            "Escalation signal: competing offer deadline introduced": False,
+        },
+        "deepseek_naive": {
+            "Timeline vagueness: 'the coming weeks', 'still finalizing'": False,
+            "Indirect refusal: 'encourage you to make the best choice for your career'": False,
+            "Professional politeness masking no intent to hire": False,
+            "Escalation signal: competing offer deadline introduced": False,
+        },
+        "semanticmail_smart": {
+            "Timeline vagueness: 'the coming weeks', 'still finalizing'": True,
+            "Indirect refusal: 'encourage you to make the best choice for your career'": True,
+            "Professional politeness masking no intent to hire": True,
+            "Escalation signal: competing offer deadline introduced": True,
+        },
+    },
+    "Thread C: 跨文化合作": {
+        "signals": [
+            "Indirect disagreement via deferential suggestion",
+            "Code-switching to Chinese for face-saving",
+            "Formality gap between participants",
+            "Phased proposal as implicit pushback",
+        ],
+        "gptoss_baseline": {
+            "Indirect disagreement via deferential suggestion": False,
+            "Code-switching to Chinese for face-saving": False,
+            "Formality gap between participants": False,
+            "Phased proposal as implicit pushback": False,
+        },
+        "deepseek_naive": {
+            "Indirect disagreement via deferential suggestion": False,
+            "Code-switching to Chinese for face-saving": False,
+            "Formality gap between participants": False,
+            "Phased proposal as implicit pushback": False,
+        },
+        "semanticmail_smart": {
+            "Indirect disagreement via deferential suggestion": True,
+            "Code-switching to Chinese for face-saving": True,
+            "Formality gap between participants": True,
+            "Phased proposal as implicit pushback": True,
+        },
+    },
+}
 
 
 # ---------------------------------------------------------------------------
@@ -82,24 +172,105 @@ def _render_draft_section(
     st.markdown("</div>", unsafe_allow_html=True)
 
 
+def _render_baseline_section(text: str, border_color: str, bg_color: str) -> None:
+    """Render the GPT-OSS baseline plain-text reply."""
+    st.markdown(
+        f'<div style="border-left: 4px solid {border_color}; '
+        f'background-color: {bg_color}; padding: 16px; border-radius: 4px; '
+        f'margin-bottom: 8px;">',
+        unsafe_allow_html=True,
+    )
+    st.markdown("### 🤖 GPT-OSS Baseline")
+    st.caption("Minimal vanilla prompt — no pragmatic instructions")
+    if text:
+        st.text_area(
+            "Baseline",
+            value=text,
+            height=220,
+            disabled=True,
+            label_visibility="collapsed",
+        )
+    else:
+        st.warning("No baseline response available.")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+def _render_scorecard(thread_title: str) -> None:
+    """Render the hardcoded signal scorecard for the given thread."""
+    data = SIGNAL_SCORECARD.get(thread_title)
+    if not data:
+        return
+
+    st.markdown("---")
+    st.markdown("### 📋 Signal Detection Scorecard")
+    st.caption(
+        "Which pragmatic signals does each model catch? "
+        "✅ = detected/addressed · ❌ = missed"
+    )
+
+    signals = data["signals"]
+    models = [
+        ("GPT-OSS Baseline", "gptoss_baseline"),
+        ("DeepSeek Naive", "deepseek_naive"),
+        ("SemanticMail Smart", "semanticmail_smart"),
+    ]
+
+    # Header row
+    cols = st.columns([3, 1, 1, 1])
+    cols[0].markdown("**Signal**")
+    for i, (model_label, _) in enumerate(models, start=1):
+        cols[i].markdown(f"**{model_label}**")
+
+    # One row per signal
+    for signal in signals:
+        row = st.columns([3, 1, 1, 1])
+        row[0].markdown(signal)
+        for i, (_, model_key) in enumerate(models, start=1):
+            caught = data[model_key].get(signal, False)
+            icon = "✅" if caught else "❌"
+            row[i].markdown(icon)
+
+    # Summary row
+    st.markdown("")
+    summary_cols = st.columns([3, 1, 1, 1])
+    summary_cols[0].markdown("**Total**")
+    for i, (_, model_key) in enumerate(models, start=1):
+        total = sum(1 for s in signals if data[model_key].get(s, False))
+        summary_cols[i].markdown(f"**{total}/{len(signals)}**")
+
+
 # ---------------------------------------------------------------------------
 # Main tab renderer
 # ---------------------------------------------------------------------------
 
 
 def render_draft_tab(thread_data: dict) -> None:
-    """Render the Draft Reply tab with side-by-side naive vs. smart drafts.
+    """Render the Baseline Comparison tab with 3-column side-by-side.
+
+    Columns: GPT-OSS Baseline | DeepSeek Naive | SemanticMail PIC Smart.
 
     Args:
         thread_data: The full thread dictionary.
     """
-    st.subheader("✍️ Context-Aware Reply Drafter")
+    st.subheader("📊 Baseline Comparison")
     st.caption(
-        "Compare a naive reply (literal content only) vs. a smart reply "
-        "(accounts for pragmatic signals)."
+        "Compare a vanilla GPT-OSS 20B baseline, a DeepSeek naive reply, "
+        "and the SemanticMail PIC smart reply side by side."
     )
 
-    # Step 1: Obtain subtext analysis (optional)
+    thread_title = thread_data.get("title", "")
+
+    # ---- Column 1: GPT-OSS Baseline ----
+    baseline_text = ""
+    try:
+        baseline_user_prompt = format_baseline_gptoss_user_prompt(thread_data)
+        baseline_text = cached_call_baseline_llm(
+            BASELINE_GPTOSS_SYSTEM_PROMPT, baseline_user_prompt, temperature=0.3
+        )
+    except Exception:
+        baseline_text = ""
+
+    # ---- Column 2 & 3: DeepSeek Naive + Smart ----
     subtext_analysis = ""
     try:
         if _HAS_SUBTEXT_MODULE:
@@ -113,10 +284,8 @@ def render_draft_tab(thread_data: dict) -> None:
                 sys_prompt, usr_prompt, temperature=0.3
             )
     except Exception:
-        # If subtext analysis fails, proceed without it
         subtext_analysis = ""
 
-    # Step 2: Generate drafts
     user_prompt = format_draft_user_prompt(thread_data, subtext_analysis)
 
     with st.spinner("Generating naive & smart drafts..."):
@@ -141,12 +310,19 @@ def render_draft_tab(thread_data: dict) -> None:
         st.warning("No drafts were generated.")
         return
 
-    # Render side-by-side
-    col_naive, col_smart = st.columns(2)
+    # Render 3-column side-by-side
+    col_baseline, col_naive, col_smart = st.columns(3)
+
+    with col_baseline:
+        _render_baseline_section(
+            baseline_text,
+            border_color="#6c757d",
+            bg_color="#f8f9fa",
+        )
 
     with col_naive:
         _render_draft_section(
-            label="Naive Draft",
+            label="DeepSeek Naive",
             icon="😐",
             draft=naive,
             tag_color="#dc3545",
@@ -157,7 +333,7 @@ def render_draft_tab(thread_data: dict) -> None:
 
     with col_smart:
         _render_draft_section(
-            label="Smart Draft",
+            label="SemanticMail Smart",
             icon="🧠",
             draft=smart,
             tag_color="#28a745",
@@ -175,7 +351,8 @@ def render_draft_tab(thread_data: dict) -> None:
 
     if smart_addressed:
         st.markdown(
-            "The smart draft leverages pragmatic signals that the naive draft overlooks:"
+            "The SemanticMail smart draft leverages pragmatic signals that "
+            "both the GPT-OSS baseline and DeepSeek naive draft overlook:"
         )
         for signal in smart_addressed:
             st.markdown(f"- ✅ **{signal}**")
@@ -184,3 +361,6 @@ def render_draft_tab(thread_data: dict) -> None:
         with st.expander("See what the naive draft missed"):
             for signal in naive_missed:
                 st.markdown(f"- ❌ {signal}")
+
+    # Signal scorecard
+    _render_scorecard(thread_title)

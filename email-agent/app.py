@@ -44,7 +44,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "📋 Overview",
     "🔍 Subtext",
     "🎮 Simulator",
-    "✍️ Draft",
+    "📊 Baseline Comparison",
 ])
 
 with tab1:

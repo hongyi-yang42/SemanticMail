@@ -57,3 +57,42 @@ def cached_call_llm(
         json.dump({"response": response_text}, f, ensure_ascii=False, indent=2)
 
     return response_text
+
+
+def cached_call_baseline_llm(
+    system_prompt: str, user_prompt: str, temperature: float = 0.3
+) -> str:
+    """Call the baseline LLM (GPT-OSS via OpenRouter) with caching.
+
+    Same caching strategy as :func:`cached_call_llm` but routes through
+    :func:`llm.baseline_client.call_baseline_llm` instead.
+
+    Args:
+        system_prompt: System-level instructions.
+        user_prompt: User message content.
+        temperature: Sampling temperature.
+
+    Returns:
+        The response content string.
+    """
+    from llm.baseline_client import call_baseline_llm
+
+    os.makedirs(CACHE_DIR, exist_ok=True)
+
+    key = _cache_key(system_prompt, user_prompt, temperature)
+    path = _cache_path(key)
+
+    # Cache hit
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data["response"]
+
+    # Cache miss — call baseline LLM
+    response_text = call_baseline_llm(system_prompt, user_prompt, temperature)
+
+    # Save to cache
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"response": response_text}, f, ensure_ascii=False, indent=2)
+
+    return response_text
