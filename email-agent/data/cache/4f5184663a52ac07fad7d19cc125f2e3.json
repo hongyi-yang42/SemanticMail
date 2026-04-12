@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"summary\": \"Li Wei requests a recommendation letter from Prof. Zhang for a Stanford graduate program, and Prof. Zhang agrees to help but later indicates a busy schedule with upcoming deadlines. The thread evolves from a polite request to a pending fulfillment with potential delays.\",\n    \"key_decisions\": [\"Prof. Zhang agreed to write the recommendation letter for Li Wei's application to Stanford University.\"],\n    \"open_questions\": [\"When Prof. Zhang will complete and submit the recommendation letter, given the busy schedule and upcoming deadlines.\"],\n    \"participants\": [\"Li Wei (student)\", \"Prof. Zhang (professor)\"]\n}"
+}
