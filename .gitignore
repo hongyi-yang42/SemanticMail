@@ -1,4 +1,5 @@
 .env
+.streamlit/secrets.toml
 __pycache__/
 *.pyc
 *.pyo
@@ -9,5 +10,4 @@ build/
 .venv/
 venv/
 *.egg
-node_modules/
 node_modules/
