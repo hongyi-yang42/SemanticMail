@@ -1,7 +1,10 @@
-"""DeepSeek V3 wrapper using OpenAI SDK."""
+"""DeepSeek API wrapper using OpenAI SDK.
+
+Note: ``deepseek-chat`` currently routes to V4-Flash (since 2026-04-24).
+Earlier cached responses were generated under V3/V3.2.
+"""
 
 import os
-import json
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -14,19 +17,20 @@ _client = OpenAI(
 )
 
 
-def call_llm(system_prompt: str, user_prompt: str, temperature: float = 0.3) -> str:
-    """Call DeepSeek V3 and return the response content as a string.
+def call_llm(system_prompt: str, user_prompt: str, temperature: float = 0.3, model: str = "deepseek-chat") -> str:
+    """Call DeepSeek and return the response content as a string.
 
     Args:
         system_prompt: System-level instructions.
         user_prompt: User message content.
         temperature: Sampling temperature (default 0.3).
+        model: Model ID (default ``deepseek-chat``, currently V4-Flash).
 
     Returns:
         The raw text content of the assistant's reply.
     """
     response = _client.chat.completions.create(
-        model="deepseek-chat",
+        model=model,
         response_format={"type": "json_object"},
         temperature=temperature,
         messages=[
