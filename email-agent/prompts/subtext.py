@@ -127,6 +127,9 @@ def format_subtext_user_prompt(thread_data: dict) -> str:
         lines.append(f"--- Email {i + 1} ---")
         lines.append(f"From: {sender}")
         lines.append(f"To: {recipient}")
+        cc = msg.get("cc")
+        if cc:
+            lines.append(f"CC: {cc}")
         lines.append(f"Date: {date}")
         lines.append(f"Subject: {subject}")
         lines.append(f"Body:\n{body}")
