@@ -57,10 +57,6 @@ def _load_result(sys_prompt: str, fmt_fn, thread: dict) -> dict | None:
         return None
     with open(path, "r", encoding="utf-8") as f:
         raw = json.load(f)
-    if not os.path.exists(path):
-        return None
-    with open(path, "r", encoding="utf-8") as f:
-        raw = json.load(f)
     text = raw.get("response", "")
     try:
         return json.loads(text)
@@ -145,10 +141,16 @@ def _divergence_summary(extracts: dict[str, dict]) -> str | None:
     highest_cond, highest_risk = risk_levels[0]
     lowest_cond, lowest_risk = risk_levels[-1]
 
-    return (
-        f"{highest_cond} = **{highest_risk}** vs {lowest_cond} = **{lowest_risk}** — "
-        f"the PIC framework detected social-pressure escalation that generic analysis missed."
-    )
+    base = f"{highest_cond} = **{highest_risk}** vs {lowest_cond} = **{lowest_risk}**"
+    if highest_cond == "A: Full PIC":
+        return (
+            f"{base} — the PIC framework detected social-pressure escalation "
+            f"that generic analysis missed."
+        )
+    elif highest_cond == "B: Generic":
+        return f"{base} — Generic subtext analysis flagged higher risk than the structured PIC."
+    else:
+        return f"{base} — No-framing review flagged the highest risk."
 
 
 # ---------------------------------------------------------------------------
