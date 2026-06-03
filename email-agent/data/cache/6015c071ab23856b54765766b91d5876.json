@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"urgency_signals\": [\"presenting to leadership next week\", \"next week is totally fine\", \"even a rough cut by Wednesday would be amazing\"],\n    \"confidence\": 0.9\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"action_items\": [\n        {\n            \"task\": \"Connect to VPN server at vpn-staging.nextera-tech.com using SSO credentials to test API endpoints\",\n            \"owner\": \"Zhang Hao\",\n            \"deadline\": \"Not specified\",\n            \"status\": \"pending\",\n            \"source_email\": \"Zhang Hao, Apr 28, 2026\"\n        },\n        {\n            \"task\": \"Let Li Mei know if having trouble connecting\",\n            \"owner\": \"Zhang Hao\",\n            \"deadline\": \"Not specified\",\n            \"status\": \"pending\",\n            \"source_email\": \"Li Mei, Apr 28, 2026\"\n        }\n    ]\n}"
+}

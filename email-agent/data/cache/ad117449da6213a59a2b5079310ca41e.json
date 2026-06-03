@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"urgency_signals\": [\"end of this week\", \"Thursday morning\", \"by tomorrow\", \"circling back\", \"counting on\", \"don't want to delay\"],\n    \"confidence\": 0.9\n}"
+}

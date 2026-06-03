@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"urgency_signals\": [\"Monday deadline\", \"client presenting to board Tuesday morning\", \"short notice acknowledged\", \"deadline stands despite request for extension\"],\n    \"confidence\": 0.9\n}"
+}

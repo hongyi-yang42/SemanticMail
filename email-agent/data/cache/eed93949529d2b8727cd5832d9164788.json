@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"urgency_signals\": [\"gentle reminder\", \"another offer pending\", \"need to confirm soon\"],\n    \"confidence\": 0.85\n}"
+}

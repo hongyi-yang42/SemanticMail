@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"summary\": \"Ren Xia requests approval for conference travel to ACM SIGCHI 2026, which is approved by Prof. Liang. Ren then requests hiring an additional research assistant for a summer project, but Prof. Liang defers discussion to the start of the semester, leaving the request pending.\",\n    \"key_decisions\": [\"Conference travel to ACM SIGCHI 2026 approved\"],\n    \"open_questions\": [\"Whether to hire an additional research assistant for the summer project\", \"Timing and details of discussion about RA hiring\"],\n    \"participants\": [\"Ren Xia (PhD student)\", \"Prof. Liang (Supervisor)\"]\n}"
+}

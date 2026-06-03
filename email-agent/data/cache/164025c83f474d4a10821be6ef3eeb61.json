@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"summary\": \"Director Wang asked Chen Ming to investigate CloudSync's recent activities. Chen Ming provided a detailed competitive analysis covering product updates, pricing changes, marketing moves, hiring, and customer signals, and offered to present a response strategy. Wang acknowledged receipt and requested Chen Ming to prepare a Q2 pipeline update for next Monday's meeting.\",\n    \"key_decisions\": [],\n    \"open_questions\": [\"When will Chen Ming present the response strategy for CloudSync's pricing move?\", \"What is the status of the Q2 pipeline update for Monday's meeting?\"],\n    \"participants\": [\"Director Wang (Director)\", \"Chen Ming (Analyst)\"]\n}"
+}

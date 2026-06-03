@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"summary\": \"Zhang Wei requested access to the CRM bulk export tool for a quarterly report, but Li Bo denied it due to security policy restrictions. Zhang Wei then asked for a temporary workaround due to an urgent client presentation, and Ma Director approved temporary read-only access for the team through end of next week.\",\n    \"key_decisions\": [\n        \"Temporary read-only access granted to Zhang Wei's team through end of next week\"\n    ],\n    \"open_questions\": [\n        \"Policy review after Q1 close\"\n    ],\n    \"participants\": [\n        \"Zhang Wei (Sales Manager)\",\n        \"Li Bo (IT Support)\",\n        \"Ma Director (IT Leadership)\"\n    ]\n}"
+}

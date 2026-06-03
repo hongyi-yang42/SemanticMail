@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"action_items\": [\n        {\n            \"task\": \"Look into CloudSync's recent activities\",\n            \"owner\": \"Chen Ming\",\n            \"deadline\": \"Not specified\",\n            \"status\": \"completed\",\n            \"source_email\": \"Director Wang, Apr 7, 2026\"\n        },\n        {\n            \"task\": \"Prepare Q2 pipeline update for next Monday's meeting\",\n            \"owner\": \"Chen Ming\",\n            \"deadline\": \"Apr 13, 2026\",\n            \"status\": \"pending\",\n            \"source_email\": \"Director Wang, Apr 9, 2026\"\n        }\n    ]\n}"
+}
