@@ -7,6 +7,7 @@ from ui.overview_tab import render_overview_tab
 from ui.subtext_tab import render_subtext_tab
 from ui.simulator_tab import render_simulator_tab
 from ui.draft_tab import render_draft_tab
+from ui.ablation_tab import render_ablation_tab
 from ui.styles import inject_styles
 
 # ---------------------------------------------------------------------------
@@ -40,11 +41,12 @@ st.sidebar.info(
 # ---------------------------------------------------------------------------
 # Main area: tabs
 # ---------------------------------------------------------------------------
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📋 Overview",
     "🔍 Subtext",
     "🎮 Simulator",
     "📊 Baseline Comparison",
+    "⚖️ Ablation",
 ])
 
 with tab1:
@@ -58,3 +60,6 @@ with tab3:
 
 with tab4:
     render_draft_tab(thread_data)
+
+with tab5:
+    render_ablation_tab(thread_data)
