@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Identifies specific regulatory risks with potential adverse financial impact\", \"Asks for feedback on completeness of list\"],\n    \"open_asks\": [\"Please let me know if there are others I missed, or if there are changes needed to the ones listed.\"]\n}"
+}

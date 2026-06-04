@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Thanks. Your attention is appreciated.\", \"I know your swamped and focused on other things.\"],\n    \"open_asks\": []\n}"
+}

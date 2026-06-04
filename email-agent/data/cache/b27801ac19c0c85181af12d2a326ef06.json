@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"conflicting agendas\", \"tough one\", \"I probably do not have enough history\"],\n    \"open_asks\": [\"How does this play into this?\", \"Should they be kept whole?\"]\n}"
+}

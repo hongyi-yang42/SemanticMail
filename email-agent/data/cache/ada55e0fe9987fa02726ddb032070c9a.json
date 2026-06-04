@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"We have no plans at this time to participate as a petitioning creditor in an involuntary bankruptcy filing\", \"this letter is an attempt to avoid bankruptcy\"],\n    \"open_asks\": []\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Please respond by COB Thursday, Sept. 27th.\", \"Attached for your review and comments is Draft No.4\"],\n    \"open_asks\": [\"Review and comment on Draft No.4 by COB Thursday\", \"Awaiting additional sections and changes from El Paso\"]\n}"
+}

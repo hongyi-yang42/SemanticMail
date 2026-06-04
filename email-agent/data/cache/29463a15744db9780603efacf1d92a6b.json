@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Jeff offered to focus more time on coordinating commercial issues\", \"I trust this initiative will further enhance an already effective procedure\"],\n    \"open_asks\": [\"Jane and Stephanie need to create a priority list of West Gas issues and hot button items\"]\n}"
+}

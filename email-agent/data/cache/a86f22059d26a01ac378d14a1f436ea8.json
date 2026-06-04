@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Sharing a potentially critical website without context\", \"Asking about the source behind it\"],\n    \"open_asks\": [\"Do we know who's behind this?\"]\n}"
+}

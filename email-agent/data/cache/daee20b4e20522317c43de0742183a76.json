@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"polite request with 'could you please' and 'thanks'\"],\n    \"open_asks\": [\"Send electronic version of matrix to Mr. Dasovich\", \"Provide information on gas for the chart\"]\n}"
+}

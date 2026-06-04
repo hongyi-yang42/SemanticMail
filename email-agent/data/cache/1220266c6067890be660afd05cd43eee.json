@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"acknowledges FERC will not directly address negative CTC\", \"notes refund process didn't ask first question about blame\"],\n    \"open_asks\": [\"How to fight retroactive determination of just and reasonable rates?\", \"Can utilities' underscheduling be used against them?\"]\n}"
+}

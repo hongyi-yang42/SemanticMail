@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"agreement\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"I agree\", \"there are both substantive and format problems\", \"it does not read very well\"],\n    \"open_asks\": [\"Will fax Amr my comments\"]\n}"
+}

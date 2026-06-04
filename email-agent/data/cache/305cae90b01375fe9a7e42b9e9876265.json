@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"CPUC terminated direct access despite pressure\", \"Mirant and Reliant pushing involuntary bankruptcy for SCE\"],\n    \"open_asks\": [\"determine SoCal's response to PG&E filing and Mirant-Reliant effort\", \"pulse likelihood and timing of voluntary bankruptcy petition\"]\n}"
+}

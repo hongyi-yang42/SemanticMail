@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"PLEASE RESPOND BY FRIDAY, 10/5\", \"we will modify our statement ... but only if there is strong opposition\"],\n    \"open_asks\": [\"Provide comments on attached filing by COB Friday, 10/5\"]\n}"
+}

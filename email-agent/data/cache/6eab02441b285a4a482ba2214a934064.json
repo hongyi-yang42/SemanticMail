@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Walper's tone was cordial but raised concerns about forbearance and liquidation\", \"Bates spoke 'out of school' indicating informal, cautious exchange\"],\n    \"open_asks\": [\"Awaiting call from Walper on Monday\", \"Request for email address of in-house contact\"]\n}"
+}

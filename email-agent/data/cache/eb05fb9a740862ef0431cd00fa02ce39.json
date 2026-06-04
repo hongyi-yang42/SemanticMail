@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"acknowledges possible overreaction but seeks input\", \"appreciative language\"],\n    \"open_asks\": [\"inputs and opinions on regulatory impact\"]\n}"
+}

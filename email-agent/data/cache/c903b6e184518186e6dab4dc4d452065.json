@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"terse directive 'this is in your court'\", \"no greeting or pleasantries\"],\n    \"open_asks\": [\"action required from Dasovich regarding Laura Doll\"]\n}"
+}

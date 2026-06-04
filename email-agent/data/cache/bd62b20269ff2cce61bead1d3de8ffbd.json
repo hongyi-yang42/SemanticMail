@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"invitation\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"invitation to open art studios\", \"casual and friendly tone\"],\n    \"open_asks\": []\n}"
+}

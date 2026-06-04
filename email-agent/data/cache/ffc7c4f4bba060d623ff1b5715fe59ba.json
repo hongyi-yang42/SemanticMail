@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"discussion of potential contradiction in advocacy positions\", \"legal analysis of surcharge classification as tax vs rate increase\"],\n    \"open_asks\": [\"What are the financial and contractual implications of the options before the Commission?\"]\n}"
+}

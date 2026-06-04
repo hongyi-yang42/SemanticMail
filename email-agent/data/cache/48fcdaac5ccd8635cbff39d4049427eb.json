@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\n        \"I really need to give up being a secretary. It is not my core competency.\",\n        \"THIS CALL IS WEDNESDAY, NOT TODAY!\"\n    ],\n    \"open_asks\": [\n        \"Please come to the telecon with a list of who you have already contacted, and who we may consider contacting.\"\n    ]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Steve is out of town until Friday\", \"If you need me to track him down, just let me know\"],\n    \"open_asks\": [\"If you need me to track him down, just let me know\"]\n}"
+}

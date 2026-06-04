@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"extremly busy...much going on\", \"will be in touch soon\"],\n    \"open_asks\": [\"no explicit ask, but implies future contact\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Attached is the September issue of Gas Flows which addresses natural gas prices & demand and Canadian supply.\"],\n    \"open_asks\": []\n}"
+}

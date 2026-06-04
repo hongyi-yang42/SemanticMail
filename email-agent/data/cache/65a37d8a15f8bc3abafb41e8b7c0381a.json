@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"clear agenda and facilitation roles proposed\", \"no tension or ambiguity in tone\"],\n    \"open_asks\": [\"Paul to confirm facilitation\", \"Joseph to set up Wednesday call\"]\n}"
+}

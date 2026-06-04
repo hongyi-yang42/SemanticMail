@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"I'm in no hurry\", \"I don't want to precipitate a palace coup led by Calpine\"],\n    \"open_asks\": []\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"hostile\",\n    \"key_signals\": [\"This is inbelievable. Will FERC pay attention now?\"],\n    \"open_asks\": []\n}"
+}

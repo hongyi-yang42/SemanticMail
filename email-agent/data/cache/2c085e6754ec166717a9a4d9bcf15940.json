@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\n        \"John Burton will not look favorably upon including direct access\",\n        \"even 78xx would get only 36 votes today if it came up for a vote\"\n    ],\n    \"open_asks\": [\n        \"Will a compromise bill be ready by next Tuesday?\",\n        \"What happens if 78xx fails on Tuesday?\"\n    ]\n}"
+}

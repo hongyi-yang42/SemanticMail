@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"shares a news link without commentary\", \"subject line is sarcastic ('more great work') but body is just a URL\"],\n    \"open_asks\": []\n}"
+}

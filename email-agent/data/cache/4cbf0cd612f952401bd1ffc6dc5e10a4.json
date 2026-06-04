@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Enron gave $50k to the Rep party at Brulte and Cox's request\", \"Behave yourselves\"],\n    \"open_asks\": [\"If Enron is participating, please let us know\"]\n}"
+}

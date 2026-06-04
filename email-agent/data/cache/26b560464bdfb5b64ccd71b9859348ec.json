@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"delay in proceeding probably in our interest\", \"need senior management approval\"],\n    \"open_asks\": [\"discuss terms for Stipulation on call tomorrow\"]\n}"
+}

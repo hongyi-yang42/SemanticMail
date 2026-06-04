@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Asks for opinion on ethical dilemma\", \"Poses hypothetical scenario\"],\n    \"open_asks\": [\"What do you think about this?\"]\n}"
+}

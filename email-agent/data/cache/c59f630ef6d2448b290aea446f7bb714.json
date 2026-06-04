@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Asks if recipient wants an update\", \"Forwarding a file as requested\"],\n    \"open_asks\": [\"Do you want me to have Steve update this?\"]\n}"
+}

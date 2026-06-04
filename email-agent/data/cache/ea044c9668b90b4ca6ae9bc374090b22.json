@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\n        \"despite the voluminous record in support of our position, the judge ruled that it was 'not at all clear' that El Paso exercised market power\",\n        \"Anytime Enron wants to help on these GCIM issues, we would welcome it--might make you look less like a Texas robber baron\"\n    ],\n    \"open_asks\": [\n        \"What is your reaction to the judge's proposed order in the El Paso case?\",\n        \"Do you think the Commission is likely to adopt or change it?\"\n    ]\n}"
+}

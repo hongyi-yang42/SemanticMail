@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"informational announcement about new payroll system\", \"no relational tension or ambiguity\"],\n    \"open_asks\": [\"employee must submit form by Oct 15 if they want hardcopy\"]\n}"
+}

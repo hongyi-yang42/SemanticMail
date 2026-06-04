@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"polite request for assistance\", \"appreciative closing\"],\n    \"open_asks\": [\"add new projects or provide updates for the briefing\"]\n}"
+}

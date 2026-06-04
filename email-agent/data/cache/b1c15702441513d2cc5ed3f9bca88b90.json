@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"customer hearsay as basis for inquiry\"],\n    \"open_asks\": [\"Confirm if SoCal Gas filed to revive unbundling\", \"Status of SoCal Gas purchasing gas for SDG&E customers\"]\n}"
+}

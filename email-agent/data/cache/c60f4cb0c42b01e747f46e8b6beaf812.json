@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Has not listened to the call yet\", \"Will ask about reschedule\"],\n    \"open_asks\": [\"What was your take on the analyst call?\", \"Are you hearing that Lay's calling Edison today?\"]\n}"
+}

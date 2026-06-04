@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"I'm trying to be more like Eldon!\", \"what I really need is a new chef's knife made by Global\"],\n    \"open_asks\": [\"Request for a Global chef's knife\"]\n}"
+}

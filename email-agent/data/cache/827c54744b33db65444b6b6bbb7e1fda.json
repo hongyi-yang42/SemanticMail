@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"Asks how to fight a notion\", \"Suggests using utilities' underscheduling against them\"],\n    \"open_asks\": [\"How to fight the notion of retroactive rate determination?\", \"Can underscheduling be used to push back?\"]\n}"
+}

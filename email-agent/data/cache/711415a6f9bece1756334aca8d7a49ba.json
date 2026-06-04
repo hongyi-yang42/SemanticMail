@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"acknowledges emotional impact of 9/11\", \"praises group for lack of bias towards Arab American colleague\"],\n    \"open_asks\": [\"contact HR or Benefits Group for counseling services if needed\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"straightforward request for contact information\"],\n    \"open_asks\": [\"who to contact at Enron regulatory\"]\n}"
+}

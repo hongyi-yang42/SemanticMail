@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"advice\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"advises against recusal due to political disadvantage\", \"suggests leaving matter to rest\"],\n    \"open_asks\": [\"none\"]\n}"
+}

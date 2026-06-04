@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"FYI indicates informational forwarding\", \"Steve's response is factual and cooperative\"],\n    \"open_asks\": [\"Let me know if you have any other questions\"]\n}"
+}

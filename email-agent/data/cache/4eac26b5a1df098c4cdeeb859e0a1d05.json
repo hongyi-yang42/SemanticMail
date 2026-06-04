@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"forwarding a list with coordination instruction\"],\n    \"open_asks\": [\"work with Tom Riley to coordinate\"]\n}"
+}

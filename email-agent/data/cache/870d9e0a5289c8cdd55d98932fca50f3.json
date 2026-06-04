@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Hedging on DA issues: 'Don't know at this point what if anything we'll do'\", \"Offers colleague's contact: 'Certainly feel free to call him'\"],\n    \"open_asks\": []\n}"
+}

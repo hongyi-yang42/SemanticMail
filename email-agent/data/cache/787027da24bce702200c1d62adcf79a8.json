@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"acknowledges need to reconfirm policy recommendations\", \"references financial exposure and policy response\"],\n    \"open_asks\": [\"determine $$ at stake and manage financial exposure\"]\n}"
+}

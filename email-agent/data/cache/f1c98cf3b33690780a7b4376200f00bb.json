@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\n        \"Bob, we have to move fast -- we have to be prepared to file within a few hours of any CPUC action.\",\n        \"Given Bob's request, please do not circulate to any more of our customers until further notice.\"\n    ],\n    \"open_asks\": [\n        \"Bob needs to review the language more closely before circulation.\",\n        \"Sue is asking customers to sign on for legal action.\"\n    ]\n}"
+}

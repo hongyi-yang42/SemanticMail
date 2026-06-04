@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"requesting review and comment on a letter attacking DWR contracts\", \"forwarded from CEERT board discussion\"],\n    \"open_asks\": [\"Please review and provide feedback on the attached letter\"]\n}"
+}

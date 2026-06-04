@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Direct request to include Chamber of Commerce on petition for re-hearing.\"],\n    \"open_asks\": [\"Include Chamber of Commerce on petition for re-hearing.\"]\n}"
+}

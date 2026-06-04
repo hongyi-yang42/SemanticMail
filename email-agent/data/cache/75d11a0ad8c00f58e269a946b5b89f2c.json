@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Forwarded FYI with no additional commentary\", \"Message states 'simply for your information, not because of any expected effect'\"],\n    \"open_asks\": [\"Contact Calvin Yee or Michael Alexander if questions\"]\n}"
+}

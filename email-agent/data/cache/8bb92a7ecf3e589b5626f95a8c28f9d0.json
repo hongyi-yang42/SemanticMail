@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"urgent language: 'extremely important'\", \"action-oriented instructions\"],\n    \"open_asks\": []\n}"
+}

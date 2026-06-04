@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"SCE believes this decision is unlawful and unconstitutional\", \"SCE intends to challenge through all appropriate avenues\"],\n    \"open_asks\": []\n}"
+}

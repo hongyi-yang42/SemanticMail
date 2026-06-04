@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"references potential FERC investigation into CAISO practices\", \"mentions 'different spin' on meeting\"],\n    \"open_asks\": [\"comments on attached talking points are welcome\"]\n}"
+}

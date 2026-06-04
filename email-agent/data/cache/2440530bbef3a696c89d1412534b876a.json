@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"forwarded meeting confirmation with no new substantive content\", \"offers to set up international line if needed\"],\n    \"open_asks\": [\"Rick, if you need us to set up an international line, please advise\"]\n}"
+}

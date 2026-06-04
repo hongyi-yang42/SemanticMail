@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Provides background on Glen Thomas's role and expected behavior\", \"Offers to arrange a call if needed\"],\n    \"open_asks\": []\n}"
+}

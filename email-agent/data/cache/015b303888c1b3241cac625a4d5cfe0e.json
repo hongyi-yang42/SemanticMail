@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Congratulations to all\", \"Thanks and good luck\"],\n    \"open_asks\": [\"Submit picks by 5 PM Thursday\"]\n}"
+}

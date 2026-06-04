@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Need to also include the moneys owed to Enron and its affiliates\", \"We should also seek to clarify the language\"],\n    \"open_asks\": [\"Include moneys owed for wholesale power transactions\", \"Clarify language about supporting PE Advice Letter proposal\"]\n}"
+}

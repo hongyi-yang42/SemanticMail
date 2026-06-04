@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"friendly invitation for lunch\", \"casual mention of Tahoe trip\"],\n    \"open_asks\": [\"let me know if you have time for lunch\", \"let me know if you want to come to Tahoe\"]\n}"
+}

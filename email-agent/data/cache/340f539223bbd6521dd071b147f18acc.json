@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"'I want all contracts get rid of any put obligations' - imperative tone with potential contractual risk\", \"'Jeff, I prusume yoo meant 9/20/01' - typo and correction request indicating possible confusion\"],\n    \"open_asks\": [\"Who is now on point commercially for the PacBell (SBC) contract?\", \"Clarification on whether Jeff meant 9/20/01 instead of 10/20/01\"]\n}"
+}

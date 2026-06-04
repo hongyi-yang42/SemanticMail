@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Thanks for the quick response\", \"Enjoy your days off\"],\n    \"open_asks\": [\"Let's hook up early next week to discuss a plan of attack on DWR\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Expresses gratitude and emphasizes no blame on recipient\", \"Explains decision thoroughly to avoid misunderstanding\"],\n    \"open_asks\": []\n}"
+}

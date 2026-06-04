@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Mentions deadline to file by Friday\", \"Working to get customers to sign on\"],\n    \"open_asks\": []\n}"
+}

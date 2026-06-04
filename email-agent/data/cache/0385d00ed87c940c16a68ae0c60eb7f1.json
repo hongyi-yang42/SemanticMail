@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"departs from Enron's line of thinking\", \"tendency to make these papers neutral, but I found it actually going the other direction\"],\n    \"open_asks\": [\"Provide comments on paper one\", \"Advise of your point of view\"]\n}"
+}

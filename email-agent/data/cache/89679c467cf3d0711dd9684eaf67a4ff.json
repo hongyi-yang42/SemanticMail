@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"seeking concerns before proceeding\", \"legal challenge to regulatory decision\"],\n    \"open_asks\": [\"any concerns that would cause reconsideration\"]\n}"
+}

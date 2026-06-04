@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"suggests internal discussion to determine response\"],\n    \"open_asks\": [\"Should we cover this new found agency?\"]\n}"
+}

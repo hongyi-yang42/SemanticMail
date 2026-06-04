@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"terse request to forward to signatories\"],\n    \"open_asks\": [\"forward the application to agreed signatories\"]\n}"
+}

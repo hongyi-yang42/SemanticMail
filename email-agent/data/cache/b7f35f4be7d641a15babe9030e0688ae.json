@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Haven't heard back from anyone except Mark\", \"Deadline TOMORROW\"],\n    \"open_asks\": [\"Need to get individual customers to sign on\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"hostile\",\n    \"key_signals\": [\"Can't you send some folks over to give them a few lessons????\", \"If these guys are manipulating the market they certainly aren't doing a very good job of it.\"],\n    \"open_asks\": [\"Resend the attachment\"]\n}"
+}

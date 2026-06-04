@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Invitation to FERC meeting with unclear scope\", \"Privileged & Confidential marking\"],\n    \"open_asks\": [\"Enron needs to decide who to send to the meeting\", \"Possible need to prepare solutions/proposals in advance\"]\n}"
+}

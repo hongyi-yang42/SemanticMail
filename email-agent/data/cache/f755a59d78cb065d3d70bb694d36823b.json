@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"forwarded letter opposing rate agreement\", \"attached document indicates organized opposition\"],\n    \"open_asks\": []\n}"
+}

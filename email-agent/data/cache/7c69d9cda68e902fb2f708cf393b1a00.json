@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"THIS MUST BE FILED BY FRIDAY\", \"Love to have you with us\"],\n    \"open_asks\": [\"Join as a party to the draft request for rehearing\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"discontinue external commercial activities\", \"evaluate strategic alternatives\"],\n    \"open_asks\": [\"follow up with Ross\"]\n}"
+}

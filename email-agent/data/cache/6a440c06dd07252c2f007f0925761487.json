@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"agreement\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"expect Brulte and Cox to push us for another 75K\", \"Apparently that is what Reliant gave to the R's\"],\n    \"open_asks\": []\n}"
+}

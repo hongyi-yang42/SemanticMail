@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"implies some retroactive action by the CPUC\", \"some financial risk is possible\"],\n    \"open_asks\": [\"Will the language be removed or clarified?\"]\n}"
+}

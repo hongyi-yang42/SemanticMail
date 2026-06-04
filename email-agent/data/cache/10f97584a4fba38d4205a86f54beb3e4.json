@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\n        \"really would like to know your thoughts on who would get the retail customers\",\n        \"What is your opinion re direct access for this class of customers?\"\n    ],\n    \"open_asks\": [\n        \"Thoughts on jurisdiction and customer assignment under the reorganization plan\",\n        \"Opinion on direct access and legislative interplay\"\n    ]\n}"
+}

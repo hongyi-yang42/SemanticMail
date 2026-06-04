@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"casual language 'cool...the mo the merrier'\", \"hopeful request 'possible????'\"],\n    \"open_asks\": [\"confirmation of location choice (recipient's or Prentice's)\", \"availability for scanning net for Bolinas locations\"]\n}"
+}

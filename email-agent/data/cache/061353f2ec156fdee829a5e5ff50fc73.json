@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Request for comments before sending around\", \"Detailed list of regulatory risks with request for input\"],\n    \"open_asks\": [\"Comments on the taxonomy of regulatory risks\", \"Suggestions for additional risks or changes\"]\n}"
+}
