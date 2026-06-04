@@ -1,0 +1,338 @@
+[
+  {
+    "category": "you_owe",
+    "entry": {
+      "direction": "inbound",
+      "canonical_ask": "send meeting notice",
+      "implied_deadline": null,
+      "obligor": "Jeff Dasovich",
+      "contact": "Hass, Glen",
+      "ask_date": "2001-10-16T12:44:09+00:00",
+      "age_days": 59,
+      "norm_subject": "gas",
+      "importance": 3,
+      "status": "open",
+      "_email_idx": 374
+    },
+    "email_snippet": {
+      "from": "Hass, Glen",
+      "date": "Tue, 16 Oct 2001 05:44:09 -0700 (PDT)",
+      "subject": "RE: Gas",
+      "body_preview": "Jeff,\n\nNo problem with joining us on the conference call Wednesday.  In fact I intended to call you today for your opinion of the Proposed Decision.  I'll send you the meeting notice as soon as we finalize the time--tentatively its set for Wednesday at 9:00 AM your time and 11:00 Houston/Omaha time."
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "you_owe",
+    "entry": {
+      "direction": "inbound",
+      "canonical_ask": "schedule call to discuss SCE settlement",
+      "implied_deadline": null,
+      "obligor": "Jeff Dasovich",
+      "contact": "Steffes, James D.",
+      "ask_date": "2001-10-03T20:08:33+00:00",
+      "age_days": 72,
+      "norm_subject": "sce settlement",
+      "importance": 72,
+      "status": "open",
+      "_email_idx": 274
+    },
+    "email_snippet": {
+      "from": "Steffes, James D.",
+      "date": "Wed, 3 Oct 2001 13:08:33 -0700 (PDT)",
+      "subject": "FW: SCE Settlement",
+      "body_preview": "Jeff --\n\nHow about a call tomorrow to discuss?\n\nJim\n -----Original Message-----\nFrom: \tWilliams, Robert C.  \nSent:\tWednesday, October 03, 2001 11:31 AM\nTo:\tSharp, Vicki; Smith, Mike; Steffes, James D.; '[EMAIL]'; Mellencamp, Lisa; Tribolet, Michael; Curry, Wanda\nSubject:\tSCE Settlement\n\nAccording to"
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "you_owe",
+    "entry": {
+      "direction": "inbound",
+      "canonical_ask": "inform if customers interested in signing on",
+      "implied_deadline": null,
+      "obligor": "Jeff Dasovich",
+      "contact": "Mara, Susan",
+      "ask_date": "2001-09-12T23:17:15+00:00",
+      "age_days": 92,
+      "norm_subject": "preparing for legal action against a retroactive da suspension",
+      "importance": 204,
+      "status": "open",
+      "_email_idx": 81
+    },
+    "email_snippet": {
+      "from": "Mara, Susan",
+      "date": "Wed, 12 Sep 2001 16:17:15 -0700 (PDT)",
+      "subject": "Preparing for Legal Action against a retroactive DA suspension",
+      "body_preview": "As of this point in time, the CPUC is NOT expected to vote tomorrow. The CPUC has not said when a new meeting would be held.  Although we continue to keep the pressure on, the CPUC vote could be for DA suspension as of July 1.  We need to be prepared to take immediate legal action in that event.  He"
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "you_owe",
+    "entry": {
+      "direction": "inbound",
+      "canonical_ask": "submit hardcopy request form",
+      "implied_deadline": "2001-10-15",
+      "obligor": "Jeff Dasovich",
+      "contact": "Enron Payroll",
+      "ask_date": "2001-10-02T09:33:53+00:00",
+      "age_days": 73,
+      "norm_subject": "electronic pay stubs",
+      "importance": 1,
+      "status": "open",
+      "_email_idx": 246
+    },
+    "email_snippet": {
+      "from": "Enron Payroll",
+      "date": "Tue, 2 Oct 2001 02:33:53 -0700 (PDT)",
+      "subject": "Electronic Pay Stubs",
+      "body_preview": "Get ready.  Beginning in November, electronic pay stubs will be available to all employees who have their paychecks direct deposited into their bank account.  Electronic pay stubs are an easy, fast, and efficient way for you to get your payroll information.  They will also help Enron to realize a co"
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "you_promised",
+    "entry": {
+      "direction": "outbound",
+      "canonical_ask": "identify who should support amendment",
+      "implied_deadline": null,
+      "obligor": "Hedy Govenar",
+      "contact": "Hedy Govenar",
+      "ask_date": "2001-09-05T17:08:22+00:00",
+      "age_days": 100,
+      "norm_subject": "california strategy - 9.5.01 12:00 pm",
+      "importance": 8,
+      "status": "open",
+      "_email_idx": 24
+    },
+    "email_snippet": {
+      "from": "Steffes, James D.",
+      "date": "Wed, 5 Sep 2001 10:08:22 -0700 (PDT)",
+      "subject": "California Strategy - 9.5.01  12:00 PM",
+      "body_preview": "Per our conversation today --\n\n1.\tSue Mara is working with AReM to (a) work on an alternative vehicle for DA - the Bowen bill, (b) get the \"taking\" argument for retroactive CPUC action to Norm Plotkin and Richard Katz, (c) call APS Energy Services to motivate Boeing, (d) getting AReM active on the d"
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "you_promised",
+    "entry": {
+      "direction": "outbound",
+      "canonical_ask": "confirm Sunday visit",
+      "implied_deadline": "2001-10-14",
+      "obligor": "Jeff Dasovich",
+      "contact": "Nancy Sellers",
+      "ask_date": "2001-10-08T23:29:08+00:00",
+      "age_days": 66,
+      "norm_subject": "",
+      "importance": 17,
+      "status": "open",
+      "_email_idx": 307
+    },
+    "email_snippet": {
+      "from": "Nancy Sellers",
+      "date": "Mon, 8 Oct 2001 16:29:08 -0700 (PDT)",
+      "subject": "RE:",
+      "body_preview": "No I was just glad she was so generous and I am hoping that that will\ncontinue!\n\nI will order the wine tomorrow if you really will be by on Sunday.  I can\nonly have 2 cases delivered at a time.  So I'll get the Coastal first.  It\ncomes to $152.74 (less $80) = $72.74\n\nThe 97 cab will be $193.50\nTotal"
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "you_promised",
+    "entry": {
+      "direction": "outbound",
+      "canonical_ask": "reconcile two separate pieces",
+      "implied_deadline": null,
+      "obligor": "Steffes, James D.",
+      "contact": "Steffes, James D.",
+      "ask_date": "2001-10-11T04:41:12+00:00",
+      "age_days": 64,
+      "norm_subject": "jim's requested analysis",
+      "importance": 72,
+      "status": "open",
+      "_email_idx": 344
+    },
+    "email_snippet": {
+      "from": "Mara, Susan",
+      "date": "Wed, 10 Oct 2001 21:41:12 -0700 (PDT)",
+      "subject": "Jim's requested analysis",
+      "body_preview": "Jim and Jeff,\n\nI spent 20 minutes trying to open Jeff's excell attachment.  I could not.\n\nJeff did not incorporate my notes into his.  SO, Jim I guess you'll just have to go with the two pieces you got from us.\n\nSue"
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "you_promised",
+    "entry": {
+      "direction": "outbound",
+      "canonical_ask": "determine $$ at stake and manage financial exposure",
+      "implied_deadline": null,
+      "obligor": "EWS West Power URM desk",
+      "contact": "EWS West Power URM desk",
+      "ask_date": "2001-10-09T23:59:39+00:00",
+      "age_days": 65,
+      "norm_subject": "$.01 surcharge as \"tax\"",
+      "importance": 1.0,
+      "status": "open",
+      "_email_idx": 325
+    },
+    "email_snippet": {
+      "from": "Steffes, James D.",
+      "date": "Tue, 9 Oct 2001 16:59:39 -0700 (PDT)",
+      "subject": "RE: $.01 surcharge as \"tax\"",
+      "body_preview": "The EWS West Power URM desk will need to determine the $$ at stake and help us manage our financial exposure and the appropriate policy response.  It's their $$.  So far, my understanding from the desk is that our current policy recommendations (as outlined in the Mike Smith memo) are the \"preferred"
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "resolved",
+    "entry": {
+      "direction": "inbound",
+      "canonical_ask": "notify if not adding class",
+      "implied_deadline": null,
+      "obligor": "Jeff Dasovich",
+      "contact": "Teresa Janus",
+      "ask_date": "2001-09-07T22:42:43+00:00",
+      "age_days": 97,
+      "norm_subject": "e283 real estate financing",
+      "importance": 5,
+      "status": "resolved",
+      "_email_idx": 43
+    },
+    "email_snippet": {
+      "from": "Teresa Janus",
+      "date": "Fri, 7 Sep 2001 15:42:43 -0700 (PDT)",
+      "subject": "E283 Real Estate Financing",
+      "body_preview": "Hi,\n\nYou have just been officially added to E283 Real Estate Financing.  Please \ncome by to pick up any books or readers in the Evening MBA office.  If you \ndon't want to add this class, please let me know right away!\n\nThanks,\nTJ"
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "resolved",
+    "entry": {
+      "direction": "inbound",
+      "canonical_ask": "choose activity for November meeting",
+      "implied_deadline": null,
+      "obligor": "Jeff Dasovich",
+      "contact": "Dernehl, Ginger",
+      "ask_date": "2001-10-15T21:38:49+00:00",
+      "age_days": 59,
+      "norm_subject": "november direct report meeting changes",
+      "importance": 13,
+      "status": "resolved",
+      "_email_idx": 368
+    },
+    "email_snippet": {
+      "from": "Dernehl, Ginger",
+      "date": "Mon, 15 Oct 2001 14:38:49 -0700 (PDT)",
+      "subject": "November Direct Report Meeting Changes",
+      "body_preview": "There are several changes to the Direct Report meeting in November.  \n\nFirst, the meeting will now conclude by 12:00 (noon) on Friday, November 9.  \n\nSecond, the activities portion of the trip will not be sponsored by Enron....each individual will be responsible (personally) for payment of activity "
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "resolved",
+    "entry": {
+      "direction": "inbound",
+      "canonical_ask": "provide thoughts on letter",
+      "implied_deadline": null,
+      "obligor": "Jeff Dasovich",
+      "contact": "Kaufman, Paul",
+      "ask_date": "2001-10-17T17:52:50+00:00",
+      "age_days": 58,
+      "norm_subject": "john campbell",
+      "importance": 18,
+      "status": "resolved",
+      "_email_idx": 392
+    },
+    "email_snippet": {
+      "from": "Kaufman, Paul",
+      "date": "Wed, 17 Oct 2001 10:52:50 -0700 (PDT)",
+      "subject": "John Campbell",
+      "body_preview": "We are not giving any more money in California.  To that end we just sent a letter to the D's saying, essentially, \"we're giving the money we thought we were going to give you to the N.Y. Disaster Relief fund.\"   Prior to the \"no more money\" decision, we also concluded that it made no sense to give "
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  },
+  {
+    "category": "resolved",
+    "entry": {
+      "direction": "outbound",
+      "canonical_ask": "facilitate introduction to Laura Doll",
+      "implied_deadline": null,
+      "obligor": "Jean Ryall",
+      "contact": "Jean Ryall",
+      "ask_date": "2001-10-07T14:48:17+00:00",
+      "age_days": 68,
+      "norm_subject": "do you know laura doll?",
+      "importance": 1.0,
+      "status": "resolved",
+      "_email_idx": 294
+    },
+    "email_snippet": {
+      "from": "Steffes, James D.",
+      "date": "Sun, 7 Oct 2001 07:48:17 -0700 (PDT)",
+      "subject": "Do you know Laura Doll?",
+      "body_preview": "Jean --\n \nLaura Doll has been appointed head of the CA Power Authority.  Do you know her?  It would be good to have an introduction for Jeff Dasovich.\n \nJim"
+    },
+    "hand_check": {
+      "correct_direction": null,
+      "correct_ask": null,
+      "correct_status": null,
+      "notes": ""
+    }
+  }
+]
