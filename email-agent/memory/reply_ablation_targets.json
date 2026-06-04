@@ -1,0 +1,424 @@
+{
+  "targets": [
+    {
+      "email_idx": 32,
+      "category": "request_with_asks",
+      "sender": "Mara, Susan",
+      "date_iso": "2001-09-06T23:26:07+00:00",
+      "subject": "ALERT--NEW WORDING IN CPUC DA  DECISION IMPLIES RETROACTIVE ACTIONS",
+      "triage": {
+        "intent": "notification",
+        "urgency": "high",
+        "risk_level": "warning",
+        "tone_label": "neutral",
+        "key_signals": [
+          "implies some retroactive action by the CPUC",
+          "some financial risk is possible"
+        ],
+        "open_asks": [
+          "Will the language be removed or clarified?"
+        ],
+        "_email_idx": 32,
+        "_cached": false
+      },
+      "open_asks": [
+        "Will the language be removed or clarified?"
+      ],
+      "cold": {
+        "draft": {
+          "draft_text": "Dear Susan,\n\nThank you for the alert regarding the new language in the CPUC proposed decision. We understand the concern about potential retroactive implications and appreciate your efforts to seek removal or clarification. Please keep us updated on any developments.\n\nBest,\n[Your Name]",
+          "rationale": "Acknowledges the alert, expresses understanding of the concern, and requests updates without adding new information or instructions."
+        },
+        "tokens": {
+          "prompt_tokens": 740,
+          "completion_tokens": 95,
+          "total_tokens": 835,
+          "source": "measured",
+          "wall_ms": 1407
+        }
+      },
+      "scaffolded": {
+        "draft": {
+          "draft_text": "Dear Susan,\n\nThank you for the alert and the detailed summary of the new language in the CPUC proposed decision. I understand the concern regarding the implication of retroactive actions and the potential financial risk. Please let me know if there is any specific support or information you need from our team as you work to get the language removed or clarified. I am happy to help in any way I can.\n\nBest,\n[Your Name]",
+          "rationale": "Acknowledges the alert, expresses understanding of the concern, and offers support without overreacting or asking for unclear details, maintaining a professional and collaborative tone."
+        },
+        "tokens": {
+          "prompt_tokens": 1498,
+          "completion_tokens": 138,
+          "total_tokens": 1636,
+          "source": "measured",
+          "wall_ms": 2049
+        },
+        "pic_analysis": "{\n  \"per_email_analysis\": [\n    {\n      \"email_index\": 1,\n      \"from\": \"Mara, Susan\",\n      \"literal_content\": \"Susan alerts a large group about new language in a CPUC proposed decision that implies retroactive actions and financial risk, and states they will try to get the language removed or clarified, though it's a long shot.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\n            \"maxim\": \"quantity\",\n            \"description\": \"Provides extensive verbatim quotes from the decision but does not specify which parts are most concerning or quantify the financial risk.\",\n            \"signal\": \"Implicates that the risk is serious but vague, possibly to avoid alarming recipients or to let them interpret the risk themselves.\"\n          }\n        ],\n        \"indirect_speech_acts\": [\n          \"The statement 'We will endeavor to get the language removed (long-shot) or clarified (also long-shot)' is an indirect request for support or action from recipients, disguised as a status update.\"\n        ],\n        \"implicature\": \"Susan implies that the situation is urgent and potentially harmful, and that recipients should be aware and possibly take action, but she downplays the likelihood of success to manage expectations.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Susan holds informational power and is alerting a large, cross-functional group; she uses a directive tone ('Just to alert you') and takes responsibility for action ('We will endeavor'), indicating she is a coordinator or leader on this issue.\",\n        \"face_threats\": \"Threatens negative face of recipients by imposing an awareness of risk and potential need for action, but mitigates by framing it as an alert and stating they will handle it.\",\n        \"politeness_strategy\": \"negative_politeness\",\n        \"tone_label\": \"warm\"\n      },\n      \"risk_level\": \"caution\"\n    }\n  ],\n  \"thread_level\": {\n    \"tone_trajectory\": [\"warm\"],\n    \"overall_risk\": \"caution\",\n    \"recommended_strategy\": \"Acknowledge receipt and offer specific support or questions to clarify the risk and next steps. This shows engagement and helps Susan gauge the group's response, while maintaining rapport.\",\n    \"common_mistakes\": [\n      \"Ignoring the email or not responding at all, which could be seen as disinterest or lack of concern.\",\n      \"Overreacting with alarmist language, which could escalate anxiety unnecessarily.\",\n      \"Asking for details that Susan has already indicated are unclear, putting her on the spot.\"\n    ]\n  }\n}",
+        "memory_block": "--- MEMORY CONTEXT (evidence only — derive conclusions yourself) ---\nCurrent sender: Mara, Susan\nPrior interactions with this sender: 34 emails over 1 days.\nPrior cheap-pass tone observations (per-email triage labels): ['neutral', 'neutral', 'neutral', 'neutral', 'cool', 'neutral', 'neutral', 'warm']\nUnanswered asks accumulated from this sender: ['Jim may need to reconcile the two separate pieces', 'Call with any questions', 'Let me know if you have any other questions', 'forward the application to agreed signatories', 'Need to get individual customers to sign on']\nThread 'alert--new wording in cpuc da decision implies retroactive actions': 1 emails, status open, last activity 2001-09-06.\n--- END MEMORY CONTEXT ---"
+      }
+    },
+    {
+      "email_idx": 93,
+      "category": "request_with_asks",
+      "sender": "Mara, Susan",
+      "date_iso": "2001-09-13T16:48:58+00:00",
+      "subject": "IT's ALEADY BEEN CIRCULATED to customers",
+      "triage": {
+        "intent": "request",
+        "urgency": "high",
+        "risk_level": "warning",
+        "tone_label": "cool",
+        "key_signals": [
+          "Bob, we have to move fast -- we have to be prepared to file within a few hours of any CPUC action.",
+          "Given Bob's request, please do not circulate to any more of our customers until further notice."
+        ],
+        "open_asks": [
+          "Bob needs to review the language more closely before circulation.",
+          "Sue is asking customers to sign on for legal action."
+        ],
+        "_email_idx": 93,
+        "_cached": false
+      },
+      "open_asks": [
+        "Bob needs to review the language more closely before circulation.",
+        "Sue is asking customers to sign on for legal action."
+      ],
+      "cold": {
+        "draft": {
+          "draft_text": "Sue,\n\nThank you for your note. I agree that we need to move quickly, and I appreciate your efforts to prepare for potential CPUC action. Regarding the brief, let's set up a call with you, Mike, and Ed Duncan to discuss the language that may conflict with our arbitration positions. In the meantime, please ensure no further circulation to customers until we resolve this.\n\nBest,\nBob",
+          "rationale": "Acknowledges Sue's urgency, proposes a meeting to address the brief's issues, and reinforces the request to halt customer circulation."
+        },
+        "tokens": {
+          "prompt_tokens": 2207,
+          "completion_tokens": 127,
+          "total_tokens": 2334,
+          "source": "measured",
+          "wall_ms": 2300
+        }
+      },
+      "scaffolded": {
+        "draft": {
+          "draft_text": "Bob,\n\nThank you for your note. I agree that we should focus on revising the brief with Ed Duncan. Let's set up a meeting with you, Mike, and Ed as soon as possible. I'll coordinate with everyone's schedules.\n\nBest,\nSue",
+          "rationale": "Acknowledges Bob's proposal to de-escalate and collaborate, avoids re-litigating the circulation issue, and uses positive politeness to rebuild rapport."
+        },
+        "tokens": {
+          "prompt_tokens": 3469,
+          "completion_tokens": 105,
+          "total_tokens": 3574,
+          "source": "measured",
+          "wall_ms": 2346
+        },
+        "pic_analysis": "{\n  \"per_email_analysis\": [\n    {\n      \"email_index\": 1,\n      \"from\": \"Mara, Susan\",\n      \"literal_content\": \"Sue informs Bob that the brief has already been circulated to customers, emphasizes urgency due to potential CPUC action, and instructs others not to circulate further.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\"maxim\": \"quantity\", \"description\": \"Sue repeats 'Bob' twice and uses emphatic language ('we have to move fast', 'Believe me, chaos will begin')\", \"signal\": \"Emphasizes urgency and frustration, implying Bob's request is too late and hindering progress.\"},\n          {\"maxim\": \"manner\", \"description\": \"Subject line in all caps with typos ('IT's ALEADY BEEN CIRCULATED')\", \"signal\": \"Conveys exasperation and a confrontational tone, signaling that the instruction to stop circulation is problematic.\"}\n        ],\n        \"indirect_speech_acts\": [\n          \"Sue's statement 'AS you can see from the e-mail I sent you, I believe it has aleady been circulated' is an indirect refusal to comply with Bob's request to stop circulation, implying it's too late.\",\n          \"The instruction 'please do not circulate to any more of our customers until further notice' is a directive disguised as a polite request, but it undermines Bob's authority by addressing 'Others' directly.\"\n        ],\n        \"implicature\": \"Sue implies that Bob's request is unreasonable because the brief is already out, and that his concern is less important than the urgent need to prepare for legal action. She also signals that she is taking control of the situation despite Bob's authority.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Bob (Williams) holds formal authority as the recipient of Sue's email and as the person who issued the initial instruction. However, Sue challenges this by asserting her own knowledge and urgency, using direct address and imperative language to others, which undermines Bob's power.\",\n        \"face_threats\": \"Threatens Bob's positive face by implying his request is misguided and too late. Also threatens Bob's negative face by instructing others in a way that bypasses his authority.\",\n        \"politeness_strategy\": \"bald_on_record\",\n        \"tone_label\": \"hostile\"\n      },\n      \"risk_level\": \"warning\"\n    },\n    {\n      \"email_index\": 2,\n      \"from\": \"Williams, Robert C.\",\n      \"literal_content\": \"Bob proposes a meeting with Sue, Mike, and Ed Duncan to revise the brief, and downplays the significance of the draft having been circulated.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\"maxim\": \"relevance\", \"description\": \"Bob says 'I don't think it matters that a draft went to some customers' in response to Sue's assertion that it has already been circulated.\", \"signal\": \"Bob is dismissing Sue's concern and reframing the issue as less important, possibly to de-escalate conflict.\"}\n        ],\n        \"indirect_speech_acts\": [\n          \"Bob's proposal 'let's you, Mike, and I talk to Ed Duncan about revising the Brief' is an indirect request for collaboration and an attempt to regain control of the situation.\"\n        ],\n        \"implicature\": \"Bob acknowledges the circulation but minimizes its impact, suggesting that the focus should be on fixing the document rather than assigning blame. He is trying to restore cooperation and move forward.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Bob reasserts his authority by proposing a meeting and framing the next steps, but does so in a collaborative manner ('let's you, Mike, and I talk'). He uses inclusive language to mitigate the earlier face threat.\",\n        \"face_threats\": \"Bob's response is face-saving for Sue by not reprimanding her for circulating the draft, and face-saving for himself by not escalating the conflict. He avoids threatening Sue's positive face.\",\n        \"politeness_strategy\": \"positive_politeness\",\n        \"tone_label\": \"warm\"\n      },\n      \"risk_level\": \"caution\"\n    }\n  ],\n  \"thread_level\": {\n    \"tone_trajectory\": [\"hostile\", \"warm\"],\n    \"overall_risk\": \"warning\",\n    \"recommended_strategy\": \"Acknowledge Bob's attempt to de-escalate and collaborate. Respond by agreeing to the meeting and focusing on revising the brief. Avoid re-litigating the circulation issue. Use positive politeness to rebuild rapport and demonstrate willingness to work together.\",\n    \"common_mistakes\": [\n      \"Continuing to argue that the circulation was necessary or justified.\",\n      \"Ignoring Bob's proposal and insisting on the urgency of filing without addressing the document issues.\",\n      \"Using a defensive or confrontational tone that re-escalates the conflict.\"\n    ]\n  }\n}",
+        "memory_block": "--- MEMORY CONTEXT (evidence only — derive conclusions yourself) ---\nCurrent sender: Mara, Susan\nPrior interactions with this sender: 34 emails over 7 days.\nPrior cheap-pass tone observations (per-email triage labels): ['neutral', 'neutral', 'neutral', 'neutral', 'cool', 'neutral', 'neutral', 'warm']\nUnanswered asks accumulated from this sender: ['Jim may need to reconcile the two separate pieces', 'Call with any questions', 'Let me know if you have any other questions', 'forward the application to agreed signatories', 'Need to get individual customers to sign on']\nThread 'it's aleady been circulated to customers': 2 emails, status open, last activity 2001-09-13.\n--- END MEMORY CONTEXT ---"
+      }
+    },
+    {
+      "email_idx": 271,
+      "category": "request_with_asks",
+      "sender": "Mara, Susan",
+      "date_iso": "2001-10-03T19:09:56+00:00",
+      "subject": "ESP/UDC/CPUC Meeting on Implementation of DA Suspension",
+      "triage": {
+        "intent": "information_sharing",
+        "urgency": "high",
+        "risk_level": "warning",
+        "tone_label": "neutral",
+        "key_signals": [
+          "SCE did not attend the meeting in person and at the end made clear that they had not agreed with the joint plan",
+          "There is risk that the CPUC will NOT approve the approach and will cutoff DASRs on some date certain"
+        ],
+        "open_asks": [
+          "Call with any questions"
+        ],
+        "_email_idx": 271,
+        "_cached": false
+      },
+      "open_asks": [
+        "Call with any questions"
+      ],
+      "cold": {
+        "draft": {
+          "draft_text": "Dear Sue,\n\nThank you for the detailed update on the meeting. I understand the proposed joint plan and the risks involved. I will work on compiling the customer list by Friday, October 5, and ensure all relevant accounts are included. Please keep me informed of any developments from the attorney working group or the CPUC.\n\nBest,\n[Your Name]",
+          "rationale": "Acknowledges receipt of the update, confirms action on the customer list deadline, and requests further updates, maintaining a professional and concise tone."
+        },
+        "tokens": {
+          "prompt_tokens": 1370,
+          "completion_tokens": 119,
+          "total_tokens": 1489,
+          "source": "measured",
+          "wall_ms": 2562
+        }
+      },
+      "scaffolded": {
+        "draft": {
+          "draft_text": "Dear Sue,\n\nThank you for the detailed update on the meeting. I understand the agreed plan and the associated risks, including the potential for the CPUC not to approve the approach and SCE's separate position. I will ensure our customer lists are submitted by Friday. Could you please clarify the verification process for adding accounts not on the November 1 list? Also, what is our next step regarding SCE?\n\nBest,\n[Your Name]",
+          "rationale": "Acknowledges receipt, confirms understanding, and asks specific clarifying questions to demonstrate engagement and address key risks."
+        },
+        "tokens": {
+          "prompt_tokens": 2149,
+          "completion_tokens": 130,
+          "total_tokens": 2279,
+          "source": "measured",
+          "wall_ms": 2464
+        },
+        "pic_analysis": "{\n  \"per_email_analysis\": [\n    {\n      \"email_index\": 1,\n      \"from\": \"Mara, Susan\",\n      \"literal_content\": \"Susan reports on a meeting with ESPs, utilities, and CPUC staff about implementing the DA suspension. She describes the agreed plan, risks, and utility positions, and invites questions.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\"maxim\": \"quantity\", \"description\": \"Provides excessive detail about meeting outcomes, risks, and utility positions beyond what is necessary for a simple update.\", \"signal\": \"Signals need to justify actions and manage expectations due to high stakes and potential blame.\"},\n          {\"maxim\": \"manner\", \"description\": \"Uses ambiguous phrases like 'hammer out an agreement' and 'It was news to the utilities' to imply surprise and difficulty.\", \"signal\": \"Implies that the situation is complex and that the sender is working hard to navigate it.\"}\n        ],\n        \"indirect_speech_acts\": [\n          \"The statement 'Call with any questions' is an indirect request for feedback or clarification, but also signals openness.\"\n        ],\n        \"implicature\": \"Susan is providing a comprehensive update to ensure all recipients are informed and aligned, while also subtly managing expectations about risks and potential failures. She is positioning herself as a proactive leader who is handling a difficult situation.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Susan holds informational power as the meeting participant and reporter. She uses inclusive language ('we', 'our') to build solidarity, but also asserts authority by stating positions ('I told them that any drop-dead date... would be unacceptable to Enron').\",\n        \"face_threats\": \"Threatens negative face of recipients by imposing a heavy informational load and requiring action (submitting lists by Friday). Also threatens positive face of utilities by highlighting their lack of knowledge and disagreement.\",\n        \"politeness_strategy\": \"negative_politeness\",\n        \"tone_label\": \"neutral\"\n      },\n      \"risk_level\": \"caution\"\n    }\n  ],\n  \"thread_level\": {\n    \"tone_trajectory\": [\"neutral\"],\n    \"overall_risk\": \"caution\",\n    \"recommended_strategy\": \"Acknowledge receipt and confirm understanding of the plan and risks. Ask specific clarifying questions about the verification process and SCE situation to demonstrate engagement and ensure alignment.\",\n    \"common_mistakes\": [\n      \"Ignoring the detailed risks and assuming the plan is final.\",\n      \"Failing to submit customer lists by the deadline, which could lead to exclusion.\",\n      \"Not addressing the SCE issue separately, leaving it unresolved.\"\n    ]\n  }\n}",
+        "memory_block": "--- MEMORY CONTEXT (evidence only — derive conclusions yourself) ---\nCurrent sender: Mara, Susan\nPrior interactions with this sender: 34 emails over 28 days.\nPrior cheap-pass tone observations (per-email triage labels): ['neutral', 'neutral', 'neutral', 'neutral', 'cool', 'neutral', 'neutral', 'warm']\nUnanswered asks accumulated from this sender: ['Jim may need to reconcile the two separate pieces', 'Call with any questions', 'Let me know if you have any other questions', 'forward the application to agreed signatories', 'Need to get individual customers to sign on']\nThread 'esp/udc/cpuc meeting on implementation of da suspension': 1 emails, status open, last activity 2001-10-03.\n--- END MEMORY CONTEXT ---"
+      }
+    },
+    {
+      "email_idx": 344,
+      "category": "request_with_asks",
+      "sender": "Mara, Susan",
+      "date_iso": "2001-10-11T04:41:12+00:00",
+      "subject": "Jim's requested analysis",
+      "triage": {
+        "intent": "information_sharing",
+        "urgency": "medium",
+        "risk_level": "warning",
+        "tone_label": "cool",
+        "key_signals": [
+          "I could not open attachment",
+          "Jeff did not incorporate my notes"
+        ],
+        "open_asks": [
+          "Jim may need to reconcile the two separate pieces"
+        ],
+        "_email_idx": 344,
+        "_cached": false
+      },
+      "open_asks": [
+        "Jim may need to reconcile the two separate pieces"
+      ],
+      "cold": {
+        "draft": {
+          "draft_text": "Dear Sue,\n\nThank you for your note. I understand the difficulty with the attachment and appreciate your efforts. I will proceed with the two pieces you and Jeff provided.\n\nBest,\nJim",
+          "rationale": "Acknowledges the issue, thanks Sue, and confirms next steps based on her suggestion."
+        },
+        "tokens": {
+          "prompt_tokens": 260,
+          "completion_tokens": 75,
+          "total_tokens": 335,
+          "source": "measured",
+          "wall_ms": 2073
+        }
+      },
+      "scaffolded": {
+        "draft": {
+          "draft_text": "Dear Sue,\n\nThank you for your efforts in trying to open the attachment and for sending your analysis. I understand the frustration. I will work with the two pieces you and Jeff have provided and reconcile them as needed. I'll also follow up with Jeff about the attachment issue and incorporating your notes.\n\nBest,\nJim",
+          "rationale": "Acknowledges Sue's effort and frustration, takes ownership of reconciling the pieces, and commits to addressing the attachment issue with Jeff to prevent future problems."
+        },
+        "tokens": {
+          "prompt_tokens": 1091,
+          "completion_tokens": 114,
+          "total_tokens": 1205,
+          "source": "measured",
+          "wall_ms": 2175
+        },
+        "pic_analysis": "{\n  \"per_email_analysis\": [\n    {\n      \"email_index\": 1,\n      \"from\": \"Mara, Susan\",\n      \"literal_content\": \"Sue spent 20 minutes trying to open Jeff's Excel attachment but couldn't. Jeff did not incorporate her notes. She tells Jim he'll have to use the two separate pieces they sent.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\"maxim\": \"quantity\", \"description\": \"Sue provides more detail than necessary (20 minutes, 'could not') to emphasize the difficulty.\", \"signal\": \"Frustration and blame towards Jeff.\"},\n          {\"maxim\": \"manner\", \"description\": \"Use of 'SO' and 'I guess' creates ambiguity about whether this is a suggestion or a directive.\", \"signal\": \"Sue is distancing herself from responsibility.\"}\n        ],\n        \"indirect_speech_acts\": [\n          \"Complaint disguised as a factual report: 'I spent 20 minutes trying to open Jeff's excell attachment. I could not.'\",\n          \"Indirect refusal to redo work: 'Jeff did not incorporate my notes into his. SO, Jim I guess you'll just have to go with the two pieces you got from us.'\"\n        ],\n        \"implicature\": \"Sue is frustrated with Jeff for not incorporating her notes and for sending an unopenable attachment. She is implicitly blaming Jeff for the incomplete analysis and telling Jim that he must work with the separate pieces because she is not going to fix the situation.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Sue positions herself as a subordinate who is unable to resolve the issue, deferring to Jim. She uses 'I guess' to soften the directive, but the tone suggests she expects Jim to accept the situation.\",\n        \"face_threats\": \"Threatens Jeff's positive face by highlighting his failure to incorporate notes and send a usable attachment. Also threatens Jim's negative face by imposing the burden of reconciling two separate pieces.\",\n        \"politeness_strategy\": \"negative_politeness\",\n        \"tone_label\": \"cool\"\n      },\n      \"risk_level\": \"warning\"\n    }\n  ],\n  \"thread_level\": {\n    \"tone_trajectory\": [\"cool\"],\n    \"overall_risk\": \"warning\",\n    \"recommended_strategy\": \"Jim should acknowledge Sue's frustration and take ownership of reconciling the two pieces, while also addressing the attachment issue with Jeff separately. A response that validates Sue's effort ('Thanks for trying, Sue') and clarifies next steps ('I'll work with what I have and follow up with Jeff about the attachment') would rebuild rapport and reduce tension.\",\n    \"common_mistakes\": [\n      \"Ignoring Sue's frustration and simply asking for the analysis again.\",\n      \"Blaming Sue for not resolving the attachment issue.\",\n      \"Failing to address Jeff's lack of incorporation of notes, which may escalate conflict.\"\n    ]\n  }\n}",
+        "memory_block": "--- MEMORY CONTEXT (evidence only — derive conclusions yourself) ---\nCurrent sender: Mara, Susan\nPrior interactions with this sender: 34 emails over 35 days.\nPrior cheap-pass tone observations (per-email triage labels): ['neutral', 'neutral', 'neutral', 'neutral', 'cool', 'neutral', 'neutral', 'warm']\nUnanswered asks accumulated from this sender: ['Jim may need to reconcile the two separate pieces', 'Call with any questions', 'Let me know if you have any other questions', 'forward the application to agreed signatories', 'Need to get individual customers to sign on']\nThread 'jim's requested analysis': 1 emails, status open, last activity 2001-10-11.\n--- END MEMORY CONTEXT ---"
+      }
+    },
+    {
+      "email_idx": 59,
+      "category": "request_with_asks",
+      "sender": "Mara, Susan",
+      "date_iso": "2001-09-10T20:11:41+00:00",
+      "subject": "New Attack on Davis",
+      "triage": {
+        "intent": "information_sharing",
+        "urgency": "medium",
+        "risk_level": "caution",
+        "tone_label": "neutral",
+        "key_signals": [
+          "Sharing a potentially critical website without context",
+          "Asking about the source behind it"
+        ],
+        "open_asks": [
+          "Do we know who's behind this?"
+        ],
+        "_email_idx": 59,
+        "_cached": false
+      },
+      "open_asks": [
+        "Do we know who's behind this?"
+      ],
+      "cold": {
+        "draft": {
+          "draft_text": "Dear Susan,\n\nThank you for sharing the link. We are looking into the source of the website and will follow up with any findings.\n\nBest,\nKaren",
+          "rationale": "Acknowledges the request for information about the website's origin and confirms action is being taken."
+        },
+        "tokens": {
+          "prompt_tokens": 242,
+          "completion_tokens": 70,
+          "total_tokens": 312,
+          "source": "measured",
+          "wall_ms": 2052
+        }
+      },
+      "scaffolded": {
+        "draft": {
+          "draft_text": "Dear Susan,\n\nThank you for sharing the link. I will look into it and see if I can find out who is behind the site. I'll follow up with any findings.\n\nBest,\n[Your Name]",
+          "rationale": "Acknowledges the request, commits to investigating, and maintains a professional tone while addressing the implied urgency."
+        },
+        "tokens": {
+          "prompt_tokens": 960,
+          "completion_tokens": 84,
+          "total_tokens": 1044,
+          "source": "measured",
+          "wall_ms": 1573
+        },
+        "pic_analysis": "{\n  \"per_email_analysis\": [\n    {\n      \"email_index\": 1,\n      \"from\": \"Mara, Susan\",\n      \"literal_content\": \"Susan asks recipients to check a website and inquires if they know who is behind it.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\n            \"maxim\": \"quantity\",\n            \"description\": \"Provides minimal information about the website and its relevance.\",\n            \"signal\": \"Assumes recipients already have context about the 'attack on Davis'.\"\n          },\n          {\n            \"maxim\": \"relevance\",\n            \"description\": \"The subject line 'New Attack on Davis' is not directly explained in the body.\",\n            \"signal\": \"Implicates that the website is part of an attack, but doesn't elaborate.\"\n          }\n        ],\n        \"indirect_speech_acts\": [\n          \"The question 'Do we know who's behind this?' is an indirect request for information or investigation.\"\n        ],\n        \"implicature\": \"Susan believes the website is a threat or attack on someone named Davis, and she wants the team to identify the responsible party. She assumes shared knowledge about the context.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Susan is initiating a task for the group, using a directive tone ('Check out') and a question that implies action. She holds some authority or at least expects responsiveness.\",\n        \"face_threats\": \"The request to investigate could threaten negative face (autonomy) of recipients by imposing on their time. However, the casual phrasing mitigates this.\",\n        \"politeness_strategy\": \"negative_politeness\",\n        \"tone_label\": \"neutral\"\n      },\n      \"risk_level\": \"caution\"\n    }\n  ],\n  \"thread_level\": {\n    \"tone_trajectory\": [\"neutral\"],\n    \"overall_risk\": \"caution\",\n    \"recommended_strategy\": \"Respond with a brief acknowledgment and a commitment to investigate, or provide known information if available. This addresses the indirect request and maintains rapport.\",\n    \"common_mistakes\": [\n      \"Ignoring the email or not responding, which could be seen as dismissive.\",\n      \"Responding with a simple 'I don't know' without offering to look into it, which may be perceived as unhelpful.\",\n      \"Assuming the website is harmless and not treating it as a potential threat, missing the implied urgency.\"\n    ]\n  }\n}",
+        "memory_block": "--- MEMORY CONTEXT (evidence only — derive conclusions yourself) ---\nCurrent sender: Mara, Susan\nPrior interactions with this sender: 34 emails over 5 days.\nPrior cheap-pass tone observations (per-email triage labels): ['neutral', 'neutral', 'neutral', 'neutral', 'cool', 'neutral', 'neutral', 'warm']\nUnanswered asks accumulated from this sender: ['Jim may need to reconcile the two separate pieces', 'Call with any questions', 'Let me know if you have any other questions', 'forward the application to agreed signatories', 'Need to get individual customers to sign on']\nThread 'new attack on davis': 1 emails, status open, last activity 2001-09-10.\n--- END MEMORY CONTEXT ---"
+      }
+    },
+    {
+      "email_idx": 76,
+      "category": "request_with_asks",
+      "sender": "Mara, Susan",
+      "date_iso": "2001-09-12T20:12:35+00:00",
+      "subject": "Planned Filing on Retro DA Suspension -- good news/bad news",
+      "triage": {
+        "intent": "request",
+        "urgency": "high",
+        "risk_level": "caution",
+        "tone_label": "neutral",
+        "key_signals": [
+          "Requires immediate action to meet Friday filing deadline",
+          "Multiple dependencies on other parties"
+        ],
+        "open_asks": [
+          "Identify who at Enron will file declarations",
+          "Confirm ASAP availability"
+        ],
+        "_email_idx": 76,
+        "_cached": false
+      },
+      "open_asks": [
+        "Identify who at Enron will file declarations",
+        "Confirm ASAP availability"
+      ],
+      "cold": {
+        "draft": {
+          "draft_text": "Dear Sue,\n\nThank you for the update. I understand the urgency and the need to coordinate with all parties. Please proceed with lining up the joint parties and declarations. I will identify the appropriate Enron representative for the filing and get back to you shortly.\n\nBest,\nRobert C. Williams",
+          "rationale": "Acknowledges the key points and requests, confirms action, and promises follow-up on the specific request for Enron's representative."
+        },
+        "tokens": {
+          "prompt_tokens": 485,
+          "completion_tokens": 104,
+          "total_tokens": 589,
+          "source": "measured",
+          "wall_ms": 1975
+        }
+      },
+      "scaffolded": {
+        "draft": {
+          "draft_text": "Dear SueMara,\n\nThank you for the detailed update. I understand the requirement to seek a stay from the CPUC before filing in court and the need to coordinate joint parties and declarations by Friday AM. I will identify the appropriate contact at Enron to handle the filing and will get back to you shortly with that information. Please let me know if there is anything else needed from our side.\n\nBest,\nRobert Williams",
+          "rationale": "Acknowledges the urgency and confirms understanding of the requirements, while committing to provide a specific point of contact to reduce ambiguity and show cooperation."
+        },
+        "tokens": {
+          "prompt_tokens": 1291,
+          "completion_tokens": 132,
+          "total_tokens": 1423,
+          "source": "measured",
+          "wall_ms": 2367
+        },
+        "pic_analysis": "{\n  \"per_email_analysis\": [\n    {\n      \"email_index\": 1,\n      \"from\": \"Mara, Susan\",\n      \"literal_content\": \"SueMara reports that they must seek a stay from the CPUC before filing in court, and need to coordinate joint parties and declarations by Friday AM.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\"maxim\": \"quantity\", \"description\": \"Uses all caps for 'WE ARE REQUIRED TO SEEK A STAY/REQUEST FOR REHEARING' and 'ALL our points' which is more emphatic than necessary.\", \"signal\": \"Emphasizes urgency and non-negotiability of the requirement.\"},\n          {\"maxim\": \"manner\", \"description\": \"Subject line says 'good news/bad news' but email only presents constraints and tasks, no positive framing.\", \"signal\": \"Implicitly signals that the situation is mostly bad news, but tries to soften with 'good news' framing.\"}\n        ],\n        \"indirect_speech_acts\": [\n          \"Request for action: 'We need to identify who at Enron would be filing this and get it going' is a directive disguised as a statement of need.\",\n          \"Request for confirmation: 'Please let me know ASAP' is a polite request for a response, but implies urgency.\"\n        ],\n        \"implicature\": \"SueMara is signaling that the timeline is extremely tight and she needs immediate cooperation from recipients to meet the Friday deadline.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"SueMara positions herself as a coordinator with some authority, but defers to the recipients (especially Robert Williams) for decisions. She uses inclusive 'we' but also gives directives.\",\n        \"face_threats\": \"Threatens negative face of recipients by imposing urgent deadlines and requesting immediate action. Also threatens positive face by implying that failure to act would cause harm.\",\n        \"politeness_strategy\": \"negative_politeness\",\n        \"tone_label\": \"neutral\"\n      },\n      \"risk_level\": \"caution\"\n    }\n  ],\n  \"thread_level\": {\n    \"tone_trajectory\": [\"neutral\"],\n    \"overall_risk\": \"caution\",\n    \"recommended_strategy\": \"Acknowledge receipt and confirm understanding of the requirements. Provide a clear point of contact for Enron's filing to reduce ambiguity. Use positive politeness to show cooperation and mitigate the face threat of the urgent request.\",\n    \"common_mistakes\": [\n      \"Ignoring the urgency and delaying response, which could jeopardize the timeline.\",\n      \"Responding with a vague commitment without specifying who will handle the Enron filing.\",\n      \"Failing to address the implicit request for confirmation, leaving SueMara uncertain about next steps.\"\n    ]\n  }\n}",
+        "memory_block": "--- MEMORY CONTEXT (evidence only — derive conclusions yourself) ---\nCurrent sender: Mara, Susan\nPrior interactions with this sender: 34 emails over 7 days.\nPrior cheap-pass tone observations (per-email triage labels): ['neutral', 'neutral', 'neutral', 'neutral', 'cool', 'neutral', 'neutral', 'warm']\nUnanswered asks accumulated from this sender: ['Jim may need to reconcile the two separate pieces', 'Call with any questions', 'Let me know if you have any other questions', 'forward the application to agreed signatories', 'Need to get individual customers to sign on']\nThread 'planned filing on retro da suspension -- good news/bad news': 1 emails, status open, last activity 2001-09-12.\n--- END MEMORY CONTEXT ---"
+      }
+    },
+    {
+      "email_idx": 257,
+      "category": "face_sensitive",
+      "sender": "Kaufman, Paul",
+      "date_iso": "2001-10-02T21:06:01+00:00",
+      "subject": "RE: California Update--10.02.01:  PUC Turns Down Davis' Proposed\n Rate Agreement with DWR",
+      "triage": {
+        "intent": "follow_up",
+        "urgency": "medium",
+        "risk_level": "warning",
+        "tone_label": "hostile",
+        "key_signals": [
+          "stop yanking my chain",
+          "What have you done with Loretta?"
+        ],
+        "open_asks": [],
+        "_email_idx": 257,
+        "_cached": false
+      },
+      "open_asks": [],
+      "cold": {
+        "draft": {
+          "draft_text": "Paul,\n\nI assure you, it's really me. Just trying to keep things light. Let me know if you have any questions on the update.\n\nBest,\nJeff",
+          "rationale": "Acknowledges Paul's playful tone while reaffirming identity and redirecting to the substantive update."
+        },
+        "tokens": {
+          "prompt_tokens": 2243,
+          "completion_tokens": 73,
+          "total_tokens": 2316,
+          "source": "measured",
+          "wall_ms": 1495
+        }
+      },
+      "scaffolded": {
+        "draft": {
+          "draft_text": "Paul,\n\nSorry for the confusion. I was just joking about being engaged—Loretta is fine, and I'm still the same Jeff. Let me know if you have any questions about the California update.\n\nBest,\nJeff",
+          "rationale": "Directly addresses Kaufman's frustration by clarifying the joke and reaffirming sincerity, restoring rapport without escalating tension."
+        },
+        "tokens": {
+          "prompt_tokens": 3246,
+          "completion_tokens": 87,
+          "total_tokens": 3333,
+          "source": "measured",
+          "wall_ms": 2009
+        },
+        "pic_analysis": "{\n  \"per_email_analysis\": [\n    {\n      \"email_index\": 1,\n      \"from\": \"Kaufman, Paul\",\n      \"literal_content\": \"Kaufman asks Dasovich what he has done with Loretta, implying that Dasovich is not the real Jeff Dasovich.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\"maxim\": \"relevance\", \"description\": \"The question 'What have you done with Loretta?' is irrelevant to the forwarded update about California energy.\", \"signal\": \"Kaufman is using humor or sarcasm to signal that Dasovich's email is out of character or that he suspects someone else is writing.\"}\n        ],\n        \"indirect_speech_acts\": [\"The question is an indirect accusation or teasing, implying that Dasovich's behavior or tone is different, possibly due to a new relationship ('Loretta').\"],\n        \"implicature\": \"Kaufman is teasing Dasovich about a personal matter (Loretta), possibly indicating that Dasovich's recent behavior (e.g., sending a formal update) is unusual, and Kaufman is using humor to address it.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Kaufman and Dasovich appear to be peers; Kaufman's teasing suggests a familiar, informal relationship.\",\n        \"face_threats\": \"The teasing threatens Dasovich's positive face (desire to be liked/approved) by implying his behavior is odd, but it is mitigated by humor.\",\n        \"politeness_strategy\": \"off_record\",\n        \"tone_label\": \"warm\"\n      },\n      \"risk_level\": \"safe\"\n    },\n    {\n      \"email_index\": 2,\n      \"from\": \"Kaufman, Paul\",\n      \"literal_content\": \"Kaufman says 'stop yanking my chain' in response to Dasovich's reply 'We're engaged...'\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\"maxim\": \"manner\", \"description\": \"The phrase 'stop yanking my chain' is colloquial and ambiguous, violating the maxim of manner (be clear).\", \"signal\": \"Kaufman is expressing frustration or disbelief, using informal language to signal that he feels teased or misled.\"}\n        ],\n        \"indirect_speech_acts\": [\"The statement is an indirect request for Dasovich to stop joking or to provide a serious answer.\"],\n        \"implicature\": \"Kaufman believes Dasovich is joking or not taking his earlier question seriously, and he wants a genuine explanation about Loretta.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Kaufman asserts himself by demanding a stop to the teasing, indicating a peer relationship but with slight tension.\",\n        \"face_threats\": \"The statement threatens Dasovich's positive face by accusing him of being insincere or playful, and also threatens negative face by imposing a demand to stop.\",\n        \"politeness_strategy\": \"bald_on_record\",\n        \"tone_label\": \"cool\"\n      },\n      \"risk_level\": \"caution\"\n    }\n  ],\n  \"thread_level\": {\n    \"tone_trajectory\": [\"warm\", \"cool\"],\n    \"overall_risk\": \"caution\",\n    \"recommended_strategy\": \"Dasovich should clarify the 'Loretta' reference seriously to defuse Kaufman's frustration. A direct, sincere response acknowledging Kaufman's concern would restore rapport and avoid escalation.\",\n    \"common_mistakes\": [\n      \"Continuing the joke or teasing further, which could increase frustration.\",\n      \"Ignoring the question entirely, which would violate the maxim of relevance and damage rapport.\",\n      \"Responding defensively, which could escalate the cool tone into hostility.\"\n    ]\n  }\n}",
+        "memory_block": "--- MEMORY CONTEXT (evidence only — derive conclusions yourself) ---\nCurrent sender: Kaufman, Paul\nPrior interactions with this sender: 9 emails over 4 days.\nPrior cheap-pass tone observations (per-email triage labels): ['neutral', 'warm', 'neutral', 'neutral', 'hostile', 'neutral', 'neutral', 'neutral']\nUnanswered asks accumulated from this sender: ['Jeff: your thoughts??', 'Sue to review after Jeff', 'Jeff to review and modify spreadsheets']\nThread 'california update--10.02.01: puc turns down davis' proposed rate agreement with dwr': 2 emails, status open, last activity 2001-10-02.\n--- END MEMORY CONTEXT ---"
+      }
+    },
+    {
+      "email_idx": 251,
+      "category": "face_sensitive",
+      "sender": "Kaufman, Paul",
+      "date_iso": "2001-10-02T18:13:28+00:00",
+      "subject": "RE: Budget Spreadsheet",
+      "triage": {
+        "intent": "follow_up",
+        "urgency": "low",
+        "risk_level": "caution",
+        "tone_label": "warm",
+        "key_signals": [
+          "Thanks. Your attention is appreciated.",
+          "I know your swamped and focused on other things."
+        ],
+        "open_asks": [],
+        "_email_idx": 251,
+        "_cached": false
+      },
+      "open_asks": [],
+      "cold": {
+        "draft": {
+          "draft_text": "Jeff,\n\nThanks for the quick turnaround on the additions. I'll review your changes and pass them along to Sue. Appreciate your help on this.\n\nBest,\nPaul",
+          "rationale": "Acknowledges Jeff's work and confirms next steps, maintaining a professional tone without engaging in the informal banter."
+        },
+        "tokens": {
+          "prompt_tokens": 1830,
+          "completion_tokens": 78,
+          "total_tokens": 1908,
+          "source": "measured",
+          "wall_ms": 1475
+        }
+      },
+      "scaffolded": {
+        "draft": {
+          "draft_text": "Paul,\n\nI hear you. This budget process has been intense, and I appreciate all the work you've put into it. Your contributions are critical to keeping us on track, and I don't think anyone sees them as inadequate. Let's get through this together.\n\nBest,\nJeff",
+          "rationale": "Responds to Paul's vulnerable metaphor with reassurance and appreciation to restore his positive face, avoiding further task demands as recommended by the pragmatic analysis."
+        },
+        "tokens": {
+          "prompt_tokens": 3060,
+          "completion_tokens": 105,
+          "total_tokens": 3165,
+          "source": "measured",
+          "wall_ms": 1661
+        },
+        "pic_analysis": "{\n  \"per_email_analysis\": [\n    {\n      \"email_index\": 1,\n      \"from\": \"Kaufman, Paul\",\n      \"literal_content\": \"Paul sends a budget spreadsheet strawman with three sheets, instructs Jeff to review and modify, Sue to review after Jeff, and Alan to look and comment.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\n            \"maxim\": \"quantity\",\n            \"description\": \"Provides detailed instructions but no explanation of why the cuts are needed or the deadline rationale.\",\n            \"signal\": \"Assumes recipients understand the urgency and importance without elaboration.\"\n          }\n        ],\n        \"indirect_speech_acts\": [\n          \"Requests disguised as instructions: 'Please review ASAP' is a directive, not a polite request.\"\n        ],\n        \"implicature\": \"Paul is under pressure to deliver the budget to Rick by Wednesday and expects immediate compliance. He positions himself as the authority delegating tasks.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Paul holds hierarchical power, expressed through imperative mood ('Please review', 'add', 'delete', 'send') and control of the task flow.\",\n        \"face_threats\": \"Threatens Jeff's negative face (autonomy) by imposing a tight deadline and specific actions. Threatens Sue's negative face by requiring her to wait for Jeff.\",\n        \"politeness_strategy\": \"bald_on_record\",\n        \"tone_label\": \"neutral\"\n      },\n      \"risk_level\": \"caution\"\n    },\n    {\n      \"email_index\": 2,\n      \"from\": \"Kaufman, Paul\",\n      \"literal_content\": \"Paul thanks Jeff for his quick turnaround, acknowledges Jeff is busy, but emphasizes the importance of administrative details using analogies.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\n            \"maxim\": \"relevance\",\n            \"description\": \"The analogies about trains, electricity, and McDonald's are tangentially related to budget spreadsheets.\",\n            \"signal\": \"Paul is using humor to soften the imposition and reaffirm the value of the task.\"\n          }\n        ],\n        \"indirect_speech_acts\": [\n          \"The analogies serve as a face-saving reminder that the task is important, despite being mundane.\"\n        ],\n        \"implicature\": \"Paul is aware that Jeff is overloaded but insists the budget work is essential. He uses humor to mitigate the face threat of imposing on Jeff's time.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Paul maintains authority but uses positive politeness to reduce distance, acknowledging Jeff's workload.\",\n        \"face_threats\": \"Threatens Jeff's negative face by reiterating the importance of the task, but mitigates with thanks and humor.\",\n        \"politeness_strategy\": \"positive_politeness\",\n        \"tone_label\": \"warm\"\n      },\n      \"risk_level\": \"safe\"\n    },\n    {\n      \"email_index\": 3,\n      \"from\": \"Kaufman, Paul\",\n      \"literal_content\": \"Paul sends a cryptic reference to the movie 2001: A Space Odyssey, comparing himself to Hal being unplugged.\",\n      \"pragmatic_inference\": {\n        \"gricean_violations\": [\n          {\n            \"maxim\": \"manner\",\n            \"description\": \"The reference is obscure and ambiguous, violating clarity.\",\n            \"signal\": \"Paul is expressing vulnerability or frustration indirectly, using metaphor to avoid direct complaint.\"\n          }\n        ],\n        \"indirect_speech_acts\": [\n          \"The question is a disguised expression of feeling overwhelmed or criticized.\"\n        ],\n        \"implicature\": \"Paul feels his contributions are being devalued or that he is being phased out, similar to Hal's disconnection. He seeks empathy or reassurance from Jeff.\"\n      },\n      \"social_dynamics\": {\n        \"power_relationship\": \"Paul lowers his status by expressing vulnerability, inviting Jeff to respond supportively.\",\n        \"face_threats\": \"Threatens Paul's own positive face (desire to be competent) by admitting inadequacy. No threat to Jeff.\",\n        \"politeness_strategy\": \"off_record\",\n        \"tone_label\": \"evasive\"\n      },\n      \"risk_level\": \"warning\"\n    }\n  ],\n  \"thread_level\": {\n    \"tone_trajectory\": [\"neutral\", \"warm\", \"evasive\"],\n    \"overall_risk\": \"warning\",\n    \"recommended_strategy\": \"Respond to Paul's vulnerability with reassurance and appreciation. Acknowledge his effort and the value of his work to restore his positive face. Avoid further task demands until the emotional tone stabilizes.\",\n    \"common_mistakes\": [\n      \"Ignoring the emotional cue and continuing with task-focused discussion.\",\n      \"Responding with humor that might be misinterpreted as dismissive.\",\n      \"Failing to acknowledge Paul's contribution and instead pointing out errors.\"\n    ]\n  }\n}",
+        "memory_block": "--- MEMORY CONTEXT (evidence only — derive conclusions yourself) ---\nCurrent sender: Kaufman, Paul\nPrior interactions with this sender: 9 emails over 4 days.\nPrior cheap-pass tone observations (per-email triage labels): ['neutral', 'warm', 'neutral', 'neutral', 'hostile', 'neutral', 'neutral', 'neutral']\nUnanswered asks accumulated from this sender: ['Jeff: your thoughts??', 'Sue to review after Jeff', 'Jeff to review and modify spreadsheets']\nThread 'budget spreadsheet': 3 emails, status open, last activity 2001-10-02.\n--- END MEMORY CONTEXT ---"
+      }
+    }
+  ]
+}

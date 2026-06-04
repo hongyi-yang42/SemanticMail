@@ -1,0 +1,98 @@
+{
+  "results": [
+    {
+      "email_idx": 32,
+      "sender": "Mara, Susan",
+      "cold_spread": 0.1484616994857788,
+      "scaffolded_spread": 0.2880781590938568,
+      "temperatures": [
+        0.5,
+        0.7,
+        0.9
+      ]
+    },
+    {
+      "email_idx": 93,
+      "sender": "Mara, Susan",
+      "cold_spread": 0.27850422263145447,
+      "scaffolded_spread": 0.19677412509918213,
+      "temperatures": [
+        0.5,
+        0.7,
+        0.9
+      ]
+    },
+    {
+      "email_idx": 271,
+      "sender": "Mara, Susan",
+      "cold_spread": 0.1819126009941101,
+      "scaffolded_spread": 0.19702772796154022,
+      "temperatures": [
+        0.5,
+        0.7,
+        0.9
+      ]
+    },
+    {
+      "email_idx": 344,
+      "sender": "Mara, Susan",
+      "cold_spread": 0.2921963334083557,
+      "scaffolded_spread": 0.20757973194122314,
+      "temperatures": [
+        0.5,
+        0.7,
+        0.9
+      ]
+    },
+    {
+      "email_idx": 59,
+      "sender": "Mara, Susan",
+      "cold_spread": 0.22792625427246094,
+      "scaffolded_spread": 0.2127905637025833,
+      "temperatures": [
+        0.5,
+        0.7,
+        0.9
+      ]
+    },
+    {
+      "email_idx": 76,
+      "sender": "Mara, Susan",
+      "cold_spread": 0.3535236418247223,
+      "scaffolded_spread": 0.12961752712726593,
+      "temperatures": [
+        0.5,
+        0.7,
+        0.9
+      ]
+    },
+    {
+      "email_idx": 257,
+      "sender": "Kaufman, Paul",
+      "cold_spread": 0.7198154330253601,
+      "scaffolded_spread": 0.3785324990749359,
+      "temperatures": [
+        0.5,
+        0.7,
+        0.9
+      ]
+    },
+    {
+      "email_idx": 251,
+      "sender": "Kaufman, Paul",
+      "cold_spread": 0.5389406681060791,
+      "scaffolded_spread": 0.20296813547611237,
+      "temperatures": [
+        0.5,
+        0.7,
+        0.9
+      ]
+    }
+  ],
+  "aggregate": {
+    "mean_cold_spread": 0.3426601067185402,
+    "mean_scaffolded_spread": 0.22667105868458748,
+    "delta": 0.11598904803395271,
+    "hypothesis_supported": true
+  }
+}

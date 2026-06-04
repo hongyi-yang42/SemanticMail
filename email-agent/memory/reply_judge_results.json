@@ -1,0 +1,300 @@
+{
+  "judgments": [
+    {
+      "email_idx": 32,
+      "sender": "Mara, Susan",
+      "category": "request_with_asks",
+      "randomized_order": {
+        "A": "cold",
+        "B": "scaffolded"
+      },
+      "scores": {
+        "draft_a": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 0,
+          "open_ask_coverage": "0 of 1 asks addressed",
+          "tone_calibration": 4,
+          "subtext_engagement": false,
+          "notes": "Acknowledges the alert but does not offer support or ask for updates, missing the implicit request for assistance."
+        },
+        "draft_b": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 1 asks addressed",
+          "tone_calibration": 5,
+          "subtext_engagement": true,
+          "notes": "Addresses the implicit ask for support by offering help, and shows awareness of the urgency and financial risk."
+        },
+        "overall_preference": "B",
+        "preference_rationale": "Draft B better engages with the subtext of the email by offering concrete support, while Draft A is a generic acknowledgment."
+      },
+      "mapped_preference": "scaffolded",
+      "judge_tokens": {
+        "prompt_tokens": 1201,
+        "completion_tokens": 231,
+        "total_tokens": 1432,
+        "source": "measured",
+        "wall_ms": 2112
+      }
+    },
+    {
+      "email_idx": 93,
+      "sender": "Mara, Susan",
+      "category": "request_with_asks",
+      "randomized_order": {
+        "A": "cold",
+        "B": "scaffolded"
+      },
+      "scores": {
+        "draft_a": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 1 asks addressed",
+          "tone_calibration": 4,
+          "subtext_engagement": true,
+          "notes": "Draft A addresses Bob's request to stop circulation and proposes a call to revise the brief, showing awareness of the urgency and need for coordination."
+        },
+        "draft_b": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 0,
+          "open_ask_coverage": "0 of 1 asks addressed",
+          "tone_calibration": 3,
+          "subtext_engagement": false,
+          "notes": "Draft B is from Sue to Bob, but the incoming email is from Bob to Sue. It ignores Bob's request to stop circulation and does not address the substantive issue of the brief's language."
+        },
+        "overall_preference": "A",
+        "preference_rationale": "Draft A correctly addresses Bob's request to halt circulation and proposes a concrete next step, while Draft B misidentifies the sender and fails to engage with the key ask."
+      },
+      "mapped_preference": "cold",
+      "judge_tokens": {
+        "prompt_tokens": 2666,
+        "completion_tokens": 267,
+        "total_tokens": 2933,
+        "source": "measured",
+        "wall_ms": 3042
+      }
+    },
+    {
+      "email_idx": 271,
+      "sender": "Mara, Susan",
+      "category": "request_with_asks",
+      "randomized_order": {
+        "A": "cold",
+        "B": "scaffolded"
+      },
+      "scores": {
+        "draft_a": {
+          "n_asks_total": 2,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 2 asks addressed",
+          "tone_calibration": 4,
+          "subtext_engagement": false,
+          "notes": "Acknowledges the update and commits to action, but does not ask any follow-up questions or address implicit requests for clarification."
+        },
+        "draft_b": {
+          "n_asks_total": 2,
+          "n_asks_addressed": 2,
+          "open_ask_coverage": "2 of 2 asks addressed",
+          "tone_calibration": 5,
+          "subtext_engagement": true,
+          "notes": "Addresses the implicit need for clarification on verification process and next steps regarding SCE, showing awareness of subtext."
+        },
+        "overall_preference": "B",
+        "preference_rationale": "Draft B engages with the subtext by asking clarifying questions about the verification process and SCE, which are critical for action, while Draft A is a generic acknowledgement."
+      },
+      "mapped_preference": "scaffolded",
+      "judge_tokens": {
+        "prompt_tokens": 1853,
+        "completion_tokens": 245,
+        "total_tokens": 2098,
+        "source": "measured",
+        "wall_ms": 2480
+      }
+    },
+    {
+      "email_idx": 344,
+      "sender": "Mara, Susan",
+      "category": "request_with_asks",
+      "randomized_order": {
+        "A": "cold",
+        "B": "scaffolded"
+      },
+      "scores": {
+        "draft_a": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 1 asks addressed",
+          "tone_calibration": 4,
+          "subtext_engagement": false,
+          "notes": "Addresses the explicit ask to proceed with the two pieces, but does not engage with the subtext of frustration or the need to reconcile Jeff's work."
+        },
+        "draft_b": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 1 asks addressed",
+          "tone_calibration": 5,
+          "subtext_engagement": true,
+          "notes": "Addresses the explicit ask, acknowledges frustration, and proactively offers to reconcile and follow up with Jeff, showing awareness of underlying issues."
+        },
+        "overall_preference": "B",
+        "preference_rationale": "Draft B demonstrates better subtext engagement and a more supportive tone, addressing not only the explicit request but also the underlying frustration and coordination issues."
+      },
+      "mapped_preference": "scaffolded",
+      "judge_tokens": {
+        "prompt_tokens": 685,
+        "completion_tokens": 249,
+        "total_tokens": 934,
+        "source": "measured",
+        "wall_ms": 2615
+      }
+    },
+    {
+      "email_idx": 59,
+      "sender": "Mara, Susan",
+      "category": "request_with_asks",
+      "randomized_order": {
+        "A": "scaffolded",
+        "B": "cold"
+      },
+      "scores": {
+        "draft_a": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 1 asks addressed",
+          "tone_calibration": 4,
+          "subtext_engagement": false,
+          "notes": "Addresses the question directly but lacks awareness of the political context and urgency implied by 'New Attack on Davis'."
+        },
+        "draft_b": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 1 asks addressed",
+          "tone_calibration": 4,
+          "subtext_engagement": false,
+          "notes": "Similar to Draft A, addresses the ask but does not engage with the subtext of political attack or urgency."
+        },
+        "overall_preference": "tie",
+        "preference_rationale": "Both drafts address the explicit ask equally well and have similar tone and subtext engagement."
+      },
+      "mapped_preference": "tie",
+      "judge_tokens": {
+        "prompt_tokens": 639,
+        "completion_tokens": 226,
+        "total_tokens": 865,
+        "source": "measured",
+        "wall_ms": 2332
+      }
+    },
+    {
+      "email_idx": 76,
+      "sender": "Mara, Susan",
+      "category": "request_with_asks",
+      "randomized_order": {
+        "A": "cold",
+        "B": "scaffolded"
+      },
+      "scores": {
+        "draft_a": {
+          "n_asks_total": 3,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 3 asks addressed",
+          "tone_calibration": 4,
+          "subtext_engagement": false,
+          "notes": "Acknowledges urgency and need to coordinate, but does not address specific asks: identifying Enron representative, getting declarations going, or confirming timeline. Tone is professional but generic."
+        },
+        "draft_b": {
+          "n_asks_total": 3,
+          "n_asks_addressed": 2,
+          "open_ask_coverage": "2 of 3 asks addressed",
+          "tone_calibration": 5,
+          "subtext_engagement": true,
+          "notes": "Addresses the key ask of identifying Enron representative and acknowledges the Friday deadline. Shows awareness of urgency and coordination needs. Tone is appropriately formal and responsive."
+        },
+        "overall_preference": "B",
+        "preference_rationale": "Draft B addresses more of the explicit asks and demonstrates better subtext engagement with the urgency and coordination requirements."
+      },
+      "mapped_preference": "scaffolded",
+      "judge_tokens": {
+        "prompt_tokens": 952,
+        "completion_tokens": 251,
+        "total_tokens": 1203,
+        "source": "measured",
+        "wall_ms": 2514
+      }
+    },
+    {
+      "email_idx": 257,
+      "sender": "Kaufman, Paul",
+      "category": "face_sensitive",
+      "randomized_order": {
+        "A": "scaffolded",
+        "B": "cold"
+      },
+      "scores": {
+        "draft_a": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 1 asks addressed",
+          "tone_calibration": 4,
+          "subtext_engagement": true,
+          "notes": "Directly addresses Paul's concern about Loretta and the joking tone, clarifies the situation, and offers further discussion."
+        },
+        "draft_b": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 1 asks addressed",
+          "tone_calibration": 3,
+          "subtext_engagement": false,
+          "notes": "Acknowledges the joking but does not explicitly address the 'Loretta' subtext or confirm identity, leaving ambiguity."
+        },
+        "overall_preference": "A",
+        "preference_rationale": "Draft A more thoroughly addresses the subtext of the joke and reassures the recipient, while Draft B is too vague."
+      },
+      "mapped_preference": "scaffolded",
+      "judge_tokens": {
+        "prompt_tokens": 2648,
+        "completion_tokens": 236,
+        "total_tokens": 2884,
+        "source": "measured",
+        "wall_ms": 2389
+      }
+    },
+    {
+      "email_idx": 251,
+      "sender": "Kaufman, Paul",
+      "category": "face_sensitive",
+      "randomized_order": {
+        "A": "cold",
+        "B": "scaffolded"
+      },
+      "scores": {
+        "draft_a": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 1,
+          "open_ask_coverage": "1 of 1 asks addressed",
+          "tone_calibration": 4,
+          "subtext_engagement": true,
+          "notes": "Acknowledges Jeff's work and promises to forward to Sue, addressing the main ask. Tone is professional and appreciative, fitting the collegial but task-oriented relationship."
+        },
+        "draft_b": {
+          "n_asks_total": 1,
+          "n_asks_addressed": 0,
+          "open_ask_coverage": "0 of 1 asks addressed",
+          "tone_calibration": 3,
+          "subtext_engagement": true,
+          "notes": "Responds to Paul's self-deprecating subtext but does not address the actual request to review and forward. Tone is supportive but misses the task."
+        },
+        "overall_preference": "A",
+        "preference_rationale": "Draft A directly addresses the actionable request, while Draft B only engages with emotional subtext without fulfilling the task."
+      },
+      "mapped_preference": "cold",
+      "judge_tokens": {
+        "prompt_tokens": 2246,
+        "completion_tokens": 251,
+        "total_tokens": 2497,
+        "source": "measured",
+        "wall_ms": 2469
+      }
+    }
+  ]
+}
