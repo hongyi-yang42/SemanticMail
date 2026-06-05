@@ -5599,5 +5599,21 @@
     ],
     "_email_idx": 399,
     "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "deadline pressure with 'risk losing our position'",
+      "request for confirmation and scheduling"
+    ],
+    "open_asks": [
+      "confirm receipt",
+      "availability for meeting this week"
+    ],
+    "_email_idx": 400,
+    "_cached": true
   }
 ]
