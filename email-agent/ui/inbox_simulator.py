@@ -7,12 +7,16 @@ Phase 3 adds: draft review + critique + rewrite.
 
 import json
 import os
-import math
+import sys
 
 import streamlit as st
 import pandas as pd
 
-MEMORY_DIR = os.path.join(os.path.dirname(__file__), "..", "memory")
+_AGENT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if _AGENT_DIR not in sys.path:
+    sys.path.insert(0, _AGENT_DIR)
+
+MEMORY_DIR = os.path.join(_AGENT_DIR, "memory")
 
 RISK_COLORS = {
     "safe": "#28a745", "caution": "#ffc107",
@@ -47,6 +51,13 @@ def _init_state(emails):
         st.session_state.user_draft = ""
     if "critique" not in st.session_state:
         st.session_state.critique = None
+    if "_prev_selected" not in st.session_state:
+        st.session_state._prev_selected = st.session_state.selected_idx
+    # Reset draft + critique when switching emails
+    if st.session_state.selected_idx != st.session_state._prev_selected:
+        st.session_state.user_draft = ""
+        st.session_state.critique = None
+        st.session_state._prev_selected = st.session_state.selected_idx
 
 
 # ---------------------------------------------------------------------------
@@ -224,6 +235,25 @@ def _render_memory_recall(cache_entry, emails):
             st.info("No recalled emails for this message.")
             return
 
+        # Similarity graph as HTML (no graphviz dependency)
+        current_subject = emails[st.session_state.selected_idx].get("subject", "Current")[:30]
+        nodes_html = (
+            f'<div style="text-align:center;margin-bottom:12px">'
+            f'<span style="background:#2196F3;color:#fff;padding:4px 12px;'
+            f'border-radius:12px;font-size:0.85em">Current: {current_subject}</span>'
+        )
+        for j, r in enumerate(recalled):
+            score = r.get("score", 0)
+            pct = f"{score:.0%}"
+            short_from = r.get("from", "?")[:15]
+            nodes_html += (
+                f' <span style="color:#666">→</span> '
+                f'<span style="background:#e0e0e0;padding:4px 12px;'
+                f'border-radius:12px;font-size:0.85em">{short_from} ({pct})</span>'
+            )
+        nodes_html += "</div>"
+        st.markdown(nodes_html, unsafe_allow_html=True)
+
         # Show recalled emails as cards
         for r in recalled:
             score = r.get("score", 0)
@@ -392,7 +422,6 @@ Output ONLY the rewritten email text (no JSON, no markdown)."""
 
 
 def _run_draft_review(email_dict, triage, pic, cache_entry, user_draft, live):
-    sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
     from llm.cache import cached_call_llm
 
     open_asks = triage.get("open_asks", [])
@@ -420,7 +449,6 @@ def _run_draft_review(email_dict, triage, pic, cache_entry, user_draft, live):
 
 
 def _run_rewrite(email_dict, triage, pic, cache_entry, user_draft, live):
-    sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
     from llm.cache import cached_call_llm
 
     recommended = ""
