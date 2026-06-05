@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"OMB conditions may affect FERC's final decision\", \"ENA and EES submitted comments highlighting burden\"],\n    \"open_asks\": []\n}"
+}

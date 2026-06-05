@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"negotiation\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"I don't want to be identified with the letter\", \"I don't want to damage the relationships\"],\n    \"open_asks\": [\"Avoid drawing attention to QF contracts\", \"Pass Edison MOU bill for Enron Wind\"]\n}"
+}

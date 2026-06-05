@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"request for analysis of legal remedies\"],\n    \"open_asks\": [\"Analyze legal remedies if legislature enacts retroactive date\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"officially added\", \"please let me know right away\"],\n    \"open_asks\": [\"pick up books or readers\", \"notify if not adding class\"]\n}"
+}

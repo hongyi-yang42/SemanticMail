@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Urgent deadlines within weeks\", \"Coordination of large team for regulatory response\"],\n    \"open_asks\": [\"Team members to contact Project Leads if interested\", \"Project Leads to submit RCR requests if applicable\"]\n}"
+}

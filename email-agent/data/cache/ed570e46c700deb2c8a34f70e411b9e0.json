@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"casual inquiry about golf plans\", \"friendly tone with mention of wager\"],\n    \"open_asks\": [\"confirmation of golf participation\", \"details of game and wager\"]\n}"
+}

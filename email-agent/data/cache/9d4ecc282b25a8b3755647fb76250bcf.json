@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"uncertainty about PG&E's plans for rolling agreements\", \"request for a call to discuss\"],\n    \"open_asks\": [\"call me when you have a moment\"]\n}"
+}

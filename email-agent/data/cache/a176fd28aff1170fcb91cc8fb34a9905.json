@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"summary\": \"Li Wei follows up on his summer internship application at TechCorp, receives a generic update, then informs HR of a competing offer with a March 1st deadline. Sarah Chen acknowledges the situation but does not expedite the decision, leaving Li Wei to decide without clarity on TechCorp's timeline.\",\n    \"key_decisions\": [],\n    \"open_questions\": [\n        \"Will TechCorp provide a decision before Li Wei's March 1st deadline?\",\n        \"What is the status of Li Wei's application?\"\n    ],\n    \"participants\": [\n        \"Li Wei (Applicant)\",\n        \"Sarah Chen (HR Specialist, TechCorp)\"\n    ]\n}"
+}

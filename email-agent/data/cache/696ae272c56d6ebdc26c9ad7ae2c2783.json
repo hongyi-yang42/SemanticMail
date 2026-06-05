@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow-up\",\n    \"urgency\": \"high\",\n    \"urgency_signals\": [\"competing offer with March 1 deadline\", \"request for clarity on timeline\", \"candidate mentions time constraint\"],\n    \"confidence\": 0.85\n}"
+}

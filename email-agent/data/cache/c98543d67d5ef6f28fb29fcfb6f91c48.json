@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"forwarding a filing with no additional commentary or request\"],\n    \"open_asks\": []\n}"
+}

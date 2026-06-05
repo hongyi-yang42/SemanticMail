@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Forwarded email with technical question about DASR effective date\"],\n    \"open_asks\": [\"Is there someone on the California Crisis Team that can answer this question?\"]\n}"
+}

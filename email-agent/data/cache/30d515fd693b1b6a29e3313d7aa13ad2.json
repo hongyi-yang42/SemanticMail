@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"expresses enthusiasm ('Great to hear from you')\", \"shares personal update openly\"],\n    \"open_asks\": [\"Give me a ring sometime\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\n        \"Overall the modifications made should not negatively impact Transwestern\",\n        \"I still ascertain that TW can support the current 10/10 PD\"\n    ],\n    \"open_asks\": [\n        \"Discussion on conference call later this morning\",\n        \"Ensure SoCal and other CSA signatories are on board before filing comments\"\n    ]\n}"
+}

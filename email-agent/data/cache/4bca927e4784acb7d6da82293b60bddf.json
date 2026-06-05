@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Please see note from Elizabeth below, and respond directly to Rita Hartfield by tomorrow!!!\", \"If you haven't already responded, below is a list of potential/existing information resources and we invite you to identify your top five priorities\"],\n    \"open_asks\": [\"Respond to survey by October 18th\", \"Rank top five priorities from list\"]\n}"
+}

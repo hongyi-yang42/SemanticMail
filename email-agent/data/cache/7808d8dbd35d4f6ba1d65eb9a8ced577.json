@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"offers to follow up if Jeff is too busy\"],\n    \"open_asks\": [\"Will you call Tycholiz on this?\"]\n}"
+}

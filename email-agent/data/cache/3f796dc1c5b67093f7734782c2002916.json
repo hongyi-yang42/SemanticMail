@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Provides cost estimate and material details\", \"Asks for confirmation and map\"],\n    \"open_asks\": [\"Will you be installing the deck as discussed?\", \"Can you fax me a map to your place?\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Thanks - look forward to your input\", \"How about we get you on the line next week\"],\n    \"open_asks\": [\"Schedule a call for next week\"]\n}"
+}

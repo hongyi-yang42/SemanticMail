@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"SCE does not recognize that decision\", \"referred me to their letter to the CPUC\"],\n    \"open_asks\": [\"Do you know if the CPUC has given SCE permission to impose an earlier deadline?\"]\n}"
+}

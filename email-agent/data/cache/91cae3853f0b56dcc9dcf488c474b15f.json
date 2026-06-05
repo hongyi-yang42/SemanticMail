@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"confirms capacity terms without escalation for 2 years\", \"no penalty for capacity release\"],\n    \"open_asks\": [\"call back on Wednesday\"]\n}"
+}

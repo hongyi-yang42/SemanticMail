@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"negotiation\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Bob suggests revising the brief despite circulation\", \"Sue emphasizes urgency and prior circulation\"],\n    \"open_asks\": [\"Talk to Ed Duncan about revising the Brief\"]\n}"
+}

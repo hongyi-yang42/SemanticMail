@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Subject line indicates financial analysis of contracts\", \"Forwarding request from Tim to West Desk traders\"],\n    \"open_asks\": [\"Mo, please speak up if I got this wrong\"]\n}"
+}

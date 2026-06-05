@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"summary\": \"Huang Lei requests Su Qin to revise the landing page hero and CTA copy by Monday. Su Qin asks for design references and deadline extension, but Huang Lei confirms the Monday deadline, provides Stripe as a reference, and states the CTA edit is direct from the client.\",\n    \"key_decisions\": [\n        \"Hero section redesign direction: modern/clean, referencing Stripe's landing page.\",\n        \"CTA copy changes are direct client edits, no copy review needed.\",\n        \"Deadline remains Monday for client's Tuesday board presentation.\"\n    ],\n    \"open_questions\": [],\n    \"participants\": [\n        \"Huang Lei (Project Manager, Meridian Agency)\",\n        \"Su Qin (Designer, Meridian Agency)\"\n    ]\n}"
+}

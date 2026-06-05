@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"acknowledgment\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Single word 'Understood' with no elaboration\"],\n    \"open_asks\": []\n}"
+}

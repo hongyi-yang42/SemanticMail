@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"direct instruction to arrange call-in number\", \"specific time and purpose given\"],\n    \"open_asks\": [\"arrange call-in number for 10:30 am Houston time\"]\n}"
+}

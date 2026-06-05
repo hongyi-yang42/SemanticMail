@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"action_items\": [\n        {\n            \"task\": \"Set up temporary read-only access for Zhang Wei's team through end of next week\",\n            \"owner\": \"Li Bo\",\n            \"deadline\": \"Not specified\",\n            \"status\": \"pending\",\n            \"source_email\": \"Ma Director, Mar 21, 2026\"\n        },\n        {\n            \"task\": \"Review the data security policy after Q1 close\",\n            \"owner\": \"Ma Director\",\n            \"deadline\": \"Not specified\",\n            \"status\": \"pending\",\n            \"source_email\": \"Ma Director, Mar 21, 2026\"\n        }\n    ]\n}"
+}

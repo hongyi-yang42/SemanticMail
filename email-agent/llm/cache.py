@@ -60,6 +60,52 @@ def cached_call_llm(
     return response_text
 
 
+def cached_call_llm_with_usage(
+    system_prompt: str, user_prompt: str, temperature: float = 0.3, model: str = "deepseek-chat",
+) -> tuple[str, dict]:
+    """Call LLM with caching and token tracking.
+
+    On cache miss: captures real token counts and wall-clock time.
+    On cache hit: estimates tokens (chars/4) with source="estimated".
+
+    Returns (response_text, usage_dict).  usage_dict includes a ``source``
+    key (``"measured"`` or ``"estimated"``) and ``wall_ms``.
+    """
+    import time as _time
+
+    from llm.client import call_llm_with_usage as _call_with_usage
+
+    os.makedirs(CACHE_DIR, exist_ok=True)
+
+    key = _cache_key(system_prompt, user_prompt, temperature, model)
+    path = _cache_path(key)
+
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        response_text = data["response"]
+        est_in = max(1, (len(system_prompt) + len(user_prompt)) // 4)
+        est_out = max(1, len(response_text) // 4)
+        return response_text, {
+            "prompt_tokens": est_in,
+            "completion_tokens": est_out,
+            "total_tokens": est_in + est_out,
+            "source": "estimated",
+            "wall_ms": 0,
+        }
+
+    t0 = _time.time()
+    response_text, real_usage = _call_with_usage(system_prompt, user_prompt, temperature, model)
+    wall_ms = int((_time.time() - t0) * 1000)
+    real_usage["source"] = "measured"
+    real_usage["wall_ms"] = wall_ms
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"response": response_text}, f, ensure_ascii=False, indent=2)
+
+    return response_text, real_usage
+
+
 def cached_call_baseline_llm(
     system_prompt: str, user_prompt: str, temperature: float = 0.3, model: str = "baseline-gptoss"
 ) -> str:

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"proposes meetings to counter Edison's influence\", \"recommends meeting with Bilas and Brown\"],\n    \"open_asks\": [\"Should Enron or AReM meet with Bilas and Brown?\"]\n}"
+}

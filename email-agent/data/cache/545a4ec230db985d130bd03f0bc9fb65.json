@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"polite request for advice/opportunity\", \"clear explanation of situation and offers\"],\n    \"open_asks\": [\"whether Enron could benefit from his services\", \"suggestions for corporations or non-profits\"]\n}"
+}

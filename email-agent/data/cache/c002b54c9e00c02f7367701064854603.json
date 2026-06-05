@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"offers to set up call-in number if needed\", \"uses 'Let me know' indicating openness\"],\n    \"open_asks\": [\"confirmation if call-in number is needed\"]\n}"
+}

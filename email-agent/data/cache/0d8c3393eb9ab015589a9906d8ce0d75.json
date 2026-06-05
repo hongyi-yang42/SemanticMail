@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Requires immediate action to meet Friday filing deadline\", \"Multiple dependencies on other parties\"],\n    \"open_asks\": [\"Identify who at Enron will file declarations\", \"Confirm ASAP availability\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Greetings!\", \"I would be most appreciative\", \"Thank you and I look forward\"],\n    \"open_asks\": [\"Complete readings before October 27th\", \"Subscribe to Board Café online\"]\n}"
+}

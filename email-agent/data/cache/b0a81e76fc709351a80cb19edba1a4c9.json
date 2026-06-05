@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"discussion of regulatory risk and potential invalidation of deals\", \"request for consensus and quick decision\"],\n    \"open_asks\": [\"Please let me know your thoughts asap.\", \"If we need to have a quick call, I can set something up.\"]\n}"
+}

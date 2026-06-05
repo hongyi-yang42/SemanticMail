@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"Requests to fill in schedule via third party\", \"Corrective tone: 'in the future can you try'\"],\n    \"open_asks\": [\"Lysa to fill Joseph in with Alan's schedule in future\"]\n}"
+}

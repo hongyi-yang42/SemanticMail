@@ -1,0 +1,5603 @@
+[
+  {
+    "intent": "notification",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "officially added",
+      "please let me know right away"
+    ],
+    "open_asks": [
+      "pick up books or readers",
+      "confirm if not adding class"
+    ],
+    "_email_idx": 0,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "informational update about waitlist position"
+    ],
+    "open_asks": [],
+    "_email_idx": 1,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request with appreciation"
+    ],
+    "open_asks": [
+      "add Mike back to distribution list for CA updates"
+    ],
+    "_email_idx": 2,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "cool",
+    "key_signals": [
+      "There does appear to be some intelligence gathering going on at the CPUC",
+      "Clearly the CPUC has a right to ask anything they want - it is my understanding is that our customers have a confidentiality clause in their contract that prohibits them from responding"
+    ],
+    "open_asks": [
+      "Should Tom speak with legal about the inquiry?"
+    ],
+    "_email_idx": 3,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "routine scheduling change",
+      "no ambiguity or tension"
+    ],
+    "open_asks": [],
+    "_email_idx": 4,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "informational update about URM positions",
+      "clear instructions for requesting data"
+    ],
+    "open_asks": [
+      "any requests for specific utility data pending"
+    ],
+    "_email_idx": 5,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "detailed procedural analysis without emotional language",
+      "objective assessment of political dynamics"
+    ],
+    "open_asks": [],
+    "_email_idx": 6,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "Reiterates preference for bill signing date or Sept 1, citing substantial contracts executed at end of August"
+    ],
+    "open_asks": [
+      "None explicitly stated; update provided"
+    ],
+    "_email_idx": 7,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Jeff offered to focus more time on coordinating commercial issues",
+      "I trust this initiative will further enhance an already effective procedure"
+    ],
+    "open_asks": [
+      "Jane and Stephanie need to create a priority list of West Gas issues and hot button items"
+    ],
+    "_email_idx": 8,
+    "_cached": false
+  },
+  {
+    "intent": "acknowledgment",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Single word 'Understood' with no elaboration"
+    ],
+    "open_asks": [],
+    "_email_idx": 9,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Expresses uncertainty about class quality but in a neutral way",
+      "Friendly closing and offer to catch up"
+    ],
+    "open_asks": [
+      "Let me know if you're going to go to this class",
+      "or want to catch up on Tues during break"
+    ],
+    "_email_idx": 10,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "informative and friendly tone",
+      "no contentious or ambiguous language"
+    ],
+    "open_asks": [],
+    "_email_idx": 11,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "informative and helpful tone",
+      "no ambiguity or tension"
+    ],
+    "open_asks": [],
+    "_email_idx": 12,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "further to our conversation",
+      "Can you advise"
+    ],
+    "open_asks": [
+      "legal status/issues of listed companies",
+      "whether any companies are part of ongoing legal action against the state"
+    ],
+    "_email_idx": 13,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "direct instruction to arrange call-in number",
+      "specific time and purpose given"
+    ],
+    "open_asks": [
+      "arrange call-in number for 10:30 am Houston time"
+    ],
+    "_email_idx": 14,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Urgent action items with deadlines",
+      "Asking for guidance on approach"
+    ],
+    "open_asks": [
+      "How best to approach the California Restaurant Association?",
+      "Need help communicating with Boeing"
+    ],
+    "_email_idx": 15,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Loretta wants to rally votes to defeat the rate agreement",
+      "Bilas alternate doesn't work"
+    ],
+    "open_asks": [
+      "Need to rally votes against rate agreement"
+    ],
+    "_email_idx": 16,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "marketing email with sales promotion"
+    ],
+    "open_asks": [],
+    "_email_idx": 17,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request with explanation",
+      "friendly closing"
+    ],
+    "open_asks": [
+      "add to update list"
+    ],
+    "_email_idx": 18,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding call-in details for a scheduled meeting"
+    ],
+    "open_asks": [],
+    "_email_idx": 19,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "I like working through AReM on this as much as possible",
+      "When is the next deadline?"
+    ],
+    "open_asks": [
+      "When is the next deadline?"
+    ],
+    "_email_idx": 20,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "casual tone, friendly teasing about vacation"
+    ],
+    "open_asks": [],
+    "_email_idx": 21,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Do you want to do this?"
+    ],
+    "open_asks": [
+      "Whether Jeff wants to participate in the conference"
+    ],
+    "_email_idx": 22,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Thanks for the quick response",
+      "Enjoy your days off"
+    ],
+    "open_asks": [
+      "Let's hook up early next week to discuss a plan of attack on DWR"
+    ],
+    "_email_idx": 23,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Keep up the great work!!!",
+      "Thanks everybody."
+    ],
+    "open_asks": [
+      "Mike Day - draft language to fix SB78",
+      "Hedy & Bev - who should support the amendment?"
+    ],
+    "_email_idx": 24,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding a WSJ opinion article about California's energy crisis"
+    ],
+    "open_asks": [],
+    "_email_idx": 25,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a filing with no additional commentary or request"
+    ],
+    "open_asks": [],
+    "_email_idx": 26,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding multiple news articles without personal commentary",
+      "No direct request or action item"
+    ],
+    "open_asks": [],
+    "_email_idx": 27,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite reminder with clear consequence",
+      "friendly closing"
+    ],
+    "open_asks": [
+      "fill out address update form"
+    ],
+    "_email_idx": 28,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "departs from Enron's line of thinking",
+      "tendency to make these papers neutral, but I found it actually going the other direction"
+    ],
+    "open_asks": [
+      "Provide comments on paper one",
+      "Advise of your point of view"
+    ],
+    "_email_idx": 29,
+    "_cached": false
+  },
+  {
+    "intent": "agreement",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "I agree",
+      "there are both substantive and format problems",
+      "it does not read very well"
+    ],
+    "open_asks": [
+      "Will fax Amr my comments"
+    ],
+    "_email_idx": 30,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Assemblyman Hertzberg reportedly had 25 votes in favor of the bailout that he could count on, still 9 short of 41",
+      "Senate may introduce a new bailout bill designed to be unacceptable to the Assembly"
+    ],
+    "open_asks": [
+      "No explicit requests; report is informational"
+    ],
+    "_email_idx": 31,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "implies some retroactive action by the CPUC",
+      "some financial risk is possible"
+    ],
+    "open_asks": [
+      "Will the language be removed or clarified?"
+    ],
+    "_email_idx": 32,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "welcoming new rookies",
+      "clear instructions for submitting picks"
+    ],
+    "open_asks": [
+      "submission of weekly picks"
+    ],
+    "_email_idx": 33,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "brief reminder of scheduled call"
+    ],
+    "open_asks": [],
+    "_email_idx": 34,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding news articles without commentary",
+      "No personal opinion or action requested"
+    ],
+    "open_asks": [],
+    "_email_idx": 35,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "FYI -",
+      "This is to update you on several CA bills"
+    ],
+    "open_asks": [],
+    "_email_idx": 36,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding news article about legal dispute with state committee",
+      "subject line 'CA Energy Issues' suggests strategic awareness"
+    ],
+    "open_asks": [],
+    "_email_idx": 37,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "assurance to meet expectations",
+      "acknowledgment of absence"
+    ],
+    "open_asks": [
+      "review remarks from John Shelk"
+    ],
+    "_email_idx": 38,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "factual listing of events without evaluative language"
+    ],
+    "open_asks": [],
+    "_email_idx": 39,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "report-style update with no personal opinions or emotional language"
+    ],
+    "open_asks": [],
+    "_email_idx": 40,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "routine meeting announcement",
+      "no emotional language"
+    ],
+    "open_asks": [],
+    "_email_idx": 41,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "officially added",
+      "please come by to pick up your book"
+    ],
+    "open_asks": [
+      "let me know right away if you don't want to add this class"
+    ],
+    "_email_idx": 42,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "officially added",
+      "please let me know right away"
+    ],
+    "open_asks": [
+      "pick up books or readers",
+      "notify if not adding class"
+    ],
+    "_email_idx": 43,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "hostile",
+    "key_signals": [
+      "This is inbelievable. Will FERC pay attention now?"
+    ],
+    "open_asks": [],
+    "_email_idx": 44,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "offers to download and send material",
+      "encouraging tone: 'you should fit in nicely'"
+    ],
+    "open_asks": [],
+    "_email_idx": 45,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "offers to share login credentials",
+      "friendly closing 'See you Tuesday'"
+    ],
+    "open_asks": [],
+    "_email_idx": 46,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Good luck to all!!",
+      "just kidding, Andre"
+    ],
+    "open_asks": [
+      "If you have an e-mail address at home and would like to be added to the distribution list for the picks, let me know what your e-mail is and I will add it."
+    ],
+    "_email_idx": 47,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "automated notification of account addition",
+      "no direct request or action required"
+    ],
+    "open_asks": [],
+    "_email_idx": 48,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "automated notification of course addition",
+      "no personal content or request"
+    ],
+    "open_asks": [],
+    "_email_idx": 49,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "FYI -",
+      "forwarded article without personal commentary"
+    ],
+    "open_asks": [],
+    "_email_idx": 50,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "hoping to catch up",
+      "hope you can give me a bit of guidance"
+    ],
+    "open_asks": [
+      "guidance on California update for Ken Lay's talking points"
+    ],
+    "_email_idx": 51,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "enthusiastic",
+    "key_signals": [
+      "I am cheered to see Dow Jones reporting on the ISO's illegal practices",
+      "We should consider having IEP request that the Market Monitoring division of the ISO investigate"
+    ],
+    "open_asks": [
+      "Consider having IEP request investigation by Market Monitoring division"
+    ],
+    "_email_idx": 52,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Brief FYI forwarding of contact update"
+    ],
+    "open_asks": [],
+    "_email_idx": 53,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding news articles without commentary",
+      "No direct request or action item"
+    ],
+    "open_asks": [],
+    "_email_idx": 54,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "scheduled call for today at specific time",
+      "provides dial-in details"
+    ],
+    "open_asks": [],
+    "_email_idx": 55,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Subject line indicates a legal assessment, no emotional language"
+    ],
+    "open_asks": [],
+    "_email_idx": 56,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "apologetic explanation for actions taken without confirmation",
+      "acknowledgment of possible mistake"
+    ],
+    "open_asks": [
+      "Did you have a marvelous time?",
+      "Did they like the tomatoes?"
+    ],
+    "_email_idx": 57,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request with 'Do you mind'",
+      "cc list shows collaboration"
+    ],
+    "open_asks": [
+      "Send periodic updates to West gas desk and cc gas group"
+    ],
+    "_email_idx": 58,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Sharing a potentially critical website without context",
+      "Asking about the source behind it"
+    ],
+    "open_asks": [
+      "Do we know who's behind this?"
+    ],
+    "_email_idx": 59,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "request for analysis of legal remedies"
+    ],
+    "open_asks": [
+      "Analyze legal remedies if legislature enacts retroactive date"
+    ],
+    "_email_idx": 60,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "cool",
+    "key_signals": [
+      "questioning why they haven't been offered the same deal",
+      "perception of being treated differently and isolated"
+    ],
+    "open_asks": [
+      "Why haven't we been offered the same deal?"
+    ],
+    "_email_idx": 61,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "humorous opening 'while we've all got our address books out'",
+      "friendly tone with 'Thanks'"
+    ],
+    "open_asks": [],
+    "_email_idx": 62,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "apologetic tone for delay",
+      "casual explanation about difficulty hearing"
+    ],
+    "open_asks": [],
+    "_email_idx": 63,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "proposes meetings to counter Edison's influence",
+      "recommends meeting with Bilas and Brown"
+    ],
+    "open_asks": [
+      "Should Enron or AReM meet with Bilas and Brown?"
+    ],
+    "_email_idx": 64,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "critical",
+    "tone_label": "neutral",
+    "key_signals": [
+      "discussing legal action against state officials",
+      "framing investigation as 'witch hunt' and 'harassment'"
+    ],
+    "open_asks": [
+      "legal research on suing state officials",
+      "decide on four proposed courses of action"
+    ],
+    "_email_idx": 65,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "speculative tone: 'So I guess'",
+      "forwarding without additional commentary"
+    ],
+    "open_asks": [],
+    "_email_idx": 66,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "requesting action to send a letter"
+    ],
+    "open_asks": [
+      "Send out the attached letter"
+    ],
+    "_email_idx": 67,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded email without additional commentary",
+      "Subject line indicates review and comment"
+    ],
+    "open_asks": [],
+    "_email_idx": 68,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "caution",
+    "tone_label": "cool",
+    "key_signals": [
+      "Requests to fill in schedule via third party",
+      "Corrective tone: 'in the future can you try'"
+    ],
+    "open_asks": [
+      "Lysa to fill Joseph in with Alan's schedule in future"
+    ],
+    "_email_idx": 69,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request with clear deadline",
+      "offers support from Jeff Dasovich"
+    ],
+    "open_asks": [
+      "Confirm ability to produce one-page update by Thursday"
+    ],
+    "_email_idx": 70,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "requesting review and comment on a letter attacking DWR contracts",
+      "forwarded from CEERT board discussion"
+    ],
+    "open_asks": [
+      "Please review and provide feedback on the attached letter"
+    ],
+    "_email_idx": 71,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "expresses concern for safety and well-being",
+      "offers flexibility and reimbursement"
+    ],
+    "open_asks": [],
+    "_email_idx": 72,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "routine scheduling and information sharing",
+      "no relational tension"
+    ],
+    "open_asks": [
+      "Please feel free to communicate any additional agenda items to the group"
+    ],
+    "_email_idx": 73,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a news article without personal commentary"
+    ],
+    "open_asks": [],
+    "_email_idx": 74,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "attorney-client privilege notice",
+      "forwarded email with legal disclaimer"
+    ],
+    "open_asks": [],
+    "_email_idx": 75,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Requires immediate action to meet Friday filing deadline",
+      "Multiple dependencies on other parties"
+    ],
+    "open_asks": [
+      "Identify who at Enron will file declarations",
+      "Confirm ASAP availability"
+    ],
+    "_email_idx": 76,
+    "_cached": false
+  },
+  {
+    "intent": "agreement",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Of course I agree with this",
+      "I look forward to being with you all again"
+    ],
+    "open_asks": [
+      "Where to meet tonight?"
+    ],
+    "_email_idx": 77,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Invitation to FERC meeting with unclear scope",
+      "Privileged & Confidential marking"
+    ],
+    "open_asks": [
+      "Enron needs to decide who to send to the meeting",
+      "Possible need to prepare solutions/proposals in advance"
+    ],
+    "_email_idx": 78,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "ALERT-- CPUC VOTE DELAYED AGAIN!!!"
+    ],
+    "open_asks": [
+      "Will let you know when we know the new date for the meeting."
+    ],
+    "_email_idx": 79,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "FYI Item",
+      "For what its worth"
+    ],
+    "open_asks": [],
+    "_email_idx": 80,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "legal action preparation with tight timeline",
+      "expectation that CPUC will ignore filing"
+    ],
+    "open_asks": [
+      "Please let me know if you have customers interested in signing on"
+    ],
+    "_email_idx": 81,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "for what it's worth"
+    ],
+    "open_asks": [],
+    "_email_idx": 82,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "acknowledges tragedy but maintains routine communication",
+      "expresses uncertainty about NFL games"
+    ],
+    "open_asks": [
+      "none"
+    ],
+    "_email_idx": 83,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "cool",
+    "key_signals": [
+      "I'm in no hurry",
+      "I don't want to precipitate a palace coup led by Calpine"
+    ],
+    "open_asks": [],
+    "_email_idx": 84,
+    "_cached": false
+  },
+  {
+    "intent": "negotiation",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "cool",
+    "key_signals": [
+      "I don't want to be identified with the letter",
+      "I don't want to damage the relationships"
+    ],
+    "open_asks": [
+      "Avoid drawing attention to QF contracts",
+      "Pass Edison MOU bill for Enron Wind"
+    ],
+    "_email_idx": 85,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "states fact without elaboration",
+      "no emotional language"
+    ],
+    "open_asks": [],
+    "_email_idx": 86,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "requests error notification"
+    ],
+    "open_asks": [
+      "please let me know if other errors"
+    ],
+    "_email_idx": 87,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Reply from STEVEN KEAN is Yes to Text message"
+    ],
+    "open_asks": [],
+    "_email_idx": 88,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Suggesting a call of congratulations and job opportunities"
+    ],
+    "open_asks": [
+      "Prentice to call Bill Harris"
+    ],
+    "_email_idx": 89,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "'Let's just keep up the dialogue' suggests ongoing coordination",
+      "'let's be sure I can hit sempra asap' implies a pending action"
+    ],
+    "open_asks": [
+      "Ensure ability to contact Sempra as soon as possible"
+    ],
+    "_email_idx": 90,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding news articles without personal commentary",
+      "No direct request or action item"
+    ],
+    "open_asks": [],
+    "_email_idx": 91,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarded meeting confirmation with no new substantive content",
+      "offers to set up international line if needed"
+    ],
+    "open_asks": [
+      "Rick, if you need us to set up an international line, please advise"
+    ],
+    "_email_idx": 92,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "cool",
+    "key_signals": [
+      "Bob, we have to move fast -- we have to be prepared to file within a few hours of any CPUC action.",
+      "Given Bob's request, please do not circulate to any more of our customers until further notice."
+    ],
+    "open_asks": [
+      "Bob needs to review the language more closely before circulation.",
+      "Sue is asking customers to sign on for legal action."
+    ],
+    "_email_idx": 93,
+    "_cached": false
+  },
+  {
+    "intent": "agreement",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Agreed",
+      "very complete",
+      "very short"
+    ],
+    "open_asks": [],
+    "_email_idx": 94,
+    "_cached": false
+  },
+  {
+    "intent": "negotiation",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Bob suggests revising the brief despite circulation",
+      "Sue emphasizes urgency and prior circulation"
+    ],
+    "open_asks": [
+      "Talk to Ed Duncan about revising the Brief"
+    ],
+    "_email_idx": 95,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Direct question about airport arrival",
+      "No hedging or tension"
+    ],
+    "open_asks": [
+      "Which airport will you be arriving at?"
+    ],
+    "_email_idx": 96,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarded email with Yiddish Haiku, no personal or business content"
+    ],
+    "open_asks": [],
+    "_email_idx": 97,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "please add mike d smith and kelly higgason to your distribution list"
+    ],
+    "open_asks": [
+      "add mike d smith and kelly higgason to distribution list"
+    ],
+    "_email_idx": 98,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding news articles without commentary",
+      "No personal opinion or request expressed"
+    ],
+    "open_asks": [],
+    "_email_idx": 99,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "expresses love",
+      "reflection on what is important"
+    ],
+    "open_asks": [],
+    "_email_idx": 100,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "'thought you'd want to see this' - friendly sharing",
+      "'Call with questions!' - open invitation"
+    ],
+    "open_asks": [],
+    "_email_idx": 101,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request for advice/opportunity",
+      "clear explanation of situation and offers"
+    ],
+    "open_asks": [
+      "whether Enron could benefit from his services",
+      "suggestions for corporations or non-profits"
+    ],
+    "_email_idx": 102,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "SoCal will voluntarily file for bankruptcy or a creditor will take them into bankruptcy",
+      "Burton is reportedly avoiding discourse with Davis over AB67 XX"
+    ],
+    "open_asks": [
+      "Will the Senate pass AB67 XX before the midnight deadline?",
+      "Will SoCal file for bankruptcy if the bill fails or passes with insufficient rate base?"
+    ],
+    "_email_idx": 103,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a list with coordination instruction"
+    ],
+    "open_asks": [
+      "work with Tom Riley to coordinate"
+    ],
+    "_email_idx": 104,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded email with technical question about DASR effective date"
+    ],
+    "open_asks": [
+      "Is there someone on the California Crisis Team that can answer this question?"
+    ],
+    "_email_idx": 105,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Legislature adjourned without DA bill",
+      "Governor calling special session"
+    ],
+    "open_asks": [],
+    "_email_idx": 106,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a resolution passed by the Senate",
+      "states no longer an emergency in CA"
+    ],
+    "open_asks": [],
+    "_email_idx": 107,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Thanks, in advance",
+      "Thanks so much"
+    ],
+    "open_asks": [
+      "List of stakeholders from Enron Corp perspective in California",
+      "Suggestions for TURN or other organizations"
+    ],
+    "_email_idx": 108,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "uncertainty about CPUC vote outcome",
+      "need to move quickly to submit DASRs"
+    ],
+    "open_asks": [
+      "none explicitly pending"
+    ],
+    "_email_idx": 109,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "repeated question about DASR effective date cutoff",
+      "uncertainty about utility acceptance timing"
+    ],
+    "open_asks": [
+      "What is the time cutoff for DASR acceptance by utilities?"
+    ],
+    "_email_idx": 110,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "I hadn't heard about his changes",
+      "I will confirm meeting time"
+    ],
+    "open_asks": [
+      "What time's your weekly meeting on Thursday, and is there a call-in number?"
+    ],
+    "_email_idx": 111,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Directly provides requested contact information without hedging or delay."
+    ],
+    "open_asks": [],
+    "_email_idx": 112,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "forwarded prayer vigil invitation with spiritual language",
+      "no personal commentary or requests"
+    ],
+    "open_asks": [],
+    "_email_idx": 113,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a request to copy someone on summaries"
+    ],
+    "open_asks": [
+      "Please copy David LeBoe on summaries of significant regulatory events/issues."
+    ],
+    "_email_idx": 114,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "suggests internal discussion to determine response"
+    ],
+    "open_asks": [
+      "Should we cover this new found agency?"
+    ],
+    "_email_idx": 115,
+    "_cached": false
+  },
+  {
+    "intent": "agreement",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "That is perfect, Jeff, thanks so much!"
+    ],
+    "open_asks": [],
+    "_email_idx": 116,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "shares personal health update and house news",
+      "expresses empathy and well-wishes"
+    ],
+    "open_asks": [
+      "Are you still living on Dolores?",
+      "What do you think of the neighborhood?"
+    ],
+    "_email_idx": 117,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "low",
+    "risk_level": "caution",
+    "tone_label": "cool",
+    "key_signals": [
+      "extremly busy...much going on",
+      "will be in touch soon"
+    ],
+    "open_asks": [
+      "no explicit ask, but implies future contact"
+    ],
+    "_email_idx": 118,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "urgent language: 'extremely important'",
+      "action-oriented instructions"
+    ],
+    "open_asks": [],
+    "_email_idx": 119,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "discontinue external commercial activities",
+      "evaluate strategic alternatives"
+    ],
+    "open_asks": [
+      "follow up with Ross"
+    ],
+    "_email_idx": 120,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "literal request for action"
+    ],
+    "open_asks": [
+      "place apple slices"
+    ],
+    "_email_idx": 121,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Provides a contact recommendation with justification"
+    ],
+    "open_asks": [],
+    "_email_idx": 122,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "States DealBench will still be used internally for auctions and M&A datarooms"
+    ],
+    "open_asks": [],
+    "_email_idx": 123,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Steve is out of town until Friday",
+      "If you need me to track him down, just let me know"
+    ],
+    "open_asks": [
+      "If you need me to track him down, just let me know"
+    ],
+    "_email_idx": 124,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "casual offer to buy a trailer"
+    ],
+    "open_asks": [
+      "Does Jeff want to buy an Airstream trailer?"
+    ],
+    "_email_idx": 125,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request for help",
+      "appreciative closing"
+    ],
+    "open_asks": [
+      "Provide OFO history for listed LDCs"
+    ],
+    "_email_idx": 126,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding logistical details about conference call",
+      "no relational tension evident"
+    ],
+    "open_asks": [],
+    "_email_idx": 127,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a summary for meeting preparation",
+      "deadline-driven but routine coordination"
+    ],
+    "open_asks": [
+      "provide feedback for FERC comments"
+    ],
+    "_email_idx": 128,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Asks for source location to use info anonymously"
+    ],
+    "open_asks": [
+      "Where does the quote appear on the Treasurer's web site?"
+    ],
+    "_email_idx": 129,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Nevermind. I see the cite now.",
+      "Thanks for your time as well. We're doing our best to help."
+    ],
+    "open_asks": [],
+    "_email_idx": 130,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "expresses enthusiasm ('Great to hear from you')",
+      "shares personal update openly"
+    ],
+    "open_asks": [
+      "Give me a ring sometime"
+    ],
+    "_email_idx": 131,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Hope you're all lighting candles at 7:30"
+    ],
+    "open_asks": [],
+    "_email_idx": 132,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding memo for a case",
+      "Routine scheduling update"
+    ],
+    "open_asks": [],
+    "_email_idx": 133,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "deadline for comments by noon tomorrow",
+      "attached document for review"
+    ],
+    "open_asks": [
+      "any comments to be sent back by deadline"
+    ],
+    "_email_idx": 134,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "press release format",
+      "forward-looking statements disclaimer"
+    ],
+    "open_asks": [],
+    "_email_idx": 135,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "uncertainty about CPUC vote timing",
+      "pessimism from commercial consumers"
+    ],
+    "open_asks": [],
+    "_email_idx": 136,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "really would like to know your thoughts on who would get the retail customers",
+      "What is your opinion re direct access for this class of customers?"
+    ],
+    "open_asks": [
+      "Thoughts on jurisdiction and customer assignment under the reorganization plan",
+      "Opinion on direct access and legislative interplay"
+    ],
+    "_email_idx": 137,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "routine information sharing at Mark's request"
+    ],
+    "open_asks": [],
+    "_email_idx": 138,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "correction of phone number",
+      "factual listing"
+    ],
+    "open_asks": [],
+    "_email_idx": 139,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Can you fax the order?"
+    ],
+    "open_asks": [
+      "Fax the order to [PHONE]"
+    ],
+    "_email_idx": 140,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Brief, directive email asking for fax numbers to send decision language"
+    ],
+    "open_asks": [
+      "Please email Joseph Alamo with your fax number if you would like a copy"
+    ],
+    "_email_idx": 141,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a press release with no personal commentary",
+      "request for document distribution due to lack of internet access"
+    ],
+    "open_asks": [
+      "Alan requests the reorg plan from Michael and Lisa",
+      "Jeff asks Alan to find and distribute a more detailed version"
+    ],
+    "_email_idx": 142,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "CPUC terminated direct access despite pressure",
+      "Mirant and Reliant pushing involuntary bankruptcy for SCE"
+    ],
+    "open_asks": [
+      "determine SoCal's response to PG&E filing and Mirant-Reliant effort",
+      "pulse likelihood and timing of voluntary bankruptcy petition"
+    ],
+    "_email_idx": 143,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Request for thoughts/comments on attached document",
+      "Collaborative tone with cc's"
+    ],
+    "open_asks": [
+      "Review attachment and provide thoughts/comments"
+    ],
+    "_email_idx": 144,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "acknowledges emotional impact of 9/11",
+      "praises group for lack of bias towards Arab American colleague"
+    ],
+    "open_asks": [
+      "contact HR or Benefits Group for counseling services if needed"
+    ],
+    "_email_idx": 145,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded FYI with no additional commentary",
+      "Message states 'simply for your information, not because of any expected effect'"
+    ],
+    "open_asks": [
+      "Contact Calvin Yee or Michael Alexander if questions"
+    ],
+    "_email_idx": 146,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Please review the attached and provide comments."
+    ],
+    "open_asks": [
+      "Review and provide comments on the revised presentation."
+    ],
+    "_email_idx": 147,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Provides a contact with a description"
+    ],
+    "open_asks": [],
+    "_email_idx": 148,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "appreciative tone",
+      "sharing positive feedback about pie"
+    ],
+    "open_asks": [],
+    "_email_idx": 149,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "I am still leaning against pursuing things further with Norm, but I just felt compelled to do a bit of further diligence",
+      "I hate to bother you with this in light of everything you have going on"
+    ],
+    "open_asks": [
+      "Request for Jeff's sense on potential conflicts based on Norman's list",
+      "Implicit request for guidance on whether to proceed with hiring Norm"
+    ],
+    "_email_idx": 150,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "OMB conditions may affect FERC's final decision",
+      "ENA and EES submitted comments highlighting burden"
+    ],
+    "open_asks": [],
+    "_email_idx": 151,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "references potential FERC investigation into CAISO practices",
+      "mentions 'different spin' on meeting"
+    ],
+    "open_asks": [
+      "comments on attached talking points are welcome"
+    ],
+    "_email_idx": 152,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "introduces herself as TA",
+      "offers office hours and email contact"
+    ],
+    "open_asks": [
+      "none"
+    ],
+    "_email_idx": 153,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "brief, directive request to review attached report"
+    ],
+    "open_asks": [
+      "review attached report"
+    ],
+    "_email_idx": 154,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "promotional email subject line 'SAVE up to 30%'",
+      "HTML display fallback message"
+    ],
+    "open_asks": [],
+    "_email_idx": 155,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "We must go after this",
+      "I need some specific direction"
+    ],
+    "open_asks": [
+      "Set up a call on Mon or Tues with specified attendees"
+    ],
+    "_email_idx": 156,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Jeff offers to coordinate with admin",
+      "Jeremy asks Jeff to set up the call"
+    ],
+    "open_asks": [
+      "Set up the call with Sharon"
+    ],
+    "_email_idx": 157,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Good work getting all these in by 9:30. Thanks."
+    ],
+    "open_asks": [],
+    "_email_idx": 158,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "seeking concerns before proceeding",
+      "legal challenge to regulatory decision"
+    ],
+    "open_asks": [
+      "any concerns that would cause reconsideration"
+    ],
+    "_email_idx": 159,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding an article for awareness",
+      "No personal opinion or action requested"
+    ],
+    "open_asks": [],
+    "_email_idx": 160,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Factual correction without hedging"
+    ],
+    "open_asks": [],
+    "_email_idx": 161,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Let's hold off scheduling for the moment."
+    ],
+    "open_asks": [],
+    "_email_idx": 162,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "No personal message, just a link"
+    ],
+    "open_asks": [],
+    "_email_idx": 163,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Mentions deadline to file by Friday",
+      "Working to get customers to sign on"
+    ],
+    "open_asks": [],
+    "_email_idx": 164,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Asks 'What are our rights?' and 'Should we just let this go?' indicating uncertainty"
+    ],
+    "open_asks": [
+      "What are our rights regarding the ex parte communications?",
+      "Should we let this go?"
+    ],
+    "_email_idx": 165,
+    "_cached": false
+  },
+  {
+    "intent": "advice",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "cool",
+    "key_signals": [
+      "advises against recusal due to political disadvantage",
+      "suggests leaving matter to rest"
+    ],
+    "open_asks": [
+      "none"
+    ],
+    "_email_idx": 166,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "warning",
+    "tone_label": "hostile",
+    "key_signals": [
+      "Can't you send some folks over to give them a few lessons????",
+      "If these guys are manipulating the market they certainly aren't doing a very good job of it."
+    ],
+    "open_asks": [
+      "Resend the attachment"
+    ],
+    "_email_idx": 167,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "cool",
+    "key_signals": [
+      "dismissive characterization of PG&E's plan as 'Enron-envy'",
+      "sarcastic tone about falling flat on their faces"
+    ],
+    "open_asks": [],
+    "_email_idx": 168,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded FYI with no additional commentary",
+      "Routine update of contact information"
+    ],
+    "open_asks": [],
+    "_email_idx": 169,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "hostile",
+    "key_signals": [
+      "personal pleasure from seeing Glynn and Richard strike out",
+      "calls them pirates"
+    ],
+    "open_asks": [],
+    "_email_idx": 170,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Forwarding a report and news article with a collaborative tone",
+      "Expresses enjoyment working with the group and hope for future collaboration"
+    ],
+    "open_asks": [],
+    "_email_idx": 171,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "THIS MUST BE FILED BY FRIDAY",
+      "Love to have you with us"
+    ],
+    "open_asks": [
+      "Join as a party to the draft request for rehearing"
+    ],
+    "_email_idx": 172,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "do not release the full draft until you hear from me"
+    ],
+    "open_asks": [
+      "sign on to the Request for Rehearing",
+      "contact elected state representatives"
+    ],
+    "_email_idx": 173,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "friendly tone with jokes about Barrie's daughter",
+      "clear explanation of worksheets"
+    ],
+    "open_asks": [
+      "Please call if you have any question or spot an error"
+    ],
+    "_email_idx": 174,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "raises risk of utilities rejecting contracts or imposing restrictive requirements",
+      "highlights confidentiality issues and need to resist sharing sensitive information"
+    ],
+    "open_asks": [
+      "How to handle utility rejection of pre-Sept 20 contracts DASR'd after?",
+      "How to resist utility demands for sensitive contract provisions?"
+    ],
+    "_email_idx": 175,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding administrative information about new expense codes"
+    ],
+    "open_asks": [],
+    "_email_idx": 176,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Please respond by COB Thursday, Sept. 27th.",
+      "Attached for your review and comments is Draft No.4"
+    ],
+    "open_asks": [
+      "Review and comment on Draft No.4 by COB Thursday",
+      "Awaiting additional sections and changes from El Paso"
+    ],
+    "_email_idx": 177,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "apologizes for mistake",
+      "corrects previous information"
+    ],
+    "open_asks": [],
+    "_email_idx": 178,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "We should have a small window of opportunity",
+      "Please let me know"
+    ],
+    "open_asks": [
+      "Need to meet or more info from you"
+    ],
+    "_email_idx": 179,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "routine reminder for scheduled call"
+    ],
+    "open_asks": [],
+    "_email_idx": 180,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a news article with no personal commentary",
+      "factual reporting of rate decrease"
+    ],
+    "open_asks": [],
+    "_email_idx": 181,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "acknowledges possible overreaction but seeks input",
+      "appreciative language"
+    ],
+    "open_asks": [
+      "inputs and opinions on regulatory impact"
+    ],
+    "_email_idx": 182,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request for updates",
+      "appreciative language"
+    ],
+    "open_asks": [
+      "send updates on current projects",
+      "indicate if project completed/terminated"
+    ],
+    "_email_idx": 183,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "casual tone with typo ('Here;s')",
+      "expects only small changes"
+    ],
+    "open_asks": [],
+    "_email_idx": 184,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "positive announcement of role change",
+      "invitation to congratulate"
+    ],
+    "open_asks": [],
+    "_email_idx": 185,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Direct request to include Chamber of Commerce on petition for re-hearing."
+    ],
+    "open_asks": [
+      "Include Chamber of Commerce on petition for re-hearing."
+    ],
+    "_email_idx": 186,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Detailed factual summary of FERC meeting with no personal opinion or hedging"
+    ],
+    "open_asks": [
+      "Let us know if you have any questions"
+    ],
+    "_email_idx": 187,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding agenda as requested",
+      "Privileged and confidential header"
+    ],
+    "open_asks": [
+      "Please feel free to revise/add to/ update this table",
+      "Please feel free to communicate any additional agenda items to the group"
+    ],
+    "_email_idx": 188,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Reports on legislative progress and stakeholder positions without personal opinion"
+    ],
+    "open_asks": [],
+    "_email_idx": 189,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Re-sending due to delivery failure",
+      "Per our telephone conversation"
+    ],
+    "open_asks": [],
+    "_email_idx": 190,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding an email without additional commentary"
+    ],
+    "open_asks": [],
+    "_email_idx": 191,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "matter-of-fact announcement about lecture notes availability"
+    ],
+    "open_asks": [],
+    "_email_idx": 192,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "automated notification about handout availability"
+    ],
+    "open_asks": [],
+    "_email_idx": 193,
+    "_cached": false
+  },
+  {
+    "intent": "negotiation",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Proposes T&M basis with clear rates",
+      "Requests bi-weekly payment"
+    ],
+    "open_asks": [
+      "Does Jeff approve the terms?",
+      "Can they meet this weekend?"
+    ],
+    "_email_idx": 194,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "cool",
+    "key_signals": [
+      "We have not been subpoened this time, but some of our firends have",
+      "I just don't get it"
+    ],
+    "open_asks": [],
+    "_email_idx": 195,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "factual sharing of contact info",
+      "no emotional language"
+    ],
+    "open_asks": [],
+    "_email_idx": 196,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding without additional context or urgency"
+    ],
+    "open_asks": [
+      "Does someone at the Chamber want to see this?"
+    ],
+    "_email_idx": 197,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "discussion of regulatory risk and potential invalidation of deals",
+      "request for consensus and quick decision"
+    ],
+    "open_asks": [
+      "Please let me know your thoughts asap.",
+      "If we need to have a quick call, I can set something up."
+    ],
+    "_email_idx": 198,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded internal update on FERC policy changes",
+      "Mentions regulatory uncertainty and potential refunds"
+    ],
+    "open_asks": [],
+    "_email_idx": 199,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "conflicting agendas",
+      "tough one",
+      "I probably do not have enough history"
+    ],
+    "open_asks": [
+      "How does this play into this?",
+      "Should they be kept whole?"
+    ],
+    "_email_idx": 200,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "cool",
+    "key_signals": [
+      "SCE believes this decision is unlawful and unconstitutional",
+      "SCE intends to challenge through all appropriate avenues"
+    ],
+    "open_asks": [],
+    "_email_idx": 201,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Asks if recipient wants an update",
+      "Forwarding a file as requested"
+    ],
+    "open_asks": [
+      "Do you want me to have Steve update this?"
+    ],
+    "_email_idx": 202,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "humorous self-deprecation about dentist visit",
+      "casual tone with 'Hey' and exclamation marks"
+    ],
+    "open_asks": [],
+    "_email_idx": 203,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "please send your comments to Rob and me around midday today"
+    ],
+    "open_asks": [
+      "Pat and Sue to send comments by midday"
+    ],
+    "_email_idx": 204,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Haven't heard back from anyone except Mark",
+      "Deadline TOMORROW"
+    ],
+    "open_asks": [
+      "Need to get individual customers to sign on"
+    ],
+    "_email_idx": 205,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Attached is a memo outlining key aspects",
+      "Please call me if you have any questions"
+    ],
+    "open_asks": [],
+    "_email_idx": 206,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "acknowledges tardiness politely",
+      "appreciates feedback"
+    ],
+    "open_asks": [
+      "feedback on issues that are critical drivers"
+    ],
+    "_email_idx": 207,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Thanks - look forward to your input",
+      "How about we get you on the line next week"
+    ],
+    "open_asks": [
+      "Schedule a call for next week"
+    ],
+    "_email_idx": 208,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "cautions about data accuracy",
+      "offers to reconcile if given go-ahead"
+    ],
+    "open_asks": [
+      "Let me know what you think",
+      "if you need anything else"
+    ],
+    "_email_idx": 209,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "expresses appreciation despite acknowledging difficulties"
+    ],
+    "open_asks": [
+      "resume forwarding request"
+    ],
+    "_email_idx": 210,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Afternoon is better than the morning",
+      "You name the time"
+    ],
+    "open_asks": [
+      "Jeff to name a time for the call"
+    ],
+    "_email_idx": 211,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "terse request to forward to signatories"
+    ],
+    "open_asks": [
+      "forward the application to agreed signatories"
+    ],
+    "_email_idx": 212,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarded news article with no personal commentary",
+      "factual reporting of legislative delay"
+    ],
+    "open_asks": [],
+    "_email_idx": 213,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Identifies specific regulatory risks with potential adverse financial impact",
+      "Asks for feedback on completeness of list"
+    ],
+    "open_asks": [
+      "Please let me know if there are others I missed, or if there are changes needed to the ones listed."
+    ],
+    "_email_idx": 214,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "humorous tone ('must be a west coast kind of specialty')",
+      "helpful information about Glen Thomas"
+    ],
+    "open_asks": [],
+    "_email_idx": 215,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Brief acknowledgment without substantive feedback",
+      "No questions or requests for clarification"
+    ],
+    "open_asks": [],
+    "_email_idx": 216,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "I don't see an issue with this",
+      "I've cc'd Jeff Dasovich and Sue Mara to check in with them"
+    ],
+    "open_asks": [],
+    "_email_idx": 217,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request with 'could you please' and 'thanks'"
+    ],
+    "open_asks": [
+      "Send electronic version of matrix to Mr. Dasovich",
+      "Provide information on gas for the chart"
+    ],
+    "_email_idx": 218,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "We welcome your input",
+      "Thanks!"
+    ],
+    "open_asks": [
+      "Provide gas information if known"
+    ],
+    "_email_idx": 219,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Provides background on Dr. Pratt's credentials and involvement in Enron oral history project"
+    ],
+    "open_asks": [],
+    "_email_idx": 220,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "casual language 'cool...the mo the merrier'",
+      "hopeful request 'possible????'"
+    ],
+    "open_asks": [
+      "confirmation of location choice (recipient's or Prentice's)",
+      "availability for scanning net for Bolinas locations"
+    ],
+    "_email_idx": 221,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Attached is the September issue of Gas Flows which addresses natural gas prices & demand and Canadian supply."
+    ],
+    "open_asks": [],
+    "_email_idx": 222,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "routine summary of data",
+      "no personal or sensitive content"
+    ],
+    "open_asks": [],
+    "_email_idx": 223,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Request for comments before sending around",
+      "Detailed list of regulatory risks with request for input"
+    ],
+    "open_asks": [
+      "Comments on the taxonomy of regulatory risks",
+      "Suggestions for additional risks or changes"
+    ],
+    "_email_idx": 224,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Thank you for your support of free markets"
+    ],
+    "open_asks": [],
+    "_email_idx": 225,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded email with legal disclaimer and attachment"
+    ],
+    "open_asks": [],
+    "_email_idx": 226,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "We have no plans at this time to participate as a petitioning creditor in an involuntary bankruptcy filing",
+      "this letter is an attempt to avoid bankruptcy"
+    ],
+    "open_asks": [],
+    "_email_idx": 227,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "press release pointing out legal errors in Decision to suspend DA"
+    ],
+    "open_asks": [],
+    "_email_idx": 228,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "deadline pressure: 'due on Mon so I have to send it out today'",
+      "lack of effort: 'we have not put a lot of effort into this simply because we didnt think it was worth it'"
+    ],
+    "open_asks": [
+      "Barbara to confirm if CLECA wants to join by 11:00 am"
+    ],
+    "_email_idx": 229,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Walper's tone was cordial but raised concerns about forbearance and liquidation",
+      "Bates spoke 'out of school' indicating informal, cautious exchange"
+    ],
+    "open_asks": [
+      "Awaiting call from Walper on Monday",
+      "Request for email address of in-house contact"
+    ],
+    "_email_idx": 230,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Look forward to seeing you!",
+      "Call me when you get in on sat"
+    ],
+    "open_asks": [
+      "Call me when you get in on sat"
+    ],
+    "_email_idx": 231,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Expresses gratitude and emphasizes no blame on recipient",
+      "Explains decision thoroughly to avoid misunderstanding"
+    ],
+    "open_asks": [],
+    "_email_idx": 232,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Provides background on Glen Thomas's role and expected behavior",
+      "Offers to arrange a call if needed"
+    ],
+    "open_asks": [],
+    "_email_idx": 233,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "REMNDER!!!!!!! suggests informal urgency",
+      "neutral scheduling language"
+    ],
+    "open_asks": [
+      "please call if you have any questions"
+    ],
+    "_email_idx": 234,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Please help keep our office safe by not giving out the code to non-Enron San Francisco office employees."
+    ],
+    "open_asks": [],
+    "_email_idx": 235,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "John Burton will not look favorably upon including direct access",
+      "even 78xx would get only 36 votes today if it came up for a vote"
+    ],
+    "open_asks": [
+      "Will a compromise bill be ready by next Tuesday?",
+      "What happens if 78xx fails on Tuesday?"
+    ],
+    "_email_idx": 236,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "The new data are out from the CPUC. Only reported as of 8/31/01."
+    ],
+    "open_asks": [],
+    "_email_idx": 237,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "friendly request to welcome new employees",
+      "humorous tone ('give him your condolences')"
+    ],
+    "open_asks": [
+      "stop by and introduce yourself to Dennis Yee and Anthony Barr"
+    ],
+    "_email_idx": 238,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "matter-of-fact attachment of documents",
+      "no emotional language"
+    ],
+    "open_asks": [],
+    "_email_idx": 239,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "asks for more information about a deal"
+    ],
+    "open_asks": [
+      "Tell me more about the TURN/AG office deal."
+    ],
+    "_email_idx": 240,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "clear agenda and facilitation roles proposed",
+      "no tension or ambiguity in tone"
+    ],
+    "open_asks": [
+      "Paul to confirm facilitation",
+      "Joseph to set up Wednesday call"
+    ],
+    "_email_idx": 241,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarded letter opposing rate agreement",
+      "attached document indicates organized opposition"
+    ],
+    "open_asks": [],
+    "_email_idx": 242,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "does not yet include some of the more recently signed contracts",
+      "We're still working on adding those contracts"
+    ],
+    "open_asks": [
+      "contact either him or I with any questions"
+    ],
+    "_email_idx": 243,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "ASAP",
+      "need to get this into Rick by Wednesday"
+    ],
+    "open_asks": [
+      "Jeff to review and modify spreadsheets",
+      "Sue to review after Jeff"
+    ],
+    "_email_idx": 244,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "shares a news link without commentary",
+      "subject line is sarcastic ('more great work') but body is just a URL"
+    ],
+    "open_asks": [],
+    "_email_idx": 245,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "informational announcement about new payroll system",
+      "no relational tension or ambiguity"
+    ],
+    "open_asks": [
+      "employee must submit form by Oct 15 if they want hardcopy"
+    ],
+    "_email_idx": 246,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "FYI indicates informational forwarding",
+      "Steve's response is factual and cooperative"
+    ],
+    "open_asks": [
+      "Let me know if you have any other questions"
+    ],
+    "_email_idx": 247,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "suggests need for increased coverage",
+      "proactive stance requested"
+    ],
+    "open_asks": [
+      "call Barry or Stephanie if questions"
+    ],
+    "_email_idx": 248,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Confidential marking",
+      "restrictive participant list"
+    ],
+    "open_asks": [
+      "Come with list of contacts for Roseville issue",
+      "Bring thoughts on DC Line PR strategy"
+    ],
+    "_email_idx": 249,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "matter-of-fact listing of budget items",
+      "no emotional language or hedging"
+    ],
+    "open_asks": [],
+    "_email_idx": 250,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "low",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "Thanks. Your attention is appreciated.",
+      "I know your swamped and focused on other things."
+    ],
+    "open_asks": [],
+    "_email_idx": 251,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "metaphorical reference to Hal from 2001: A Space Odyssey suggests feeling overwhelmed or disconnected"
+    ],
+    "open_asks": [],
+    "_email_idx": 252,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Confidential marking",
+      "Restricted participation request"
+    ],
+    "open_asks": [
+      "Participants to bring lists of contacts for Roseville issue",
+      "Participants to bring thoughts on PR strategy for DC Line"
+    ],
+    "_email_idx": 253,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "I really need to give up being a secretary. It is not my core competency.",
+      "THIS CALL IS WEDNESDAY, NOT TODAY!"
+    ],
+    "open_asks": [
+      "Please come to the telecon with a list of who you have already contacted, and who we may consider contacting."
+    ],
+    "_email_idx": 254,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "friendly tone with exclamation marks and playful teasing",
+      "no contentious or ambiguous language"
+    ],
+    "open_asks": [
+      "copy Nancy on email picks this week"
+    ],
+    "_email_idx": 255,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "What have you done with Loretta?"
+    ],
+    "open_asks": [],
+    "_email_idx": 256,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "hostile",
+    "key_signals": [
+      "stop yanking my chain",
+      "What have you done with Loretta?"
+    ],
+    "open_asks": [],
+    "_email_idx": 257,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "PUC approved Edison bailout in surprise move",
+      "PUC rejected Davis' rate agreement, leaving funding unclear"
+    ],
+    "open_asks": [
+      "How will California pay for DWR contracts?",
+      "Will Davis sign the bill creating dedicated rate component?"
+    ],
+    "_email_idx": 258,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "enthusiastic",
+    "key_signals": [
+      "WOW! This is really a surprise.",
+      "You would really make our day if your answer is yes."
+    ],
+    "open_asks": [
+      "Does this mean the current surcharge of 3 cent and 1 cent will NOT apply to direct access loads?"
+    ],
+    "_email_idx": 259,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "PUC vote seriously embarrassed Davis",
+      "no clear indication of how California will pay for DWR contracts"
+    ],
+    "open_asks": [
+      "How will California pay for DWR contracts and issue bonds?"
+    ],
+    "_email_idx": 260,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "factual reporting of regulatory decisions",
+      "no subjective language or hedging"
+    ],
+    "open_asks": [
+      "none"
+    ],
+    "_email_idx": 261,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "factual update about game schedule change"
+    ],
+    "open_asks": [],
+    "_email_idx": 262,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded press release and internal summaries about PUC decisions",
+      "No direct requests or action items"
+    ],
+    "open_asks": [],
+    "_email_idx": 263,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "straightforward request for contact information"
+    ],
+    "open_asks": [
+      "who to contact at Enron regulatory"
+    ],
+    "_email_idx": 264,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "i hate to be too logical here",
+      "need to decide what to do tomorrow, or, i realize, TODAY"
+    ],
+    "open_asks": [
+      "can you get with jeff early and start getting our view as i finish the other crisis stuff first in the am???"
+    ],
+    "_email_idx": 265,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "good quotes",
+      "let me know if you need anything else"
+    ],
+    "open_asks": [],
+    "_email_idx": 266,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "offers to provide information within same business day",
+      "polite closing"
+    ],
+    "open_asks": [
+      "any specific utility position requests?"
+    ],
+    "_email_idx": 267,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "Survey results show low trust and ethical concerns",
+      "Management acknowledges issues and proposes actions"
+    ],
+    "open_asks": [
+      "Employee commitment to Enron and its values"
+    ],
+    "_email_idx": 268,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Urgent deadlines within weeks",
+      "Coordination of large team for regulatory response"
+    ],
+    "open_asks": [
+      "Team members to contact Project Leads if interested",
+      "Project Leads to submit RCR requests if applicable"
+    ],
+    "_email_idx": 269,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding information as requested",
+      "Factual statement about document content"
+    ],
+    "open_asks": [],
+    "_email_idx": 270,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "neutral",
+    "key_signals": [
+      "SCE did not attend the meeting in person and at the end made clear that they had not agreed with the joint plan",
+      "There is risk that the CPUC will NOT approve the approach and will cutoff DASRs on some date certain"
+    ],
+    "open_asks": [
+      "Call with any questions"
+    ],
+    "_email_idx": 271,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "largely favorable report summary",
+      "objective tone with balanced mention of negative aspects"
+    ],
+    "open_asks": [],
+    "_email_idx": 272,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Subject line indicates financial analysis of contracts",
+      "Forwarding request from Tim to West Desk traders"
+    ],
+    "open_asks": [
+      "Mo, please speak up if I got this wrong"
+    ],
+    "_email_idx": 273,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Request for a call to discuss",
+      "Reference to a stipulation and payment demand"
+    ],
+    "open_asks": [
+      "Schedule a call to discuss the SCE settlement"
+    ],
+    "_email_idx": 274,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Asking about commercial opportunities in a factual manner"
+    ],
+    "open_asks": [
+      "Any commercial opportunities there?"
+    ],
+    "_email_idx": 275,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded email with schedule details",
+      "No personal opinions or hedging"
+    ],
+    "open_asks": [
+      "Call Sarah if questions"
+    ],
+    "_email_idx": 276,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "PLEASE RESPOND BY FRIDAY, 10/5",
+      "we will modify our statement ... but only if there is strong opposition"
+    ],
+    "open_asks": [
+      "Provide comments on attached filing by COB Friday, 10/5"
+    ],
+    "_email_idx": 277,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "offers to follow up if Jeff is too busy"
+    ],
+    "open_asks": [
+      "Will you call Tycholiz on this?"
+    ],
+    "_email_idx": 278,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "matter-of-fact tone",
+      "no emotional language"
+    ],
+    "open_asks": [],
+    "_email_idx": 279,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "neutral summary of report",
+      "no personal opinion or request"
+    ],
+    "open_asks": [],
+    "_email_idx": 280,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "apologetic opening 'Sorry for the short notice'",
+      "sharing personal information (birthday, phone number)"
+    ],
+    "open_asks": [],
+    "_email_idx": 281,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "arranged breakfast and lunch",
+      "agenda attached"
+    ],
+    "open_asks": [
+      "Any questions, please contact me"
+    ],
+    "_email_idx": 282,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Subject asks for opinion on purpose of website",
+      "Body contains only an attachment reference"
+    ],
+    "open_asks": [
+      "What do you think is the purpose of this web site?"
+    ],
+    "_email_idx": 283,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request for assistance",
+      "appreciative closing"
+    ],
+    "open_asks": [
+      "add new projects or provide updates for the briefing"
+    ],
+    "_email_idx": 284,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "routine meeting notification with logistics"
+    ],
+    "open_asks": [],
+    "_email_idx": 285,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "request to schedule a conference call with dial-in details"
+    ],
+    "open_asks": [
+      "none"
+    ],
+    "_email_idx": 286,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Purpose is to decide strategy for convincing SCE to pay negative CTC claim",
+      "High importance flag on original email"
+    ],
+    "open_asks": [
+      "Participants to join call on Monday, October 8"
+    ],
+    "_email_idx": 287,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded email with FYI subject",
+      "Brief acknowledgment 'Thanks!'"
+    ],
+    "open_asks": [],
+    "_email_idx": 288,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "offers to set up call-in number if needed",
+      "uses 'Let me know' indicating openness"
+    ],
+    "open_asks": [
+      "confirmation if call-in number is needed"
+    ],
+    "_email_idx": 289,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Per my discussion with Joseph",
+      "Thanks!"
+    ],
+    "open_asks": [],
+    "_email_idx": 290,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "confirmation of meeting time",
+      "providing conference room number"
+    ],
+    "open_asks": [],
+    "_email_idx": 291,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "provides detailed schedule and activity options",
+      "offers to fax additional information"
+    ],
+    "open_asks": [
+      "let me know of your activity choice"
+    ],
+    "_email_idx": 292,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded email with no additional context or request"
+    ],
+    "open_asks": [],
+    "_email_idx": 293,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Request for introduction via mutual contact"
+    ],
+    "open_asks": [
+      "Does Jean know Laura Doll?",
+      "Can Jean facilitate an introduction for Jeff Dasovich?"
+    ],
+    "_email_idx": 294,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "routine instructions for spreadsheet use",
+      "no relational tension"
+    ],
+    "open_asks": [],
+    "_email_idx": 295,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "suggests ending a recurring call",
+      "proposes reducing frequency to once per week"
+    ],
+    "open_asks": [
+      "decision on ending Monday call",
+      "agreement on weekly call frequency"
+    ],
+    "_email_idx": 296,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "speculative tone ('I'm sure', 'will be interesting')"
+    ],
+    "open_asks": [],
+    "_email_idx": 297,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "apologetic tone with 'As usual I'm a day late and a dollar short'",
+      "promise to complete task"
+    ],
+    "open_asks": [
+      "complete material take off"
+    ],
+    "_email_idx": 298,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "casual inquiry about golf plans",
+      "friendly tone with mention of wager"
+    ],
+    "open_asks": [
+      "confirmation of golf participation",
+      "details of game and wager"
+    ],
+    "_email_idx": 299,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "I don't know if there is anything to speed up payment"
+    ],
+    "open_asks": [],
+    "_email_idx": 300,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Greetings!",
+      "I would be most appreciative",
+      "Thank you and I look forward"
+    ],
+    "open_asks": [
+      "Complete readings before October 27th",
+      "Subscribe to Board Café online"
+    ],
+    "_email_idx": 301,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Good article",
+      "sent it on to my republican friends"
+    ],
+    "open_asks": [],
+    "_email_idx": 302,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "routine meeting invitation",
+      "no urgency or tension"
+    ],
+    "open_asks": [],
+    "_email_idx": 303,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Please forward",
+      "Many thanks"
+    ],
+    "open_asks": [
+      "Forward the announcement",
+      "Include Janie Tholt on distribution"
+    ],
+    "_email_idx": 304,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "I am not sure how much help I will be with the case though"
+    ],
+    "open_asks": [],
+    "_email_idx": 305,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Attached is a schedule of RTO-related happenings"
+    ],
+    "open_asks": [],
+    "_email_idx": 306,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "friendly tone about sports",
+      "clear ordering plan"
+    ],
+    "open_asks": [
+      "confirmation of Sunday visit"
+    ],
+    "_email_idx": 307,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "direct request for a specific gift",
+      "friendly signature with contact info"
+    ],
+    "open_asks": [
+      "purchase of the cookbook for her birthday"
+    ],
+    "_email_idx": 308,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "factual statement of price",
+      "reference to previously sent order form"
+    ],
+    "open_asks": [],
+    "_email_idx": 309,
+    "_cached": false
+  },
+  {
+    "intent": "agreement",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "willing to make introduction",
+      "offers to arrange meeting"
+    ],
+    "open_asks": [
+      "confirmation to proceed with introduction"
+    ],
+    "_email_idx": 310,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "brief acknowledgment without elaboration"
+    ],
+    "open_asks": [],
+    "_email_idx": 311,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "announces a conference call with dial-in details"
+    ],
+    "open_asks": [],
+    "_email_idx": 312,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a document without additional commentary"
+    ],
+    "open_asks": [],
+    "_email_idx": 313,
+    "_cached": false
+  },
+  {
+    "intent": "agreement",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Thanks",
+      "Hope all is well with you"
+    ],
+    "open_asks": [],
+    "_email_idx": 314,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "request to review attached draft",
+      "seeking management approval"
+    ],
+    "open_asks": [
+      "approval for settlement proposal"
+    ],
+    "_email_idx": 315,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "I'm trying to be more like Eldon!",
+      "what I really need is a new chef's knife made by Global"
+    ],
+    "open_asks": [
+      "Request for a Global chef's knife"
+    ],
+    "_email_idx": 316,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "caution",
+    "tone_label": "warm",
+    "key_signals": [
+      "Enron gave $50k to the Rep party at Brulte and Cox's request",
+      "Behave yourselves"
+    ],
+    "open_asks": [
+      "If Enron is participating, please let us know"
+    ],
+    "_email_idx": 317,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "We've worked with this group in the past",
+      "Feel free to check them out if you have the need"
+    ],
+    "open_asks": [],
+    "_email_idx": 318,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Legal analysis of surcharge classification under contracts",
+      "Forwarded memo with arguments for and against"
+    ],
+    "open_asks": [],
+    "_email_idx": 319,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "enthusiastic",
+    "key_signals": [
+      "Barrie was awesome!!",
+      "that is some kind of crystal ball!"
+    ],
+    "open_asks": [],
+    "_email_idx": 320,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "discussion of potential contradiction in advocacy positions",
+      "legal analysis of surcharge classification as tax vs rate increase"
+    ],
+    "open_asks": [
+      "What are the financial and contractual implications of the options before the Commission?"
+    ],
+    "_email_idx": 321,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "automated quarantine notification",
+      "no personal tone or urgency"
+    ],
+    "open_asks": [
+      "call help desk to release email if needed"
+    ],
+    "_email_idx": 322,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "cool",
+    "key_signals": [
+      "terse directive 'this is in your court'",
+      "no greeting or pleasantries"
+    ],
+    "open_asks": [
+      "action required from Dasovich regarding Laura Doll"
+    ],
+    "_email_idx": 323,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Need to also include the moneys owed to Enron and its affiliates",
+      "We should also seek to clarify the language"
+    ],
+    "open_asks": [
+      "Include moneys owed for wholesale power transactions",
+      "Clarify language about supporting PE Advice Letter proposal"
+    ],
+    "_email_idx": 324,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "acknowledges need to reconfirm policy recommendations",
+      "references financial exposure and policy response"
+    ],
+    "open_asks": [
+      "determine $$ at stake and manage financial exposure"
+    ],
+    "_email_idx": 325,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "customer hearsay as basis for inquiry"
+    ],
+    "open_asks": [
+      "Confirm if SoCal Gas filed to revive unbundling",
+      "Status of SoCal Gas purchasing gas for SDG&E customers"
+    ],
+    "_email_idx": 326,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "discussion of legal arguments for classifying DWR charges as 'tax' vs 'rate increase'",
+      "concern about inconsistency if Enron advocates for broad application then claims it's a tax"
+    ],
+    "open_asks": [
+      "Determine financial exposure and policy response from EWS West Power URM desk"
+    ],
+    "_email_idx": 327,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forward of a press release without additional commentary",
+      "broad distribution list"
+    ],
+    "open_asks": [],
+    "_email_idx": 328,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "FYI",
+      "forwarded message without commentary"
+    ],
+    "open_asks": [],
+    "_email_idx": 329,
+    "_cached": false
+  },
+  {
+    "intent": "agreement",
+    "urgency": "low",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "expect Brulte and Cox to push us for another 75K",
+      "Apparently that is what Reliant gave to the R's"
+    ],
+    "open_asks": [],
+    "_email_idx": 330,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "cool",
+    "key_signals": [
+      "Asks how to fight a notion",
+      "Suggests using utilities' underscheduling against them"
+    ],
+    "open_asks": [
+      "How to fight the notion of retroactive rate determination?",
+      "Can underscheduling be used to push back?"
+    ],
+    "_email_idx": 331,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding a stipulation language for reference",
+      "Attaching a draft for management approval"
+    ],
+    "open_asks": [],
+    "_email_idx": 332,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "friendly invitation for lunch",
+      "casual mention of Tahoe trip"
+    ],
+    "open_asks": [
+      "let me know if you have time for lunch",
+      "let me know if you want to come to Tahoe"
+    ],
+    "_email_idx": 333,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "FYI",
+      "Best"
+    ],
+    "open_asks": [],
+    "_email_idx": 334,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "acknowledges FERC will not directly address negative CTC",
+      "notes refund process didn't ask first question about blame"
+    ],
+    "open_asks": [
+      "How to fight retroactive determination of just and reasonable rates?",
+      "Can utilities' underscheduling be used against them?"
+    ],
+    "_email_idx": 335,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "FYI",
+      "estimates that"
+    ],
+    "open_asks": [],
+    "_email_idx": 336,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "apologetic tone for delay",
+      "providing requested info"
+    ],
+    "open_asks": [
+      "none"
+    ],
+    "_email_idx": 337,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "matter-of-fact update about sharing notes"
+    ],
+    "open_asks": [],
+    "_email_idx": 338,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Make it simple and transparent",
+      "Duh"
+    ],
+    "open_asks": [],
+    "_email_idx": 339,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "commendation on presentation",
+      "enclosing presentations for feedback"
+    ],
+    "open_asks": [
+      "feedback on concept and presentations"
+    ],
+    "_email_idx": 340,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a document already likely received",
+      "casual tone: 'just in case'"
+    ],
+    "open_asks": [],
+    "_email_idx": 341,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "provides requested contact info without hedging or delay"
+    ],
+    "open_asks": [],
+    "_email_idx": 342,
+    "_cached": false
+  },
+  {
+    "intent": "invitation",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "invitation to open art studios",
+      "casual and friendly tone"
+    ],
+    "open_asks": [],
+    "_email_idx": 343,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "cool",
+    "key_signals": [
+      "I could not open attachment",
+      "Jeff did not incorporate my notes"
+    ],
+    "open_asks": [
+      "Jim may need to reconcile the two separate pieces"
+    ],
+    "_email_idx": 344,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "automated marketing email",
+      "no personal content"
+    ],
+    "open_asks": [],
+    "_email_idx": 345,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "FYI",
+      "Probably too early for you guys"
+    ],
+    "open_asks": [],
+    "_email_idx": 346,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "terse correction of assumption",
+      "no elaboration or hedging"
+    ],
+    "open_asks": [],
+    "_email_idx": 347,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request with thanks",
+      "casual tone"
+    ],
+    "open_asks": [
+      "fax the document to provided number"
+    ],
+    "_email_idx": 348,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Complimentary ticket reserved for member",
+      "RSVP deadline with social security number required"
+    ],
+    "open_asks": [
+      "RSVP with social security number by October 12, 4:00pm PDT"
+    ],
+    "_email_idx": 349,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "DO NOT DISTRIBUTE",
+      "factual errors"
+    ],
+    "open_asks": [
+      "awaiting replacement set next week"
+    ],
+    "_email_idx": 350,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "promised more details",
+      "told Bev we would be interested"
+    ],
+    "open_asks": [],
+    "_email_idx": 351,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Thanks again for your great remarks last Friday; I really appreciated them."
+    ],
+    "open_asks": [
+      "summary of typical siting/permitting process for a plant in California"
+    ],
+    "_email_idx": 352,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "It is VERY important that trading and marketing are aware of the hedging activities"
+    ],
+    "open_asks": [
+      "Do you know the CFO ?"
+    ],
+    "_email_idx": 353,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarded message with details about an event participation"
+    ],
+    "open_asks": [],
+    "_email_idx": 354,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding contact information update"
+    ],
+    "open_asks": [],
+    "_email_idx": 355,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding news articles without personal commentary"
+    ],
+    "open_asks": [],
+    "_email_idx": 356,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Scope is 'right on the money' and timing is reasonably good",
+      "Mention of low attendance at pre-bid conference"
+    ],
+    "open_asks": [],
+    "_email_idx": 357,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Forwarding a survey with clear instructions and deadline"
+    ],
+    "open_asks": [
+      "Provide responses to Elizabeth Linnell",
+      "Rank up to five choices and send to Rita Hartfield by October 17"
+    ],
+    "_email_idx": 358,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Explains reasoning for raising CTC question",
+      "Indicates issue may be resolved"
+    ],
+    "open_asks": [
+      "Please let me know if you have any more relevant comments"
+    ],
+    "_email_idx": 359,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "clarifying past proposals without urgency",
+      "matter-of-fact tone about CPUC ignoring proposal"
+    ],
+    "open_asks": [],
+    "_email_idx": 360,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "cool",
+    "key_signals": [
+      "I don't believe these are what I am looking for",
+      "I do not see those titles or labels on any of these documents"
+    ],
+    "open_asks": [
+      "Provide the correct exhibits referenced in the Decision"
+    ],
+    "_email_idx": 361,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarded news articles without commentary",
+      "no personal opinions or requests"
+    ],
+    "open_asks": [],
+    "_email_idx": 362,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "warning",
+    "tone_label": "cool",
+    "key_signals": [
+      "despite the voluminous record in support of our position, the judge ruled that it was 'not at all clear' that El Paso exercised market power",
+      "Anytime Enron wants to help on these GCIM issues, we would welcome it--might make you look less like a Texas robber baron"
+    ],
+    "open_asks": [
+      "What is your reaction to the judge's proposed order in the El Paso case?",
+      "Do you think the Commission is likely to adopt or change it?"
+    ],
+    "_email_idx": 363,
+    "_cached": false
+  },
+  {
+    "intent": "follow_up",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Agree the settlement is not nearly all that it could have been, but sure beats what we've got",
+      "If there's something you think that we can do to help"
+    ],
+    "open_asks": [
+      "Will Douglas get back with thoughts?"
+    ],
+    "_email_idx": 364,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "No. Although the lack of a concrete decision is a 'decision' - just not one we like."
+    ],
+    "open_asks": [],
+    "_email_idx": 365,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "cool",
+    "key_signals": [
+      "I frankly have put NO creadance into their timeline",
+      "This will drag out"
+    ],
+    "open_asks": [],
+    "_email_idx": 366,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Asks for opinion on ethical dilemma",
+      "Poses hypothetical scenario"
+    ],
+    "open_asks": [
+      "What do you think about this?"
+    ],
+    "_email_idx": 367,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "meeting changes and cost details provided",
+      "request for activity choice with deadline"
+    ],
+    "open_asks": [
+      "Please let me know which activity you choose",
+      "Interest in spa services?"
+    ],
+    "_email_idx": 368,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "joking tone: 'I'll play the cheap course'",
+      "lighthearted banter about golf and knitting"
+    ],
+    "open_asks": [],
+    "_email_idx": 369,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "detailed political analysis without direct request or action item"
+    ],
+    "open_asks": [],
+    "_email_idx": 370,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "We hope you are weathering these difficult times",
+      "we look forward to seeing you next week"
+    ],
+    "open_asks": [
+      "Contact me or Ron Gern immediately if any assumptions are incorrect"
+    ],
+    "_email_idx": 371,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Congratulations to all",
+      "Thanks and good luck"
+    ],
+    "open_asks": [
+      "Submit picks by 5 PM Thursday"
+    ],
+    "_email_idx": 372,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "apologizes for not meeting",
+      "offers to send hand-outs"
+    ],
+    "open_asks": [],
+    "_email_idx": 373,
+    "_cached": false
+  },
+  {
+    "intent": "agreement",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "No problem with joining",
+      "I'll pass your request on to her"
+    ],
+    "open_asks": [
+      "None"
+    ],
+    "_email_idx": 374,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "SCE does not recognize that decision",
+      "referred me to their letter to the CPUC"
+    ],
+    "open_asks": [
+      "Do you know if the CPUC has given SCE permission to impose an earlier deadline?"
+    ],
+    "_email_idx": 375,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "uncertainty about PG&E's plans for rolling agreements",
+      "request for a call to discuss"
+    ],
+    "open_asks": [
+      "call me when you have a moment"
+    ],
+    "_email_idx": 376,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding multiple news articles without personal commentary"
+    ],
+    "open_asks": [],
+    "_email_idx": 377,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "We are all invited",
+      "celebrate my birthday"
+    ],
+    "open_asks": [],
+    "_email_idx": 378,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Hedging on DA issues: 'Don't know at this point what if anything we'll do'",
+      "Offers colleague's contact: 'Certainly feel free to call him'"
+    ],
+    "open_asks": [],
+    "_email_idx": 379,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "apologetic tone for error",
+      "friendly remark about Oakland fans"
+    ],
+    "open_asks": [],
+    "_email_idx": 380,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Asks about marketers' view on 'no exit fees'",
+      "Labels view as 'fantasy'"
+    ],
+    "open_asks": [
+      "Is the no exit fee view commonly held among marketers?"
+    ],
+    "_email_idx": 381,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Thanks, yes I would at some point",
+      "quietly marketing"
+    ],
+    "open_asks": [],
+    "_email_idx": 382,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "scheduled conference call with dial-in details"
+    ],
+    "open_asks": [],
+    "_email_idx": 383,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "polite request for feedback and citation addition"
+    ],
+    "open_asks": [
+      "Get back to Leslie or Becky with feedback",
+      "Add citation to OMB notice"
+    ],
+    "_email_idx": 384,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Has not listened to the call yet",
+      "Will ask about reschedule"
+    ],
+    "open_asks": [
+      "What was your take on the analyst call?",
+      "Are you hearing that Lay's calling Edison today?"
+    ],
+    "_email_idx": 385,
+    "_cached": false
+  },
+  {
+    "intent": "notification",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "marketing email with product promotions and rebates",
+      "no personal request or response needed"
+    ],
+    "open_asks": [],
+    "_email_idx": 386,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "casual tone, friendly offer to share info"
+    ],
+    "open_asks": [
+      "Ask me about it next time I see you"
+    ],
+    "_email_idx": 387,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "confirms capacity terms without escalation for 2 years",
+      "no penalty for capacity release"
+    ],
+    "open_asks": [
+      "call back on Wednesday"
+    ],
+    "_email_idx": 388,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "warning",
+    "tone_label": "cool",
+    "key_signals": [
+      "'I want all contracts get rid of any put obligations' - imperative tone with potential contractual risk",
+      "'Jeff, I prusume yoo meant 9/20/01' - typo and correction request indicating possible confusion"
+    ],
+    "open_asks": [
+      "Who is now on point commercially for the PacBell (SBC) contract?",
+      "Clarification on whether Jeff meant 9/20/01 instead of 10/20/01"
+    ],
+    "_email_idx": 389,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Overall the modifications made should not negatively impact Transwestern",
+      "I still ascertain that TW can support the current 10/10 PD"
+    ],
+    "open_asks": [
+      "Discussion on conference call later this morning",
+      "Ensure SoCal and other CSA signatories are on board before filing comments"
+    ],
+    "_email_idx": 390,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "forwarding a note with 'enjoyable' comment",
+      "no personal or business stakes"
+    ],
+    "open_asks": [],
+    "_email_idx": 391,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "We are not giving any more money in California",
+      "we made a corporate decision to direct our campaign dollars"
+    ],
+    "open_asks": [
+      "Jeff: your thoughts??"
+    ],
+    "_email_idx": 392,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "In response to your request",
+      "I thought you might be interested as well"
+    ],
+    "open_asks": [],
+    "_email_idx": 393,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "high",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "Please see note from Elizabeth below, and respond directly to Rita Hartfield by tomorrow!!!",
+      "If you haven't already responded, below is a list of potential/existing information resources and we invite you to identify your top five priorities"
+    ],
+    "open_asks": [
+      "Respond to survey by October 18th",
+      "Rank top five priorities from list"
+    ],
+    "_email_idx": 394,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "safe",
+    "tone_label": "neutral",
+    "key_signals": [
+      "conference call scheduled",
+      "provides call-in details"
+    ],
+    "open_asks": [],
+    "_email_idx": 395,
+    "_cached": false
+  },
+  {
+    "intent": "information_sharing",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Provides cost estimate and material details",
+      "Asks for confirmation and map"
+    ],
+    "open_asks": [
+      "Will you be installing the deck as discussed?",
+      "Can you fax me a map to your place?"
+    ],
+    "_email_idx": 396,
+    "_cached": false
+  },
+  {
+    "intent": "scheduling",
+    "urgency": "medium",
+    "risk_level": "caution",
+    "tone_label": "neutral",
+    "key_signals": [
+      "delay in proceeding probably in our interest",
+      "need senior management approval"
+    ],
+    "open_asks": [
+      "discuss terms for Stipulation on call tomorrow"
+    ],
+    "_email_idx": 397,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Please include Murray, Brenda and me on your distribution list"
+    ],
+    "open_asks": [
+      "Add Shelly, Murray, Brenda to EES market updates distribution list"
+    ],
+    "_email_idx": 398,
+    "_cached": false
+  },
+  {
+    "intent": "request",
+    "urgency": "low",
+    "risk_level": "safe",
+    "tone_label": "warm",
+    "key_signals": [
+      "Thank you for this info - and for all of the hard work",
+      "please make sure to include",
+      "I would like to be on the distribution list"
+    ],
+    "open_asks": [
+      "Add Evan Hughes, Murray O'Neill, Brenda Herod to distribution list for this topic",
+      "Add Dan Leff to distribution list for all California communication"
+    ],
+    "_email_idx": 399,
+    "_cached": false
+  }
+]

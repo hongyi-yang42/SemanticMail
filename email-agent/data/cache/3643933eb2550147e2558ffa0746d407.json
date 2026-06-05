@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"critical\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"discussing legal action against state officials\", \"framing investigation as 'witch hunt' and 'harassment'\"],\n    \"open_asks\": [\"legal research on suing state officials\", \"decide on four proposed courses of action\"]\n}"
+}

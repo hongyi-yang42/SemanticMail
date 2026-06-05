@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Purpose is to decide strategy for convincing SCE to pay negative CTC claim\", \"High importance flag on original email\"],\n    \"open_asks\": [\"Participants to join call on Monday, October 8\"]\n}"
+}

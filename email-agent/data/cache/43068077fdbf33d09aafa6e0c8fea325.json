@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"welcoming new rookies\", \"clear instructions for submitting picks\"],\n    \"open_asks\": [\"submission of weekly picks\"]\n}"
+}

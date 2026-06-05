@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"enthusiastic\",\n    \"key_signals\": [\"WOW! This is really a surprise.\", \"You would really make our day if your answer is yes.\"],\n    \"open_asks\": [\"Does this mean the current surcharge of 3 cent and 1 cent will NOT apply to direct access loads?\"]\n}"
+}

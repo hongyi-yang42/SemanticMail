@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"action_items\": [\n        {\n            \"task\": \"Submit conference travel budget through finance portal\",\n            \"owner\": \"Ren Xia\",\n            \"deadline\": \"Not specified\",\n            \"status\": \"pending\",\n            \"source_email\": \"Prof. Liang, Mar 17, 2026\"\n        },\n        {\n            \"task\": \"Discuss RA hiring request when semester starts\",\n            \"owner\": \"Ren Xia and Prof. Liang\",\n            \"deadline\": \"Not specified\",\n            \"status\": \"pending\",\n            \"source_email\": \"Prof. Liang, Mar 26, 2026\"\n        }\n    ]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Loretta wants to rally votes to defeat the rate agreement\", \"Bilas alternate doesn't work\"],\n    \"open_asks\": [\"Need to rally votes against rate agreement\"]\n}"
+}

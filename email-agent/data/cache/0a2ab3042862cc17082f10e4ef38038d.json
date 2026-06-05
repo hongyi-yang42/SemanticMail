@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Request for a call to discuss\", \"Reference to a stipulation and payment demand\"],\n    \"open_asks\": [\"Schedule a call to discuss the SCE settlement\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Forwarding a survey with clear instructions and deadline\"],\n    \"open_asks\": [\"Provide responses to Elizabeth Linnell\", \"Rank up to five choices and send to Rita Hartfield by October 17\"]\n}"
+}

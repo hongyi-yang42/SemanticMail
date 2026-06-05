@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"meeting changes and cost details provided\", \"request for activity choice with deadline\"],\n    \"open_asks\": [\"Please let me know which activity you choose\", \"Interest in spa services?\"]\n}"
+}

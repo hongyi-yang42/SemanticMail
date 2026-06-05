@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"dismissive characterization of PG&E's plan as 'Enron-envy'\", \"sarcastic tone about falling flat on their faces\"],\n    \"open_asks\": []\n}"
+}

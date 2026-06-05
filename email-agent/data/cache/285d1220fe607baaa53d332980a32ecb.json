@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"I hadn't heard about his changes\", \"I will confirm meeting time\"],\n    \"open_asks\": [\"What time's your weekly meeting on Thursday, and is there a call-in number?\"]\n}"
+}

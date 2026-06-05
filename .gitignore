@@ -11,3 +11,4 @@ build/
 venv/
 *.egg
 node_modules/
+email-agent/out/

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"matter-of-fact announcement about lecture notes availability\"],\n    \"open_asks\": []\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"uncertainty about CPUC vote timing\", \"pessimism from commercial consumers\"],\n    \"open_asks\": []\n}"
+}

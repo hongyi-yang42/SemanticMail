@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Asks 'What are our rights?' and 'Should we just let this go?' indicating uncertainty\"],\n    \"open_asks\": [\"What are our rights regarding the ex parte communications?\", \"Should we let this go?\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"ASAP\", \"need to get this into Rick by Wednesday\"],\n    \"open_asks\": [\"Jeff to review and modify spreadsheets\", \"Sue to review after Jeff\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"uncertainty about CPUC vote outcome\", \"need to move quickly to submit DASRs\"],\n    \"open_asks\": [\"none explicitly pending\"]\n}"
+}

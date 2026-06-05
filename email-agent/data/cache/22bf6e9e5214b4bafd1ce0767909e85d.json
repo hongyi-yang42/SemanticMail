@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"hostile\",\n    \"key_signals\": [\"personal pleasure from seeing Glynn and Richard strike out\", \"calls them pirates\"],\n    \"open_asks\": []\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Scope is 'right on the money' and timing is reasonably good\", \"Mention of low attendance at pre-bid conference\"],\n    \"open_asks\": []\n}"
+}

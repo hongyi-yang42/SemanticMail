@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"suggests ending a recurring call\", \"proposes reducing frequency to once per week\"],\n    \"open_asks\": [\"decision on ending Monday call\", \"agreement on weekly call frequency\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"largely favorable report summary\", \"objective tone with balanced mention of negative aspects\"],\n    \"open_asks\": []\n}"
+}

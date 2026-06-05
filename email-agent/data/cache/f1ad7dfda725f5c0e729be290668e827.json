@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Forwarding agenda as requested\", \"Privileged and confidential header\"],\n    \"open_asks\": [\"Please feel free to revise/add to/ update this table\", \"Please feel free to communicate any additional agenda items to the group\"]\n}"
+}

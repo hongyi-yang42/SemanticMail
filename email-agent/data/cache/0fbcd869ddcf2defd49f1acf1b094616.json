@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Brief acknowledgment without substantive feedback\", \"No questions or requests for clarification\"],\n    \"open_asks\": []\n}"
+}

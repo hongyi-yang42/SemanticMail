@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"apologetic explanation for actions taken without confirmation\", \"acknowledgment of possible mistake\"],\n    \"open_asks\": [\"Did you have a marvelous time?\", \"Did they like the tomatoes?\"]\n}"
+}

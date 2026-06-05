@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"urgency_signals\": [\"client presentation on Monday\", \"48-hour ticket turnaround won't work\", \"temporary read-only access window\", \"expedited ticket\"],\n    \"confidence\": 0.9\n}"
+}

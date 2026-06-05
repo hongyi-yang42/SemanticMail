@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"suggests need for increased coverage\", \"proactive stance requested\"],\n    \"open_asks\": [\"call Barry or Stephanie if questions\"]\n}"
+}

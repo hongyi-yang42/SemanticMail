@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Subject asks for opinion on purpose of website\", \"Body contains only an attachment reference\"],\n    \"open_asks\": [\"What do you think is the purpose of this web site?\"]\n}"
+}

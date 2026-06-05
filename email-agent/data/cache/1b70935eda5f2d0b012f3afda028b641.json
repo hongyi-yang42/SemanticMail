@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"apologetic tone with 'As usual I'm a day late and a dollar short'\", \"promise to complete task\"],\n    \"open_asks\": [\"complete material take off\"]\n}"
+}

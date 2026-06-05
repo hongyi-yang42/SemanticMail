@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"matter-of-fact listing of budget items\", \"no emotional language or hedging\"],\n    \"open_asks\": []\n}"
+}

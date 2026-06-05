@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Please include Murray, Brenda and me on your distribution list\"],\n    \"open_asks\": [\"Add Shelly, Murray, Brenda to EES market updates distribution list\"]\n}"
+}

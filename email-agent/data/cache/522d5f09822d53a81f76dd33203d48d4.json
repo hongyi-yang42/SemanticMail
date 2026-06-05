@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"please add mike d smith and kelly higgason to your distribution list\"],\n    \"open_asks\": [\"add mike d smith and kelly higgason to distribution list\"]\n}"
+}

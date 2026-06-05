@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"discussion of legal arguments for classifying DWR charges as 'tax' vs 'rate increase'\", \"concern about inconsistency if Enron advocates for broad application then claims it's a tax\"],\n    \"open_asks\": [\"Determine financial exposure and policy response from EWS West Power URM desk\"]\n}"
+}

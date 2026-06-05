@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"provides detailed schedule and activity options\", \"offers to fax additional information\"],\n    \"open_asks\": [\"let me know of your activity choice\"]\n}"
+}

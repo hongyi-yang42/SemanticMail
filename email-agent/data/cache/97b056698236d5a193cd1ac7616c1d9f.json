@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"raises risk of utilities rejecting contracts or imposing restrictive requirements\", \"highlights confidentiality issues and need to resist sharing sensitive information\"],\n    \"open_asks\": [\"How to handle utility rejection of pre-Sept 20 contracts DASR'd after?\", \"How to resist utility demands for sensitive contract provisions?\"]\n}"
+}

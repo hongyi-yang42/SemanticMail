@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"I don't see an issue with this\", \"I've cc'd Jeff Dasovich and Sue Mara to check in with them\"],\n    \"open_asks\": []\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Jeff offers to coordinate with admin\", \"Jeremy asks Jeff to set up the call\"],\n    \"open_asks\": [\"Set up the call with Sharon\"]\n}"
+}

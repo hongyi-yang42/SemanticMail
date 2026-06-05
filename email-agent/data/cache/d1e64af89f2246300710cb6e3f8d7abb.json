@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Thanks, in advance\", \"Thanks so much\"],\n    \"open_asks\": [\"List of stakeholders from Enron Corp perspective in California\", \"Suggestions for TURN or other organizations\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"does not yet include some of the more recently signed contracts\", \"We're still working on adding those contracts\"],\n    \"open_asks\": [\"contact either him or I with any questions\"]\n}"
+}

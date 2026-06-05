@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"'Let's just keep up the dialogue' suggests ongoing coordination\", \"'let's be sure I can hit sempra asap' implies a pending action\"],\n    \"open_asks\": [\"Ensure ability to contact Sempra as soon as possible\"]\n}"
+}

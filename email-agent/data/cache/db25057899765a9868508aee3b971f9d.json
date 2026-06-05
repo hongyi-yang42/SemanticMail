@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"action_items\": [\n        {\n            \"task\": \"Share API integration docs for the payment module\",\n            \"owner\": \"Lin Hao\",\n            \"deadline\": \"Apr 17, 2026\",\n            \"status\": \"completed\",\n            \"source_email\": \"Xu Jie, Apr 14, 2026\"\n        }\n    ]\n}"
+}

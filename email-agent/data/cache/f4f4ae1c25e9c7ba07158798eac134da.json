@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Please help keep our office safe by not giving out the code to non-Enron San Francisco office employees.\"],\n    \"open_asks\": []\n}"
+}

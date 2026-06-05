@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Attached is a memo outlining key aspects\", \"Please call me if you have any questions\"],\n    \"open_asks\": []\n}"
+}

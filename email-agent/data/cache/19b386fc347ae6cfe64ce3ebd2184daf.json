@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"forwarding a request to copy someone on summaries\"],\n    \"open_asks\": [\"Please copy David LeBoe on summaries of significant regulatory events/issues.\"]\n}"
+}

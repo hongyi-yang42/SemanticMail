@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"repeated question about DASR effective date cutoff\", \"uncertainty about utility acceptance timing\"],\n    \"open_asks\": [\"What is the time cutoff for DASR acceptance by utilities?\"]\n}"
+}

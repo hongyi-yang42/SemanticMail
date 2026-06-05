@@ -1,0 +1,2280 @@
+{
+  "Teresa Janus": {
+    "n_interactions": 5,
+    "first_seen": "2001-08-31T23:51:25+00:00",
+    "last_seen": "2001-09-07T22:42:43+00:00",
+    "tone_labels": [
+      "warm",
+      "warm",
+      "warm",
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "pick up books or readers",
+      "confirm if not adding class",
+      "let me know right away if you don't want to add this class",
+      "pick up books or readers",
+      "notify if not adding class"
+    ]
+  },
+  "Josh Bortman": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-01T00:02:06+00:00",
+    "last_seen": "2001-09-05T21:24:25+00:00",
+    "tone_labels": [
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "fill out address update form"
+    ]
+  },
+  "Smith, Mike": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-03T13:18:39+00:00",
+    "last_seen": "2001-09-27T15:50:22+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "warning"
+    ],
+    "open_asks": [
+      "add Mike back to distribution list for CA updates",
+      "Please let me know your thoughts asap.",
+      "If we need to have a quick call, I can set something up."
+    ]
+  },
+  "Steffes, James D.": {
+    "n_interactions": 24,
+    "first_seen": "2001-09-03T22:02:35+00:00",
+    "last_seen": "2001-10-15T21:55:53+00:00",
+    "tone_labels": [
+      "cool",
+      "neutral",
+      "neutral",
+      "warm",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral",
+      "warm",
+      "neutral",
+      "cool",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "warning",
+      "safe",
+      "caution",
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "critical",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "caution",
+      "caution",
+      "caution",
+      "caution",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Should Tom speak with legal about the inquiry?",
+      "arrange call-in number for 10:30 am Houston time",
+      "How best to approach the California Restaurant Association?",
+      "Need help communicating with Boeing",
+      "When is the next deadline?",
+      "Whether Jeff wants to participate in the conference",
+      "Mike Day - draft language to fix SB78",
+      "Hedy & Bev - who should support the amendment?",
+      "Should Enron or AReM meet with Bilas and Brown?",
+      "legal research on suing state officials",
+      "decide on four proposed courses of action",
+      "work with Tom Riley to coordinate",
+      "Schedule a call to discuss the SCE settlement",
+      "Does Jean know Laura Doll?",
+      "Can Jean facilitate an introduction for Jeff Dasovich?",
+      "decision on ending Monday call",
+      "agreement on weekly call frequency",
+      "confirmation of golf participation",
+      "details of game and wager",
+      "action required from Dasovich regarding Laura Doll",
+      "Include moneys owed for wholesale power transactions",
+      "Clarify language about supporting PE Advice Letter proposal",
+      "determine $$ at stake and manage financial exposure",
+      "How to fight retroactive determination of just and reasonable rates?",
+      "Can utilities' underscheduling be used against them?"
+    ]
+  },
+  "Petrochko, Mona L.": {
+    "n_interactions": 4,
+    "first_seen": "2001-09-04T14:28:12+00:00",
+    "last_seen": "2001-10-04T13:30:26+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Ibrahim, Amr": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-04T14:37:04+00:00",
+    "last_seen": "2001-09-26T16:17:36+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "caution",
+      "safe"
+    ],
+    "open_asks": [
+      "any requests for specific utility data pending",
+      "Provide comments on paper one",
+      "Advise of your point of view",
+      "inputs and opinions on regulatory impact"
+    ]
+  },
+  "Whitman, Britt": {
+    "n_interactions": 8,
+    "first_seen": "2001-09-04T16:51:14+00:00",
+    "last_seen": "2001-10-02T21:57:42+00:00",
+    "tone_labels": [
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "warning",
+      "safe",
+      "warning",
+      "caution",
+      "warning",
+      "safe"
+    ],
+    "open_asks": [
+      "add to update list",
+      "No explicit requests; report is informational",
+      "Will the Senate pass AB67 XX before the midnight deadline?",
+      "Will SoCal file for bankruptcy if the bill fails or passes with insufficient rate base?",
+      "determine SoCal's response to PG&E filing and Mirant-Reliant effort",
+      "pulse likelihood and timing of voluntary bankruptcy petition",
+      "none"
+    ]
+  },
+  "Dietrich, Janet": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-04T17:18:08+00:00",
+    "last_seen": "2001-09-24T15:20:52+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral"
+    ],
+    "risk_history": [
+      "caution",
+      "caution"
+    ],
+    "open_asks": [
+      "None explicitly stated; update provided",
+      "any concerns that would cause reconsideration"
+    ]
+  },
+  "Tycholiz, Barry": {
+    "n_interactions": 5,
+    "first_seen": "2001-09-04T17:34:22+00:00",
+    "last_seen": "2001-10-12T12:24:55+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Jane and Stephanie need to create a priority list of West Gas issues and hot button items",
+      "legal status/issues of listed companies",
+      "whether any companies are part of ongoing legal action against the state",
+      "Let's hook up early next week to discuss a plan of attack on DWR",
+      "What time's your weekly meeting on Thursday, and is there a call-in number?",
+      "Do you know the CFO ?"
+    ]
+  },
+  "Shapiro, Richard": {
+    "n_interactions": 8,
+    "first_seen": "2001-09-04T17:44:53+00:00",
+    "last_seen": "2001-10-03T15:37:26+00:00",
+    "tone_labels": [
+      "neutral",
+      "warm",
+      "neutral",
+      "warm",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Review attachment and provide thoughts/comments",
+      "contact HR or Benefits Group for counseling services if needed",
+      "Team members to contact Project Leads if interested",
+      "Project Leads to submit RCR requests if applicable"
+    ]
+  },
+  "Courtney Abernathy": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-04T17:55:46+00:00",
+    "last_seen": "2001-09-05T15:05:31+00:00",
+    "tone_labels": [
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Let me know if you're going to go to this class",
+      "or want to catch up on Tues during break"
+    ]
+  },
+  "V. John White": {
+    "n_interactions": 6,
+    "first_seen": "2001-09-05T03:45:48+00:00",
+    "last_seen": "2001-09-13T15:52:18+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "cool",
+      "warm"
+    ],
+    "risk_history": [
+      "caution",
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "caution"
+    ],
+    "open_asks": [
+      "Need to rally votes against rate agreement",
+      "Send out the attached letter",
+      "Ensure ability to contact Sempra as soon as possible"
+    ]
+  },
+  "The Wine Enthusiast": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-05T09:35:36+00:00",
+    "last_seen": "2001-10-11T10:58:24+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Noske, Linda J.": {
+    "n_interactions": 5,
+    "first_seen": "2001-09-05T14:13:08+00:00",
+    "last_seen": "2001-10-10T20:03:16+00:00",
+    "tone_labels": [
+      "neutral",
+      "cool",
+      "warm",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "warning",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Why haven't we been offered the same deal?",
+      "Rick, if you need us to set up an international line, please advise"
+    ]
+  },
+  "Comnes, Alan": {
+    "n_interactions": 19,
+    "first_seen": "2001-09-05T17:57:13+00:00",
+    "last_seen": "2001-10-09T18:18:04+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm",
+      "cool",
+      "neutral",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "caution",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "safe",
+      "caution",
+      "safe"
+    ],
+    "open_asks": [
+      "Lysa to fill Joseph in with Alan's schedule in future",
+      "Enron needs to decide who to send to the meeting",
+      "Possible need to prepare solutions/proposals in advance",
+      "Should we cover this new found agency?",
+      "Alan requests the reorg plan from Michael and Lisa",
+      "Jeff asks Alan to find and distribute a more detailed version",
+      "comments on attached talking points are welcome",
+      "Let us know if you have any questions",
+      "Please feel free to revise/add to/ update this table",
+      "Please feel free to communicate any additional agenda items to the group",
+      "Paul to confirm facilitation",
+      "Joseph to set up Wednesday call",
+      "contact either him or I with any questions",
+      "Mo, please speak up if I got this wrong"
+    ]
+  },
+  "Mara, Susan": {
+    "n_interactions": 34,
+    "first_seen": "2001-09-05T18:22:09+00:00",
+    "last_seen": "2001-10-17T19:16:57+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "hostile",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "cool",
+      "warm",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral",
+      "cool",
+      "neutral",
+      "neutral",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "cool",
+      "neutral",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "warning",
+      "safe",
+      "warning",
+      "safe",
+      "caution",
+      "caution",
+      "safe",
+      "caution",
+      "safe",
+      "warning",
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "safe",
+      "safe",
+      "caution",
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "safe",
+      "caution",
+      "safe",
+      "safe",
+      "caution",
+      "safe",
+      "safe",
+      "warning",
+      "warning",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Will the language be removed or clarified?",
+      "Do we know who's behind this?",
+      "Identify who at Enron will file declarations",
+      "Confirm ASAP availability",
+      "Will let you know when we know the new date for the meeting.",
+      "Please let me know if you have customers interested in signing on",
+      "Bob needs to review the language more closely before circulation.",
+      "Sue is asking customers to sign on for legal action.",
+      "none explicitly pending",
+      "Contact Calvin Yee or Michael Alexander if questions",
+      "What are our rights regarding the ex parte communications?",
+      "Should we let this go?",
+      "Join as a party to the draft request for rehearing",
+      "sign on to the Request for Rehearing",
+      "contact elected state representatives",
+      "Does someone at the Chamber want to see this?",
+      "Need to get individual customers to sign on",
+      "forward the application to agreed signatories",
+      "Let me know if you have any other questions",
+      "Call with any questions",
+      "Jim may need to reconcile the two separate pieces"
+    ]
+  },
+  "Shelk, John": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-06T17:43:55+00:00",
+    "last_seen": "2001-10-04T14:05:15+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "caution",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Will fax Amr my comments"
+    ]
+  },
+  "eldon sellers": {
+    "n_interactions": 8,
+    "first_seen": "2001-09-07T05:35:21+00:00",
+    "last_seen": "2001-09-26T01:46:12+00:00",
+    "tone_labels": [
+      "warm",
+      "warm",
+      "warm",
+      "neutral",
+      "warm",
+      "warm",
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "submission of weekly picks",
+      "If you have an e-mail address at home and would like to be added to the distribution list for the picks, let me know what your e-mail is and I will add it.",
+      "none",
+      "please let me know if other errors",
+      "Please call if you have any question or spot an error"
+    ]
+  },
+  "Gottfredson, Bryan": {
+    "n_interactions": 6,
+    "first_seen": "2001-09-07T14:34:25+00:00",
+    "last_seen": "2001-10-04T21:38:35+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "warm",
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "warning",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "send updates on current projects",
+      "indicate if project completed/terminated",
+      "any specific utility position requests?",
+      "add new projects or provide updates for the briefing"
+    ]
+  },
+  "Thome, Jennifer": {
+    "n_interactions": 5,
+    "first_seen": "2001-09-07T15:48:32+00:00",
+    "last_seen": "2001-10-09T18:55:43+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Provide gas information if known"
+    ]
+  },
+  "Vegas, Dennis": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-07T17:18:09+00:00",
+    "last_seen": "2001-09-07T17:18:09+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "caution"
+    ],
+    "open_asks": [
+      "review remarks from John Shelk"
+    ]
+  },
+  "Guerrero, Janel": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-07T18:37:38+00:00",
+    "last_seen": "2001-10-11T20:57:02+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "caution"
+    ],
+    "open_asks": [
+      "awaiting replacement set next week"
+    ]
+  },
+  "Joseph Tambornino": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-08T20:40:29+00:00",
+    "last_seen": "2001-10-11T18:45:40+00:00",
+    "tone_labels": [
+      "warm",
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "fax the document to provided number"
+    ]
+  },
+  "[EMAIL]": {
+    "n_interactions": 7,
+    "first_seen": "2001-09-10T02:08:47+00:00",
+    "last_seen": "2001-10-16T21:59:51+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "cool",
+      "warm",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "warning",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "What is your reaction to the judge's proposed order in the El Paso case?",
+      "Do you think the Commission is likely to adopt or change it?",
+      "Will Douglas get back with thoughts?"
+    ]
+  },
+  "Landwehr, Susan M.": {
+    "n_interactions": 6,
+    "first_seen": "2001-09-10T16:00:27+00:00",
+    "last_seen": "2001-10-08T01:47:18+00:00",
+    "tone_labels": [
+      "warm",
+      "warm",
+      "warm",
+      "warm",
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "guidance on California update for Ken Lay's talking points",
+      "Confirm ability to produce one-page update by Thursday",
+      "Send electronic version of matrix to Mr. Dasovich",
+      "Provide information on gas for the chart",
+      "Will you call Tycholiz on this?"
+    ]
+  },
+  "Hall, Steve C. (Legal)": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-10T16:25:41+00:00",
+    "last_seen": "2001-09-10T16:25:41+00:00",
+    "tone_labels": [
+      "enthusiastic"
+    ],
+    "risk_history": [
+      "warning"
+    ],
+    "open_asks": [
+      "Consider having IEP request investigation by Market Monitoring division"
+    ]
+  },
+  "Dernehl, Ginger": {
+    "n_interactions": 13,
+    "first_seen": "2001-09-10T16:31:37+00:00",
+    "last_seen": "2001-10-17T19:26:02+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Please copy David LeBoe on summaries of significant regulatory events/issues.",
+      "please call if you have any questions",
+      "let me know of your activity choice",
+      "Provide responses to Elizabeth Linnell",
+      "Rank up to five choices and send to Rita Hartfield by October 17",
+      "Please let me know which activity you choose",
+      "Interest in spa services?",
+      "Respond to survey by October 18th",
+      "Rank top five priorities from list"
+    ]
+  },
+  "Sanders, Richard B.": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-10T17:50:51+00:00",
+    "last_seen": "2001-09-10T17:50:51+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Nancy Sellers": {
+    "n_interactions": 17,
+    "first_seen": "2001-09-10T20:06:55+00:00",
+    "last_seen": "2001-10-16T16:20:30+00:00",
+    "tone_labels": [
+      "warm",
+      "warm",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "warm",
+      "neutral",
+      "warm",
+      "neutral",
+      "warm",
+      "warm",
+      "neutral",
+      "warm",
+      "neutral",
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "caution",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Did you have a marvelous time?",
+      "Did they like the tomatoes?",
+      "Prentice to call Bill Harris",
+      "copy Nancy on email picks this week",
+      "What do you think is the purpose of this web site?",
+      "confirmation of Sunday visit",
+      "purchase of the cookbook for her birthday",
+      "Request for a Global chef's knife"
+    ]
+  },
+  "Nicolay, Christi L.": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-10T20:10:19+00:00",
+    "last_seen": "2001-09-19T19:42:33+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Send periodic updates to West gas desk and cc gas group"
+    ]
+  },
+  "Williams, Robert C.": {
+    "n_interactions": 10,
+    "first_seen": "2001-09-10T20:25:53+00:00",
+    "last_seen": "2001-10-17T20:30:59+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "cool",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "caution",
+      "caution",
+      "safe",
+      "safe",
+      "caution",
+      "caution",
+      "warning",
+      "safe",
+      "caution"
+    ],
+    "open_asks": [
+      "Analyze legal remedies if legislature enacts retroactive date",
+      "Talk to Ed Duncan about revising the Brief",
+      "Participants to join call on Monday, October 8",
+      "approval for settlement proposal",
+      "What are the financial and contractual implications of the options before the Commission?",
+      "Determine financial exposure and policy response from EWS West Power URM desk",
+      "How to fight the notion of retroactive rate determination?",
+      "Can underscheduling be used to push back?",
+      "discuss terms for Stipulation on call tomorrow"
+    ]
+  },
+  "Boyd, Hap": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-12T01:39:39+00:00",
+    "last_seen": "2001-09-13T01:22:12+00:00",
+    "tone_labels": [
+      "neutral",
+      "cool"
+    ],
+    "risk_history": [
+      "caution",
+      "caution"
+    ],
+    "open_asks": [
+      "Please review and provide feedback on the attached letter",
+      "Avoid drawing attention to QF contracts",
+      "Pass Edison MOU bill for Enron Wind"
+    ]
+  },
+  "Alvarez, Ray": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-12T15:31:21+00:00",
+    "last_seen": "2001-10-12T15:03:27+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Please feel free to communicate any additional agenda items to the group"
+    ]
+  },
+  "Perez, Gus": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-12T15:50:45+00:00",
+    "last_seen": "2001-09-14T14:43:19+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Michael Kirby": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-12T16:43:24+00:00",
+    "last_seen": "2001-09-12T16:43:24+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Rory Sellers": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-12T20:24:27+00:00",
+    "last_seen": "2001-10-16T00:15:21+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Where to meet tonight?"
+    ]
+  },
+  "Prentice Sellers": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-13T03:11:17+00:00",
+    "last_seen": "2001-09-13T03:11:17+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Etringer, Michael": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-13T20:15:02+00:00",
+    "last_seen": "2001-10-10T20:39:51+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Which airport will you be arriving at?",
+      "Review and provide comments on the revised presentation.",
+      "feedback on concept and presentations"
+    ]
+  },
+  "Sharp, Vicki": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-13T22:45:18+00:00",
+    "last_seen": "2001-09-20T19:56:07+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "add mike d smith and kelly higgason to distribution list",
+      "Fax the order to [PHONE]"
+    ]
+  },
+  "John Whiting": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-14T15:44:33+00:00",
+    "last_seen": "2001-09-14T15:44:33+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "DelPriore, Angelo": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-14T19:37:43+00:00",
+    "last_seen": "2001-09-14T19:37:43+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "whether Enron could benefit from his services",
+      "suggestions for corporations or non-profits"
+    ]
+  },
+  "Hetrick, Nancy": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-17T16:32:03+00:00",
+    "last_seen": "2001-09-17T16:32:03+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Is there someone on the California Crisis Team that can answer this question?"
+    ]
+  },
+  "McKalip-Thompson, Catherine": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-17T20:14:40+00:00",
+    "last_seen": "2001-09-18T23:56:44+00:00",
+    "tone_labels": [
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "List of stakeholders from Enron Corp perspective in California",
+      "Suggestions for TURN or other organizations"
+    ]
+  },
+  "Gresch, Robert": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-17T22:50:27+00:00",
+    "last_seen": "2001-09-17T22:50:27+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "caution"
+    ],
+    "open_asks": [
+      "What is the time cutoff for DASR acceptance by utilities?"
+    ]
+  },
+  "Page, Jonalan": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-18T14:52:10+00:00",
+    "last_seen": "2001-09-18T14:52:10+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Dotty Hopkins": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-18T17:24:11+00:00",
+    "last_seen": "2001-09-18T17:24:11+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Madeleine Todd": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-19T04:30:39+00:00",
+    "last_seen": "2001-09-19T04:30:39+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Are you still living on Dolores?",
+      "What do you think of the neighborhood?"
+    ]
+  },
+  "James Docker": {
+    "n_interactions": 6,
+    "first_seen": "2001-09-19T14:01:50+00:00",
+    "last_seen": "2001-10-17T19:33:53+00:00",
+    "tone_labels": [
+      "cool",
+      "warm",
+      "warm",
+      "warm",
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "caution",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "no explicit ask, but implies future contact",
+      "Need to meet or more info from you",
+      "Does Jeff approve the terms?",
+      "Can they meet this weekend?",
+      "Call me when you get in on sat",
+      "complete material take off",
+      "Will you be installing the deck as discussed?",
+      "Can you fax me a map to your place?"
+    ]
+  },
+  "Hrach, April": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-19T15:52:45+00:00",
+    "last_seen": "2001-10-01T20:27:47+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "stop by and introduce yourself to Dennis Yee and Anthony Barr"
+    ]
+  },
+  "Bartlett, Jeff": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-19T16:09:44+00:00",
+    "last_seen": "2001-09-19T17:39:32+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "follow up with Ross"
+    ]
+  },
+  "Thompson, Thomas W.": {
+    "n_interactions": 5,
+    "first_seen": "2001-09-19T16:24:58+00:00",
+    "last_seen": "2001-10-03T00:13:53+00:00",
+    "tone_labels": [
+      "neutral",
+      "warm",
+      "warm",
+      "warm",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "place apple slices",
+      "Does Jeff want to buy an Airstream trailer?",
+      "confirmation of location choice (recipient's or Prentice's)",
+      "availability for scanning net for Bolinas locations",
+      "who to contact at Enron regulatory"
+    ]
+  },
+  "McVicker, Maureen": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-19T18:17:53+00:00",
+    "last_seen": "2001-09-19T18:17:53+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "If you need me to track him down, just let me know"
+    ]
+  },
+  "Lawner, Leslie": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-19T19:29:39+00:00",
+    "last_seen": "2001-10-16T19:51:24+00:00",
+    "tone_labels": [
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Provide OFO history for listed LDCs",
+      "Get back to Leslie or Becky with feedback",
+      "Add citation to OMB notice"
+    ]
+  },
+  "Tholt, Jane M.": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-19T19:45:23+00:00",
+    "last_seen": "2001-10-16T11:45:29+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "provide feedback for FERC comments",
+      "Confirm if SoCal Gas filed to revive unbundling",
+      "Status of SoCal Gas purchasing gas for SDG&E customers"
+    ]
+  },
+  "Lipper, Kip": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-19T21:05:18+00:00",
+    "last_seen": "2001-09-19T21:06:01+00:00",
+    "tone_labels": [
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Where does the quote appear on the Treasurer's web site?"
+    ]
+  },
+  "Bob Lane": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-19T22:46:13+00:00",
+    "last_seen": "2001-09-19T22:46:13+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Give me a ring sometime"
+    ]
+  },
+  "Frank, Robert": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-20T13:30:51+00:00",
+    "last_seen": "2001-10-03T10:50:24+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Cantrell, Rebecca W.": {
+    "n_interactions": 7,
+    "first_seen": "2001-09-20T17:21:00+00:00",
+    "last_seen": "2001-10-10T22:32:01+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "caution",
+      "safe"
+    ],
+    "open_asks": [
+      "any comments to be sent back by deadline",
+      "Review and comment on Draft No.4 by COB Thursday",
+      "Awaiting additional sections and changes from El Paso",
+      "Provide comments on attached filing by COB Friday, 10/5"
+    ]
+  },
+  "Parquet, David": {
+    "n_interactions": 4,
+    "first_seen": "2001-09-20T19:12:25+00:00",
+    "last_seen": "2001-10-02T18:47:33+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "caution",
+      "safe",
+      "safe",
+      "caution"
+    ],
+    "open_asks": [
+      "Thoughts on jurisdiction and customer assignment under the reorganization plan",
+      "Opinion on direct access and legislative interplay",
+      "Come with list of contacts for Roseville issue",
+      "Bring thoughts on DC Line PR strategy",
+      "Participants to bring lists of contacts for Roseville issue",
+      "Participants to bring thoughts on PR strategy for DC Line",
+      "Please come to the telecon with a list of who you have already contacted, and who we may consider contacting."
+    ]
+  },
+  "Gwen Soong": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-20T19:34:17+00:00",
+    "last_seen": "2001-09-20T19:39:33+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Tribolet, Michael": {
+    "n_interactions": 6,
+    "first_seen": "2001-09-20T20:05:27+00:00",
+    "last_seen": "2001-10-16T19:52:16+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "cool",
+      "warm",
+      "cool",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "warning",
+      "caution",
+      "caution",
+      "safe"
+    ],
+    "open_asks": [
+      "Please email Joseph Alamo with your fax number if you would like a copy",
+      "review attached report",
+      "Employee commitment to Enron and its values",
+      "What was your take on the analyst call?",
+      "Are you hearing that Lay's calling Edison today?"
+    ]
+  },
+  "Briggs, Tom": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-21T16:01:28+00:00",
+    "last_seen": "2001-09-21T16:01:28+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "John Klauberg": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-21T21:24:39+00:00",
+    "last_seen": "2001-09-30T02:05:42+00:00",
+    "tone_labels": [
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "caution",
+      "safe"
+    ],
+    "open_asks": [
+      "Request for Jeff's sense on potential conflicts based on Norman's list",
+      "Implicit request for guidance on whether to proceed with hiring Norm"
+    ]
+  },
+  "Barbara Bukhvalov": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-21T23:21:47+00:00",
+    "last_seen": "2001-09-27T01:21:37+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "none"
+    ]
+  },
+  "Blachman, Jeremy": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-22T10:00:09+00:00",
+    "last_seen": "2001-10-17T11:01:31+00:00",
+    "tone_labels": [
+      "neutral",
+      "warm",
+      "cool"
+    ],
+    "risk_history": [
+      "caution",
+      "safe",
+      "warning"
+    ],
+    "open_asks": [
+      "Set up a call on Mon or Tues with specified attendees",
+      "Set up the call with Sharon",
+      "Who is now on point commercially for the PacBell (SBC) contract?",
+      "Clarification on whether Jeff meant 9/20/01 instead of 10/20/01"
+    ]
+  },
+  "MDay": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-24T16:25:08+00:00",
+    "last_seen": "2001-09-25T21:37:25+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "warning"
+    ],
+    "open_asks": [
+      "How to handle utility rejection of pre-Sept 20 contracts DASR'd after?",
+      "How to resist utility demands for sensitive contract provisions?"
+    ]
+  },
+  "Ronald Carroll": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-24T21:29:15+00:00",
+    "last_seen": "2001-09-24T21:29:15+00:00",
+    "tone_labels": [
+      "cool"
+    ],
+    "risk_history": [
+      "caution"
+    ],
+    "open_asks": [
+      "none"
+    ]
+  },
+  "Mike Florio": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-25T04:02:18+00:00",
+    "last_seen": "2001-09-25T15:55:44+00:00",
+    "tone_labels": [
+      "hostile",
+      "cool",
+      "hostile"
+    ],
+    "risk_history": [
+      "warning",
+      "safe",
+      "warning"
+    ],
+    "open_asks": [
+      "Resend the attachment"
+    ]
+  },
+  "Dasovich, Jeff": {
+    "n_interactions": 10,
+    "first_seen": "2001-09-25T16:04:39+00:00",
+    "last_seen": "2001-10-10T18:21:16+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "warning",
+      "caution",
+      "safe",
+      "caution",
+      "warning",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Please let me know if there are others I missed, or if there are changes needed to the ones listed.",
+      "Comments on the taxonomy of regulatory risks",
+      "Suggestions for additional risks or changes",
+      "How will California pay for DWR contracts?",
+      "Will Davis sign the bill creating dedicated rate component?",
+      "How will California pay for DWR contracts and issue bonds?"
+    ]
+  },
+  "DiMare, Dominic": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-26T20:47:33+00:00",
+    "last_seen": "2001-09-26T20:47:33+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Include Chamber of Commerce on petition for re-hearing."
+    ]
+  },
+  "Hedy Govenar": {
+    "n_interactions": 4,
+    "first_seen": "2001-09-26T22:21:00+00:00",
+    "last_seen": "2001-10-09T21:16:05+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "warning",
+      "caution",
+      "safe"
+    ],
+    "open_asks": [
+      "Will a compromise bill be ready by next Tuesday?",
+      "What happens if 78xx fails on Tuesday?",
+      "If Enron is participating, please let us know"
+    ]
+  },
+  "Michael Rochman": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-26T23:26:06+00:00",
+    "last_seen": "2001-09-26T23:26:06+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Curry, Wanda": {
+    "n_interactions": 5,
+    "first_seen": "2001-09-27T16:11:56+00:00",
+    "last_seen": "2001-10-02T21:49:52+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm",
+      "warm",
+      "enthusiastic"
+    ],
+    "risk_history": [
+      "caution",
+      "safe",
+      "caution",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "How does this play into this?",
+      "Should they be kept whole?",
+      "Do you want me to have Steve update this?",
+      "Let me know what you think",
+      "if you need anything else",
+      "Jeff to name a time for the call",
+      "Does this mean the current surcharge of 3 cent and 1 cent will NOT apply to direct access loads?"
+    ]
+  },
+  "Dorothy Rothrock": {
+    "n_interactions": 4,
+    "first_seen": "2001-09-27T17:44:33+00:00",
+    "last_seen": "2001-10-02T00:06:48+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "caution",
+      "safe",
+      "caution"
+    ],
+    "open_asks": [
+      "Barbara to confirm if CLECA wants to join by 11:00 am",
+      "Tell me more about the TURN/AG office deal."
+    ]
+  },
+  "Nord, Sue": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-27T18:33:33+00:00",
+    "last_seen": "2001-09-27T18:33:33+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Pat and Sue to send comments by midday"
+    ]
+  },
+  "Miller, Stephanie": {
+    "n_interactions": 7,
+    "first_seen": "2001-09-27T19:21:35+00:00",
+    "last_seen": "2001-10-16T14:00:13+00:00",
+    "tone_labels": [
+      "warm",
+      "warm",
+      "warm",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "safe",
+      "caution"
+    ],
+    "open_asks": [
+      "feedback on issues that are critical drivers",
+      "Schedule a call for next week",
+      "call Barry or Stephanie if questions",
+      "Forward the announcement",
+      "Include Janie Tholt on distribution",
+      "call me when you have a moment"
+    ]
+  },
+  "Redding, John R. (PS, NE)": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-27T21:53:30+00:00",
+    "last_seen": "2001-09-27T21:53:30+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "resume forwarding request"
+    ]
+  },
+  "Kaufman, Paul": {
+    "n_interactions": 9,
+    "first_seen": "2001-09-28T15:33:56+00:00",
+    "last_seen": "2001-10-17T17:52:50+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral",
+      "warm",
+      "neutral",
+      "neutral",
+      "hostile",
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "caution",
+      "safe",
+      "safe",
+      "warning",
+      "caution",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Jeff to review and modify spreadsheets",
+      "Sue to review after Jeff",
+      "Jeff: your thoughts??"
+    ]
+  },
+  "Bradley, Rob": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-28T16:56:31+00:00",
+    "last_seen": "2001-09-28T16:56:31+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Hartfield, Rita": {
+    "n_interactions": 2,
+    "first_seen": "2001-09-28T19:25:04+00:00",
+    "last_seen": "2001-09-28T19:25:11+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Mellencamp, Lisa": {
+    "n_interactions": 3,
+    "first_seen": "2001-09-28T22:42:36+00:00",
+    "last_seen": "2001-10-03T05:14:57+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "caution",
+      "caution"
+    ],
+    "open_asks": [
+      "Awaiting call from Walper on Monday",
+      "Request for email address of in-house contact",
+      "can you get with jeff early and start getting our view as i finish the other crisis stuff first in the am???"
+    ]
+  },
+  "Denne, Karen": {
+    "n_interactions": 1,
+    "first_seen": "2001-09-28T23:03:46+00:00",
+    "last_seen": "2001-09-28T23:03:46+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "caution"
+    ],
+    "open_asks": []
+  },
+  "Shortridge, Pat": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-02T02:15:58+00:00",
+    "last_seen": "2001-10-02T02:15:58+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Enron Payroll": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-02T09:33:53+00:00",
+    "last_seen": "2001-10-02T09:33:53+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "employee must submit form by Oct 15 if they want hardcopy"
+    ]
+  },
+  "Neustaedter, Robert": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-03T22:20:53+00:00",
+    "last_seen": "2001-10-03T22:20:53+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Any commercial opportunities there?"
+    ]
+  },
+  "Novosel, Sarah": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-03T22:24:47+00:00",
+    "last_seen": "2001-10-03T22:24:47+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Call Sarah if questions"
+    ]
+  },
+  "Perrino, Dave": {
+    "n_interactions": 2,
+    "first_seen": "2001-10-04T16:01:27+00:00",
+    "last_seen": "2001-10-05T17:47:50+00:00",
+    "tone_labels": [
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "Any questions, please contact me",
+      "confirmation if call-in number is needed"
+    ]
+  },
+  "Cooley, Jan": {
+    "n_interactions": 3,
+    "first_seen": "2001-10-05T17:01:29+00:00",
+    "last_seen": "2001-10-17T19:26:50+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "none"
+    ]
+  },
+  "Ashley Kasischke/HOU/EES@EES": {
+    "n_interactions": 2,
+    "first_seen": "2001-10-05T18:45:16+00:00",
+    "last_seen": "2001-10-05T18:47:36+00:00",
+    "tone_labels": [
+      "warm",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "eldon": {
+    "n_interactions": 4,
+    "first_seen": "2001-10-07T17:06:30+00:00",
+    "last_seen": "2001-10-16T06:13:55+00:00",
+    "tone_labels": [
+      "neutral",
+      "enthusiastic",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "What do you think about this?",
+      "Submit picks by 5 PM Thursday"
+    ]
+  },
+  "Lynne LaMarca Heinrich": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-07T22:28:51+00:00",
+    "last_seen": "2001-10-07T22:28:51+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Complete readings before October 27th",
+      "Subscribe to Board Café online"
+    ]
+  },
+  "Barbara Bukhvalova": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-08T22:50:26+00:00",
+    "last_seen": "2001-10-08T22:50:26+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Ryall, Jean": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-09T04:45:57+00:00",
+    "last_seen": "2001-10-09T04:45:57+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "confirmation to proceed with introduction"
+    ]
+  },
+  "O'Neal, Patricia": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-09T15:27:21+00:00",
+    "last_seen": "2001-10-09T15:27:21+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Enron MailSweeper Admin": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-09T23:48:01+00:00",
+    "last_seen": "2001-10-09T23:48:01+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "call help desk to release email if needed"
+    ]
+  },
+  "Hartsoe, Joe": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-10T15:10:57+00:00",
+    "last_seen": "2001-10-10T15:10:57+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Kelly, Jacqueline": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-10T16:02:33+00:00",
+    "last_seen": "2001-10-10T16:02:33+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "let me know if you have time for lunch",
+      "let me know if you want to come to Tahoe"
+    ]
+  },
+  "Swain, Steve": {
+    "n_interactions": 4,
+    "first_seen": "2001-10-10T18:22:18+00:00",
+    "last_seen": "2001-10-12T19:15:21+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral",
+      "neutral",
+      "cool"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe",
+      "caution"
+    ],
+    "open_asks": [
+      "none",
+      "Please let me know if you have any more relevant comments",
+      "Provide the correct exhibits referenced in the Decision"
+    ]
+  },
+  "Alamo, Joseph": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-10T23:46:23+00:00",
+    "last_seen": "2001-10-10T23:46:23+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Carranza, Octavio": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-11T00:17:17+00:00",
+    "last_seen": "2001-10-11T00:17:17+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Jack M. Stewart, President - CMTA": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-11T18:53:47+00:00",
+    "last_seen": "2001-10-11T18:53:47+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "RSVP with social security number by October 12, 4:00pm PDT"
+    ]
+  },
+  "Lynne Kiesling": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-12T01:30:00+00:00",
+    "last_seen": "2001-10-12T01:30:00+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "summary of typical siting/permitting process for a plant in California"
+    ]
+  },
+  "Binns, Darran": {
+    "n_interactions": 3,
+    "first_seen": "2001-10-12T14:34:13+00:00",
+    "last_seen": "2001-10-16T15:15:29+00:00",
+    "tone_labels": [
+      "neutral",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": []
+  },
+  "Friedman, Richard": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-16T00:42:00+00:00",
+    "last_seen": "2001-10-16T00:42:00+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Contact me or Ron Gern immediately if any assumptions are incorrect"
+    ]
+  },
+  "Hass, Glen": {
+    "n_interactions": 3,
+    "first_seen": "2001-10-16T12:44:09+00:00",
+    "last_seen": "2001-10-17T13:36:25+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral",
+      "neutral"
+    ],
+    "risk_history": [
+      "safe",
+      "safe",
+      "safe"
+    ],
+    "open_asks": [
+      "None",
+      "Discussion on conference call later this morning",
+      "Ensure SoCal and other CSA signatories are on board before filing comments"
+    ]
+  },
+  "Huddleson, Diann": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-16T12:59:38+00:00",
+    "last_seen": "2001-10-16T12:59:38+00:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "caution"
+    ],
+    "open_asks": [
+      "Do you know if the CPUC has given SCE permission to impose an earlier deadline?"
+    ]
+  },
+  "Evelyn Kahl": {
+    "n_interactions": 3,
+    "first_seen": "2001-10-16T15:56:34+00:00",
+    "last_seen": "2001-10-16T16:53:16+00:00",
+    "tone_labels": [
+      "warm",
+      "neutral",
+      "warm"
+    ],
+    "risk_history": [
+      "safe",
+      "caution",
+      "safe"
+    ],
+    "open_asks": [
+      "Is the no exit fee view commonly held among marketers?"
+    ]
+  },
+  "Avram Siegel": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-17T00:40:04+00:00",
+    "last_seen": "2001-10-17T00:40:04+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Ask me about it next time I see you"
+    ]
+  },
+  "Cherry, Brian": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-17T01:38:05+00:00",
+    "last_seen": "2001-10-17T01:38:05+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "call back on Wednesday"
+    ]
+  },
+  "Stubbs, Shelly": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-17T20:34:32+00:00",
+    "last_seen": "2001-10-17T20:34:32+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Add Shelly, Murray, Brenda to EES market updates distribution list"
+    ]
+  },
+  "Leff, Dan": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-17T20:50:00+00:00",
+    "last_seen": "2001-10-17T20:50:00+00:00",
+    "tone_labels": [
+      "warm"
+    ],
+    "risk_history": [
+      "safe"
+    ],
+    "open_asks": [
+      "Add Evan Hughes, Murray O'Neill, Brenda Herod to distribution list for this topic",
+      "Add Dan Leff to distribution list for all California communication"
+    ]
+  }
+}

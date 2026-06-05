@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"polite request with explanation\", \"friendly closing\"],\n    \"open_asks\": [\"add to update list\"]\n}"
+}

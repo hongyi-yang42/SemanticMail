@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"negotiation\",\n    \"urgency\": \"medium\",\n    \"urgency_signals\": [\"March 20th deadline\", \"April conference submission\", \"phased approach proposed\"],\n    \"confidence\": 0.9\n}"
+}

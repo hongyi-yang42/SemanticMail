@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"expresses concern for safety and well-being\", \"offers flexibility and reimbursement\"],\n    \"open_asks\": []\n}"
+}

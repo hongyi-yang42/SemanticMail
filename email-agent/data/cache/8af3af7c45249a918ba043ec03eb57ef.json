@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Confidential marking\", \"restrictive participant list\"],\n    \"open_asks\": [\"Come with list of contacts for Roseville issue\", \"Bring thoughts on DC Line PR strategy\"]\n}"
+}

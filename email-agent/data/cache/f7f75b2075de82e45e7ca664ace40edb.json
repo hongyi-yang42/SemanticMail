@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"request to review attached draft\", \"seeking management approval\"],\n    \"open_asks\": [\"approval for settlement proposal\"]\n}"
+}

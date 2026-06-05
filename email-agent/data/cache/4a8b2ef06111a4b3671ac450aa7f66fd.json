@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Expresses uncertainty about class quality but in a neutral way\", \"Friendly closing and offer to catch up\"],\n    \"open_asks\": [\"Let me know if you're going to go to this class\", \"or want to catch up on Tues during break\"]\n}"
+}

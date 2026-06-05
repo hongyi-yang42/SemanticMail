@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"hostile\",\n    \"key_signals\": [\"stop yanking my chain\", \"What have you done with Loretta?\"],\n    \"open_asks\": []\n}"
+}

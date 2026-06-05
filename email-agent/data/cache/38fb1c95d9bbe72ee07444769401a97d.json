@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Legislature adjourned without DA bill\", \"Governor calling special session\"],\n    \"open_asks\": []\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"enthusiastic\",\n    \"key_signals\": [\"I am cheered to see Dow Jones reporting on the ISO's illegal practices\", \"We should consider having IEP request that the Market Monitoring division of the ISO investigate\"],\n    \"open_asks\": [\"Consider having IEP request investigation by Market Monitoring division\"]\n}"
+}

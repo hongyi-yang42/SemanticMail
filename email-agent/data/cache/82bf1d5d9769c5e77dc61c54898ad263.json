@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"warning\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\n        \"SCE did not attend the meeting in person and at the end made clear that they had not agreed with the joint plan\",\n        \"There is risk that the CPUC will NOT approve the approach and will cutoff DASRs on some date certain\"\n    ],\n    \"open_asks\": [\n        \"Call with any questions\"\n    ]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"follow_up\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Agree the settlement is not nearly all that it could have been, but sure beats what we've got\", \"If there's something you think that we can do to help\"],\n    \"open_asks\": [\"Will Douglas get back with thoughts?\"]\n}"
+}

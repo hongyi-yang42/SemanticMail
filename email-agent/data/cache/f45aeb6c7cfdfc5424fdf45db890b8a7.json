@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"forwarding a press release with no personal commentary\", \"request for document distribution due to lack of internet access\"],\n    \"open_asks\": [\"Alan requests the reorg plan from Michael and Lisa\", \"Jeff asks Alan to find and distribute a more detailed version\"]\n}"
+}

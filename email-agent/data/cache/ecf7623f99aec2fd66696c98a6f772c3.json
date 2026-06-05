@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Thank you for this info - and for all of the hard work\", \"please make sure to include\", \"I would like to be on the distribution list\"],\n    \"open_asks\": [\"Add Evan Hughes, Murray O'Neill, Brenda Herod to distribution list for this topic\", \"Add Dan Leff to distribution list for all California communication\"]\n}"
+}

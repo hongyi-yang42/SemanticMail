@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Survey results show low trust and ethical concerns\", \"Management acknowledges issues and proposes actions\"],\n    \"open_asks\": [\"Employee commitment to Enron and its values\"]\n}"
+}

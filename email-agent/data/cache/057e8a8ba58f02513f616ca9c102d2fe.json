@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Afternoon is better than the morning\", \"You name the time\"],\n    \"open_asks\": [\"Jeff to name a time for the call\"]\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"cool\",\n    \"key_signals\": [\"I don't believe these are what I am looking for\", \"I do not see those titles or labels on any of these documents\"],\n    \"open_asks\": [\"Provide the correct exhibits referenced in the Decision\"]\n}"
+}

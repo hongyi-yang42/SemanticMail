@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Asks about marketers' view on 'no exit fees'\", \"Labels view as 'fantasy'\"],\n    \"open_asks\": [\"Is the no exit fee view commonly held among marketers?\"]\n}"
+}

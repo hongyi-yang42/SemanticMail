@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"polite request for feedback and citation addition\"],\n    \"open_asks\": [\"Get back to Leslie or Becky with feedback\", \"Add citation to OMB notice\"]\n}"
+}

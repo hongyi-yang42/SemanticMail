@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"scheduling\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Keep up the great work!!!\", \"Thanks everybody.\"],\n    \"open_asks\": [\"Mike Day - draft language to fix SB78\", \"Hedy & Bev - who should support the amendment?\"]\n}"
+}

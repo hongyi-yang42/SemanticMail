@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"We've worked with this group in the past\", \"Feel free to check them out if you have the need\"],\n    \"open_asks\": []\n}"
+}

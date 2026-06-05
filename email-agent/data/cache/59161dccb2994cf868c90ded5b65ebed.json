@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"request\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"Urgent action items with deadlines\", \"Asking for guidance on approach\"],\n    \"open_asks\": [\"How best to approach the California Restaurant Association?\", \"Need help communicating with Boeing\"]\n}"
+}

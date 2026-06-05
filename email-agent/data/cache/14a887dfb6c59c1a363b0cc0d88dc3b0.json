@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"enthusiastic\",\n    \"key_signals\": [\"Barrie was awesome!!\", \"that is some kind of crystal ball!\"],\n    \"open_asks\": []\n}"
+}

@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"negotiation\",\n    \"urgency\": \"low\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Proposes T&M basis with clear rates\", \"Requests bi-weekly payment\"],\n    \"open_asks\": [\"Does Jeff approve the terms?\", \"Can they meet this weekend?\"]\n}"
+}

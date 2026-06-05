@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"neutral\",\n    \"key_signals\": [\"ALERT-- CPUC VOTE DELAYED AGAIN!!!\"],\n    \"open_asks\": [\"Will let you know when we know the new date for the meeting.\"]\n}"
+}

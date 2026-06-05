@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"notification\",\n    \"urgency\": \"high\",\n    \"risk_level\": \"safe\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\"Complimentary ticket reserved for member\", \"RSVP deadline with social security number required\"],\n    \"open_asks\": [\"RSVP with social security number by October 12, 4:00pm PDT\"]\n}"
+}

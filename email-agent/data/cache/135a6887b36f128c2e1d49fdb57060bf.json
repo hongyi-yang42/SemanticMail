@@ -1,0 +1,3 @@
+{
+  "response": "{\n    \"intent\": \"information_sharing\",\n    \"urgency\": \"medium\",\n    \"risk_level\": \"caution\",\n    \"tone_label\": \"warm\",\n    \"key_signals\": [\n        \"I am still leaning against pursuing things further with Norm, but I just felt compelled to do a bit of further diligence\",\n        \"I hate to bother you with this in light of everything you have going on\"\n    ],\n    \"open_asks\": [\n        \"Request for Jeff's sense on potential conflicts based on Norman's list\",\n        \"Implicit request for guidance on whether to proceed with hiring Norm\"\n    ]\n}"
+}
