@@ -720,6 +720,7 @@ def main():
         sender = edict.get("from", "Unknown")
         print(f"\n[{i+1}/{len(emails)}] {sender}: {subj}...", file=sys.stderr)
 
+        fb_key = _email_key(edict)           # compute before deidentify
         if not args.no_deidentify:
             edict = deidentify(edict)
 
@@ -752,7 +753,6 @@ def main():
         append_memory(edict, triage, obligations, memory)
 
         # Apply feedback overrides
-        fb_key = _email_key(edict)
         fb_touched = apply_feedback(triage, cold, scaffolded, feedback, fb_key)
         if fb_touched:
             print(f"  feedback applied: {fb_touched}", file=sys.stderr)
