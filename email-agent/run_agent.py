@@ -43,6 +43,9 @@ MEMORY_DIR = os.path.join(AGENT_DIR, "memory")
 OUT_DIR = os.path.join(AGENT_DIR, "out")
 
 RISK_BADGE = {"safe": "[OK]", "caution": "[!]", "warning": "[!!]", "critical": "[!!!]"}
+FEEDBACK_PATH = os.path.join(MEMORY_DIR, "feedback.json")
+
+_LOCAL_ONLY = False  # set by --local-only; hard-disables live LLM
 
 # ---------------------------------------------------------------------------
 # Safe I/O helpers
@@ -110,6 +113,61 @@ def _is_seen(email_dict, seen):
     if mid:
         return ("mid", mid) in seen
     return ("body_date", email_dict.get("body", ""), email_dict.get("date_iso", "")) in seen
+
+
+# ---------------------------------------------------------------------------
+# Feedback overrides (memory/feedback.json)
+# ---------------------------------------------------------------------------
+
+def _email_key(email_dict):
+    """Stable key for feedback: message_id or MD5(body)."""
+    mid = email_dict.get("message_id", "")
+    return mid if mid else hashlib.md5(email_dict.get("body", "").encode()).hexdigest()
+
+
+def load_feedback():
+    return _load_json(FEEDBACK_PATH, {})
+
+
+def record_feedback(email_dict, overrides, note=""):
+    from datetime import datetime, timezone
+    feedback = load_feedback()
+    key = _email_key(email_dict)
+    feedback[key] = {
+        "overrides": overrides,
+        "note": note,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+    }
+    _atomic_write_json(FEEDBACK_PATH, feedback)
+    return key
+
+
+def apply_feedback(triage, cold, scaffolded, feedback, email_key):
+    """Apply overrides in-place. Returns set of overridden field names."""
+    entry = feedback.get(email_key, {})
+    overrides = entry.get("overrides", {})
+    touched = set()
+    for field, value in overrides.items():
+        if field in ("intent", "urgency", "risk_level", "tone_label"):
+            triage[field] = value
+            touched.add(field)
+        elif field == "cold.draft_text" and cold is not None:
+            cold["draft_text"] = value
+            touched.add("cold.draft_text")
+        elif field == "scaffolded.draft_text" and scaffolded is not None:
+            scaffolded["draft_text"] = value
+            touched.add("scaffolded.draft_text")
+    return touched
+
+
+def redact_report(text):
+    """Scrub PII from rendered report for safe sharing."""
+    from enron_load import PHONE_RE, BARE_ADDR_RE, ADDR_RE, EXCHANGE_RE
+    text = EXCHANGE_RE.sub("[EMAIL]", text)
+    text = ADDR_RE.sub("[EMAIL]", text)
+    text = BARE_ADDR_RE.sub("[EMAIL]", text)
+    text = PHONE_RE.sub("[PHONE]", text)
+    return text
 
 
 def load_memory():
@@ -265,7 +323,7 @@ def safe_llm(system_prompt, user_prompt, live=False):
     cached = _cache_read(system_prompt, user_prompt)
     if cached is not None:
         return cached
-    if not live or not _has_api_key():
+    if _LOCAL_ONLY or not live or not _has_api_key():
         return None
     from llm.cache import cached_call_llm
     return cached_call_llm(system_prompt, user_prompt)
@@ -477,7 +535,10 @@ def _contact_obligations(sender, ledger):
     return results
 
 
-def render_report(email_dict, triage, pic, cold, scaffolded, memory_block, memory):
+def render_report(email_dict, triage, pic, cold, scaffolded, memory_block, memory,
+                  feedback_touched=None):
+    _CORR = " ✎ user-corrected"
+    fb = feedback_touched or set()
     sender = email_dict.get("from", "Unknown")
     subject = email_dict.get("subject", "(no subject)")
     date = email_dict.get("date", "")
@@ -492,10 +553,14 @@ def render_report(email_dict, triage, pic, cold, scaffolded, memory_block, memor
 
     # --- Triage ---
     md.append(f"## Triage Verdict {badge}\n")
-    md.append(f"- **Intent:** {triage.get('intent', 'unknown')}")
-    md.append(f"- **Urgency:** {triage.get('urgency', 'low')}")
-    md.append(f"- **Risk Level:** {risk}")
-    md.append(f"- **Tone:** {triage.get('tone_label', 'neutral')}")
+    md.append(f"- **Intent:** {triage.get('intent', 'unknown')}"
+              + (_CORR if "intent" in fb else ""))
+    md.append(f"- **Urgency:** {triage.get('urgency', 'low')}"
+              + (_CORR if "urgency" in fb else ""))
+    md.append(f"- **Risk Level:** {risk}"
+              + (_CORR if "risk_level" in fb else ""))
+    md.append(f"- **Tone:** {triage.get('tone_label', 'neutral')}"
+              + (_CORR if "tone_label" in fb else ""))
     for s in triage.get("key_signals", []):
         md.append(f"  - Signal: {s}")
     for a in triage.get("open_asks", []):
@@ -541,7 +606,8 @@ def render_report(email_dict, triage, pic, cold, scaffolded, memory_block, memor
         md.append("```")
         md.append(cold.get("draft_text", ""))
         md.append("```\n")
-        md.append(f"*Rationale: {cold.get('rationale', '')}*")
+        md.append(f"*Rationale: {cold.get('rationale', '')}*"
+                  + (_CORR if "cold.draft_text" in fb else ""))
     else:
         md.append("*Not generated (offline).*")
     md.append("")
@@ -551,7 +617,8 @@ def render_report(email_dict, triage, pic, cold, scaffolded, memory_block, memor
         md.append("```")
         md.append(scaffolded.get("draft_text", ""))
         md.append("```\n")
-        md.append(f"*Rationale: {scaffolded.get('rationale', '')}*")
+        md.append(f"*Rationale: {scaffolded.get('rationale', '')}*"
+                  + (_CORR if "scaffolded.draft_text" in fb else ""))
     else:
         md.append("*Not generated (offline).*")
     md.append("")
@@ -586,18 +653,28 @@ def render_report(email_dict, triage, pic, cold, scaffolded, memory_block, memor
 # ---------------------------------------------------------------------------
 
 def main():
+    global _LOCAL_ONLY
+
     ap = argparse.ArgumentParser(description="SemanticMail Agent — end-to-end email analysis")
     ap.add_argument("input", nargs="?", help=".eml / .mbox file, or '-' for stdin")
     ap.add_argument("--text", action="store_true",
                     help="Read raw email text from stdin (From/To/Date/Subject + body)")
     ap.add_argument("--live", action="store_true",
                     help="Allow live LLM calls on cache miss (needs DEEPSEEK_API_KEY)")
+    ap.add_argument("--local-only", action="store_true",
+                    help="Hard-disable live LLM — nothing leaves the machine")
+    ap.add_argument("--redact", action="store_true",
+                    help="Scrub PII from report output for safe sharing")
+    ap.add_argument("--feedback", metavar="JSON",
+                    help='Record user correction, e.g. \'{"risk_level":"caution"}\'')
     ap.add_argument("--out", help="Output file path (default: out/<id>.md)")
     ap.add_argument("--no-deidentify", action="store_true", help="Skip PII de-identification")
     args = ap.parse_args()
 
     if not args.input and not args.text:
         ap.error("Provide an input file (.eml/.mbox) or use --text")
+
+    _LOCAL_ONLY = args.local_only
 
     # --- Parse input ---
     emails = []
@@ -625,8 +702,10 @@ def main():
     # --- Load memory (incremental) ---
     print("Loading memory...", file=sys.stderr)
     memory = load_memory()
+    feedback = load_feedback()
     print(f"  {len(memory['emails'])} emails | {len(memory['contacts'])} contacts | "
-          f"{len(memory['threads'])} threads", file=sys.stderr)
+          f"{len(memory['threads'])} threads | {len(feedback)} feedback entries",
+          file=sys.stderr)
 
     emb_model = None
     try:
@@ -643,6 +722,17 @@ def main():
 
         if not args.no_deidentify:
             edict = deidentify(edict)
+
+        # Record feedback if --feedback given (then exit)
+        if args.feedback:
+            try:
+                fb_overrides = json.loads(args.feedback)
+            except json.JSONDecodeError:
+                sys.exit("Error: --feedback value must be valid JSON")
+            note = fb_overrides.pop("_note", "")
+            key = record_feedback(edict, fb_overrides, note)
+            print(f"Feedback recorded for {key}", file=sys.stderr)
+            continue
 
         triage = run_triage(edict, args.live)
         print(f"  triage: intent={triage['intent']} risk={triage['risk_level']} "
@@ -661,7 +751,18 @@ def main():
 
         append_memory(edict, triage, obligations, memory)
 
-        report = render_report(edict, triage, pic, cold, scaffolded, mem_block, memory)
+        # Apply feedback overrides
+        fb_key = _email_key(edict)
+        fb_touched = apply_feedback(triage, cold, scaffolded, feedback, fb_key)
+        if fb_touched:
+            print(f"  feedback applied: {fb_touched}", file=sys.stderr)
+
+        report = render_report(edict, triage, pic, cold, scaffolded, mem_block, memory,
+                               feedback_touched=fb_touched)
+
+        # Redact PII if requested
+        if args.redact:
+            report = redact_report(report)
 
         # stdout
         print(report)
