@@ -92,14 +92,35 @@ def _atomic_write_pickle(path, obj):
 # Memory loading (incremental — never rebuild)
 # ---------------------------------------------------------------------------
 
+def _build_seen_set(emails):
+    """Build a dedup set: message_id → True when present, else (body, date_iso) tuple."""
+    seen = set()
+    for e in emails:
+        mid = e.get("message_id", "")
+        if mid:
+            seen.add(("mid", mid))
+        else:
+            seen.add(("body_date", e.get("body", ""), e.get("date_iso", "")))
+    return seen
+
+
+def _is_seen(email_dict, seen):
+    """Check if email is already in the corpus. message_id primary, body+date fallback."""
+    mid = email_dict.get("message_id", "")
+    if mid:
+        return ("mid", mid) in seen
+    return ("body_date", email_dict.get("body", ""), email_dict.get("date_iso", "")) in seen
+
+
 def load_memory():
     vectors, metadata = None, None
     try:
         vectors, metadata = load_index()
     except Exception:
         pass
+    emails = _load_json(os.path.join(MEMORY_DIR, "emails.json"), [])
     return {
-        "emails":         _load_json(os.path.join(MEMORY_DIR, "emails.json"), []),
+        "emails":         emails,
         "contacts":       _load_json(os.path.join(MEMORY_DIR, "contacts.json"), {}),
         "threads":        _load_json(os.path.join(MEMORY_DIR, "threads.json"), {}),
         "triage_results": _load_json(os.path.join(MEMORY_DIR, "triage_results.json"), []),
@@ -107,6 +128,7 @@ def load_memory():
                                      {"you_owe": [], "you_promised": [], "resolved": []}),
         "vectors":        vectors,
         "metadata":       metadata,
+        "_seen":          _build_seen_set(emails),
     }
 
 
@@ -277,9 +299,11 @@ def run_obligations(email_dict, triage_result, live):
 def _build_thread(email_dict, memory):
     """Build mini-thread, ensuring the new email appears as the last message."""
     thread_data = build_mini_thread(email_dict, memory["emails"], memory["triage_results"])
+    # build_mini_thread falls back to including the email itself when no matches —
+    # check body to avoid duplicating it.
     new_body = email_dict.get("body", "")
-    already_present = any(m.get("body", "") == new_body for m in thread_data["messages"])
-    if not already_present:
+    already_in = any(m.get("body", "") == new_body for m in thread_data["messages"])
+    if not already_in:
         thread_data["messages"].append({
             "from":    email_dict.get("from", "Unknown"),
             "to":      email_dict.get("to", "Unknown"),
@@ -360,14 +384,17 @@ def append_memory(email_dict, triage_result, obligations, memory):
     sender = email_dict.get("from", "Unknown")
     date_iso = email_dict.get("date_iso", "")
     norm_subj = email_dict.get("norm_subject", "")
-    new_body = email_dict.get("body", "")
 
-    # Skip if already present (same body + same date)
-    if any(e.get("body", "") == new_body and e.get("date_iso", "") == date_iso
-           for e in memory["emails"]):
+    if _is_seen(email_dict, memory.get("_seen", set())):
         return
 
     memory["emails"].append(email_dict)
+    # Keep dedup set in sync
+    mid = email_dict.get("message_id", "")
+    if mid:
+        memory.setdefault("_seen", set()).add(("mid", mid))
+    else:
+        memory.setdefault("_seen", set()).add(("body_date", email_dict.get("body", ""), date_iso))
     triage_result["_email_idx"] = len(memory["emails"]) - 1
     triage_result["_cached"] = True
     memory["triage_results"].append(triage_result)
