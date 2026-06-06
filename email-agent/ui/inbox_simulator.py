@@ -124,34 +124,34 @@ def _render_email_reader(email_dict, triage):
 
     st.markdown(
         f'<div style="'
-        f'border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;'
-        f'margin-bottom:0;background:#fff">'
+        f'border:1px solid rgba(128,128,128,0.2);border-radius:8px;overflow:hidden;'
+        f'margin-bottom:0;background:var(--secondary-background-color)">'
         # Subject header
         f'<div style="padding:16px 20px 8px 20px">'
-        f'<div style="font-size:18px;font-weight:600;color:#202124;line-height:1.3">'
+        f'<div style="font-size:18px;font-weight:600;color:var(--text-color);line-height:1.3">'
         f'{subject}</div>'
         f'</div>'
         # Sender / date row
         f'<div style="padding:4px 20px 12px 20px;display:flex;'
         f'justify-content:space-between;align-items:baseline">'
         f'<div>'
-        f'<span style="font-size:13px;font-weight:600;color:#202124">{sender_name}</span>'
-        f' <span style="font-size:12px;color:#5f6368;font-family:monospace">'
+        f'<span style="font-size:13px;font-weight:600;color:var(--text-color)">{sender_name}</span>'
+        f' <span style="font-size:12px;color:var(--text-color);opacity:0.65;font-family:monospace">'
         f'&lt;{sender_email}&gt;</span>'
         f'</div>'
         f'<div style="display:flex;align-items:center;gap:8px">'
-        f'<span style="font-size:12px;color:#5f6368">{date}</span>'
+        f'<span style="font-size:12px;color:var(--text-color);opacity:0.65">{date}</span>'
         f' {_risk_pill_html(risk, small=True)}'
         f'</div>'
         f'</div>'
         # To line
-        f'<div style="padding:0 20px 12px 20px;font-size:12px;color:#5f6368">'
+        f'<div style="padding:0 20px 12px 20px;font-size:12px;color:var(--text-color);opacity:0.65">'
         f'To: {to}'
         f'</div>'
-        f'<div style="border-top:1px solid #e0e0e0"></div>'
+        f'<div style="border-top:1px solid rgba(128,128,128,0.2)"></div>'
         # Body
         f'<div style="padding:16px 20px;max-width:720px;line-height:1.7;'
-        f'font-size:14px;color:#202124;white-space:pre-wrap;word-wrap:break-word">'
+        f'font-size:14px;color:var(--text-color);white-space:pre-wrap;word-wrap:break-word">'
         f'{email_dict.get("body", "")}'
         f'</div>'
         f'</div>',
@@ -261,7 +261,7 @@ def _render_memory_recall(cache_entry, emails):
         short_from = r.get("from", "?")[:15]
         nodes_html += (
             f' <span style="color:var(--text-color,#666)">→</span> '
-            f'<span style="background:#e0e0e0;padding:4px 12px;'
+            f'<span style="background:rgba(128,128,128,0.15);padding:4px 12px;'
             f'border-radius:12px;font-size:0.85em">{short_from} ({pct})</span>'
         )
     nodes_html += "</div>"
@@ -272,8 +272,8 @@ def _render_memory_recall(cache_entry, emails):
         score = r.get("score", 0)
         pct = f"{score:.2f}"
         st.markdown(
-            f'<div style="border:1px solid #ddd;border-radius:6px;padding:8px;'
-            f'margin-bottom:6px;background:#f8f9fa">'
+            f'<div style="border:1px solid rgba(128,128,128,0.2);border-radius:6px;padding:8px;'
+            f'margin-bottom:6px;background:var(--secondary-background-color)">'
             f'<b>{r.get("from","?")}</b> ({r.get("date_iso","?")[:10]}) '
             f'— similarity: <code>{pct}</code><br>'
             f'<span style="color:var(--text-color,#666);font-size:0.9em">{r.get("snippet","")}</span>'
@@ -484,6 +484,44 @@ def _run_rewrite(email_dict, triage, pic, cache_entry, user_draft, live):
 
 
 # ---------------------------------------------------------------------------
+# Intro panel
+# ---------------------------------------------------------------------------
+
+def _render_intro():
+    with st.expander("📘 What is the Inbox Simulator?  (click to collapse)", expanded=True):
+        st.markdown("""
+**The setup.** You are stepping into the inbox of **Jeff Dasovich**, Director of Government Affairs at Enron, during 2001 — the California energy crisis and the months leading up to Enron's collapse. His mailbox is part of the public Enron corpus. We replay **400 messages** in chronological order, the way they actually arrived on his desk.
+
+**What the agent does for every email — five passes you can inspect in the tabs below:**
+
+1. **📋 Triage** — Quick classification: *intent* (request / notification / follow-up / information sharing), *urgency*, *risk level*, and *tone*. This is the fast lane — a label tells you in 2 seconds whether you need to deal with this now.
+
+2. **🔍 4-Layer PIC** — A deep pragmatic read. **PIC** = Pragmatic / Indirect / Contextual. The agent reads the email through four linguistic lenses: literal content, *Gricean* maxim violations (quantity / quality / relevance / manner), *Brown & Levinson* face threats (positive face = belonging; negative face = autonomy), and *Spencer-Oatey* power dynamics. Output: a structured judgment of what is really being said beyond the surface words.
+
+3. **🧠 Memory Recall** — The agent searches Jeff's past correspondence (sent + received, indexed with MiniLM sentence embeddings) for the most semantically similar past emails. The top-3 hits become the *context* injected into the drafting prompt.
+
+4. **✏️ Drafts (A/B)** — Two replies side-by-side: a **cold draft** (no PIC, no memory — what a generic LLM would write) and a **scaffolded draft** (PIC + memory + tone guidance injected into the prompt). You decide which is better.
+
+5. **🤖 Critique** — Write your own reply. Click *Ask Agent to Review My Draft* and the agent checks: did you cover the open asks? does your tone match the situation? did you handle the face threats appropriately? Click *Rewrite to Meet PIC Requirements* to see the agent's revision of your draft.
+
+**The risk colors** (left of each email in the inbox):
+- 🟢 **safe** — routine, no special handling needed
+- 🟡 **caution** — slightly tricky, watch the tone
+- 🟠 **warning** — face threats present, draft carefully
+- 🔴 **critical** — high stakes (legal, regulatory, layoffs)
+
+**How to explore the demo:**
+
+1. Click an email in the left pane. We recommend starting with a 🟠 *warning* or 🔴 *critical* one — that's where the agent's analysis matters most.
+2. Read the body, then walk through the analysis tabs left → right: **Triage → PIC → Memory → Drafts → Critique**.
+3. Click **📥 Receive Next Email** (top of the reader pane) to advance one message forward in time. The new arrival appears at the top of the inbox with a blue indicator.
+4. In the **Critique** tab, try writing a one-line reply and asking the agent to review it. Then try the rewrite. Compare what the agent adds.
+
+**What you're really watching.** The interesting question this demo asks is: *does pragmatic analysis + episodic memory actually change the quality of an LLM's reply?* Compare the cold draft and the scaffolded draft on the same email. If PIC + memory aren't helping, the two will look identical. If they are, you'll see the scaffolded draft handling face threats, referring to past context, and matching tone more naturally.
+""")
+
+
+# ---------------------------------------------------------------------------
 # Receive next email
 # ---------------------------------------------------------------------------
 
@@ -533,6 +571,9 @@ def render_inbox_simulator():
         unsafe_allow_html=True,
     )
 
+    # Intro panel (full width, above the split-pane)
+    _render_intro()
+
     selected = st.session_state.selected_idx
     email_dict = emails[selected]
     cache_entry = sim_cache.get(str(selected), {})
@@ -554,8 +595,8 @@ def render_inbox_simulator():
 
         # Agent analysis tabs (tabs CAN contain expanders)
         st.markdown(
-            '<div style="border-top:1px solid #e0e0e0;margin:16px 0 8px 0;'
-            'font-size:11px;color:#999;text-align:center;letter-spacing:0.1em">'
+            '<div style="border-top:1px solid rgba(128,128,128,0.2);margin:16px 0 8px 0;'
+            'font-size:11px;color:var(--text-color);opacity:0.5;text-align:center;letter-spacing:0.1em">'
             'AGENT ANALYSIS</div>',
             unsafe_allow_html=True,
         )
