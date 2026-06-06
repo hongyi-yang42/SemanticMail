@@ -22,7 +22,6 @@ RISK_COLORS = {
     "safe": "#28a745", "caution": "#d39e00",
     "warning": "#fd7e14", "critical": "#dc3545",
 }
-RISK_LABELS = {"safe": "OK", "caution": "!", "warning": "!!", "critical": "!!!"}
 
 
 def _load_json(fname):
@@ -33,12 +32,26 @@ def _load_json(fname):
         return json.load(f)
 
 
-def _risk_badge_html(risk_level):
+def _ensure_list(v):
+    """Guard against LLM returning strings instead of lists for iterable fields."""
+    if v is None:
+        return []
+    if isinstance(v, str):
+        return [v] if v.strip() else []
+    if isinstance(v, list):
+        return v
+    return [str(v)]
+
+
+def _risk_pill_html(risk_level, small=False):
     color = RISK_COLORS.get(risk_level, "#999")
-    label = RISK_LABELS.get(risk_level, "?")
+    size = "0.7em" if small else "0.8em"
+    pad = "1px 6px" if small else "2px 8px"
+    label = risk_level.upper() if risk_level else "?"
     return (
-        f'<span style="background:{color};color:#fff;padding:1px 6px;'
-        f'border-radius:3px;font-size:0.75em;font-weight:bold">{label}</span>'
+        f'<span style="background:{color};color:#fff;padding:{pad};'
+        f'border-radius:3px;font-size:{size};font-weight:bold;vertical-align:middle">'
+        f'{label}</span>'
     )
 
 
@@ -61,293 +74,315 @@ def _init_state(emails):
 
 
 # ---------------------------------------------------------------------------
-# Left pane: scrollable inbox
+# Left pane: Gmail-style inbox list
 # ---------------------------------------------------------------------------
 
 def _render_inbox_list(emails, triage_map, selected_idx):
-    """Render inbox rows. Returns new selected_idx if user clicks."""
+    """Render compact inbox rows styled like Gmail/Apple Mail."""
     st.markdown(
-        '<div style="max-height:75vh;overflow-y:auto;padding-right:4px">',
+        '<div style="max-height:70vh;overflow-y:auto;padding-right:2px">',
         unsafe_allow_html=True,
     )
     for i in range(st.session_state.inbox_cursor, len(emails)):
         e = emails[i]
         t = triage_map.get(i, {})
         risk = t.get("risk_level", "safe")
-        bg = "#e8f4fd" if i == selected_idx else "#fff"
-        border = "2px solid #4a90d9" if i == selected_idx else "1px solid #e0e0e0"
-        if i == st.session_state.get("_new_email_idx"):
-            border = "2px solid #2196F3"
-            bg = "#e3f2fd"
+        border_color = RISK_COLORS.get(risk, "#ccc")
+        is_selected = i == selected_idx
+        is_new = i == st.session_state.get("_new_email_idx")
 
-        sender = e.get("from", "?")[:22]
-        subject = (e.get("subject", "(no subject)") or "(no subject)")[:32]
+        sender = e.get("from", "?").split("<")[0].strip()[:25]
+        subject = (e.get("subject", "(no subject)") or "(no subject)")[:40]
+        preview = (e.get("body", "") or "")[:50].replace("\n", " ").strip()
         date = e.get("date_iso", "")[:10]
-        badge = _risk_badge_html(risk)
+        if not date:
+            date = (e.get("date", "") or "")[:10]
 
-        if st.button(
-            f"**{sender}** — {subject}",
-            key=f"email_{i}",
-            use_container_width=True,
-        ):
-            st.session_state.selected_idx = i
+        bg = "#e8f0fe" if is_selected else ("#e3f2fd" if is_new else "#fff")
+        font_w = "600" if is_selected else "400"
 
-        # Inline style for selected row
+        # Risk-colored left border via HTML
         st.markdown(
-            f'<div style="margin-top:-8px;margin-bottom:2px;font-size:0.8em;'
-            f'padding-left:8px;color:var(--text-color,#666)">{date} {badge} {sender}</div>',
+            f'<div style="border-left:3px solid {border_color};background:{bg};'
+            f'padding:7px 10px 0 10px;margin-bottom:0;border-radius:0">'
+            f'<span style="font-size:13px;font-weight:{font_w};color:#202124">{sender}</span>'
+            f'&nbsp;&nbsp;<span style="font-size:11px;color:#5f6368;float:right">{date}</span>'
+            f'<br><span style="font-size:12px;color:#5f6368">{subject}'
+            f' <span style="color:#bbb">&mdash;</span> {preview}</span>'
+            f'</div>',
             unsafe_allow_html=True,
         )
+
+        # Clickable row — minimal invisible button overlaid
+        label = f"{sender} · {subject}"
+        if st.button(label, key=f"email_{i}", use_container_width=True):
+            st.session_state.selected_idx = i
+            st.rerun()
     st.markdown("</div>", unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------------------------
-# Right pane: email detail + agent analysis
+# Right pane: email-client-style reader
 # ---------------------------------------------------------------------------
 
-def _render_email_detail(email_dict, triage, cache_entry):
-    sender = email_dict.get("from", "Unknown")
+def _render_email_reader(email_dict, triage):
+    """Render the selected email like an opened message in Gmail."""
+    sender_full = email_dict.get("from", "Unknown")
+    sender_name = sender_full.split("<")[0].strip()
+    sender_email = ""
+    if "<" in sender_full:
+        sender_email = sender_full.split("<")[1].rstrip(">").strip()
+
     subject = email_dict.get("subject", "(no subject)")
     date = email_dict.get("date", "")
+    to = email_dict.get("to", "Jeff Dasovich")
     risk = triage.get("risk_level", "safe")
-    badge = _risk_badge_html(risk)
 
     st.markdown(
-        f'<div style="border:1px solid #e0e0e0;border-radius:8px;padding:16px;'
-        f'background:#fafafa;margin-bottom:12px">'
-        f'<h3 style="margin:0">{badge} {subject}</h3>'
-        f'<p style="color:var(--text-color,#666);margin:4px 0"><b>From:</b> {sender} &nbsp;|&nbsp; '
-        f'<b>Date:</b> {date}</p>'
+        f'<div style="'
+        f'border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;'
+        f'margin-bottom:0;background:#fff">'
+        # Subject header
+        f'<div style="padding:16px 20px 8px 20px">'
+        f'<div style="font-size:18px;font-weight:600;color:#202124;line-height:1.3">'
+        f'{subject}</div>'
+        f'</div>'
+        # Sender / date row
+        f'<div style="padding:4px 20px 12px 20px;display:flex;'
+        f'justify-content:space-between;align-items:baseline">'
+        f'<div>'
+        f'<span style="font-size:13px;font-weight:600;color:#202124">{sender_name}</span>'
+        f' <span style="font-size:12px;color:#5f6368;font-family:monospace">'
+        f'&lt;{sender_email}&gt;</span>'
+        f'</div>'
+        f'<div style="display:flex;align-items:center;gap:8px">'
+        f'<span style="font-size:12px;color:#5f6368">{date}</span>'
+        f' {_risk_pill_html(risk, small=True)}'
+        f'</div>'
+        f'</div>'
+        # To line
+        f'<div style="padding:0 20px 12px 20px;font-size:12px;color:#5f6368">'
+        f'To: {to}'
+        f'</div>'
+        f'<div style="border-top:1px solid #e0e0e0"></div>'
+        # Body
+        f'<div style="padding:16px 20px;max-width:720px;line-height:1.7;'
+        f'font-size:14px;color:#202124;white-space:pre-wrap;word-wrap:break-word">'
+        f'{email_dict.get("body", "")}'
+        f'</div>'
         f'</div>',
         unsafe_allow_html=True,
     )
 
-    # Email body
-    body = email_dict.get("body", "")
-    st.text_area("Email Body", body, height=180, disabled=True, label_visibility="collapsed")
+
+# ---------------------------------------------------------------------------
+# Agent analysis tabs (tabs CAN contain expanders)
+# ---------------------------------------------------------------------------
+
+def _render_triage(cache_entry):
+    triage = cache_entry.get("triage", {}) if cache_entry else {}
+    if not triage or triage.get("intent") == "not analyzed (offline)":
+        st.info("Triage not available for this email.")
+        return
+
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Intent", triage.get("intent", "—"))
+    c2.metric("Urgency", triage.get("urgency", "—"))
+    risk = triage.get("risk_level", "safe")
+    c3.metric("Risk", risk)
+    c4.metric("Tone", triage.get("tone_label", "—"))
+
+    signals = _ensure_list(triage.get("key_signals"))
+    if signals:
+        st.markdown("**Key Signals:** " + ", ".join(f"`{s}`" for s in signals))
+
+    asks = _ensure_list(triage.get("open_asks"))
+    if asks:
+        st.markdown("**Open Asks:** " + ", ".join(f"`{a}`" for a in asks))
 
 
-def _render_triage_panel(triage):
-    with st.expander("Triage Labels", expanded=True):
-        if not triage or triage.get("intent") == "not analyzed (offline)":
-            st.info("Triage not available for this email.")
-            return
+def _render_pic_analysis(cache_entry):
+    pic = cache_entry.get("pic") if cache_entry else None
+    if not pic:
+        st.info("PIC analysis not cached for this email.")
+        return
 
-        c1, c2, c3, c4 = st.columns(4)
-        c1.metric("Intent", triage.get("intent", "—"))
-        c2.metric("Urgency", triage.get("urgency", "—"))
-        risk = triage.get("risk_level", "safe")
-        c3.metric("Risk", risk)
-        c4.metric("Tone", triage.get("tone_label", "—"))
+    per_email = pic.get("per_email_analysis", [])
+    for j, analysis in enumerate(per_email):
+        sender = analysis.get("from", f"Email {j+1}")
+        risk = analysis.get("risk_level", "safe")
+        st.markdown(f"#### {sender} {_risk_pill_html(risk)}", unsafe_allow_html=True)
 
-        signals = triage.get("key_signals", [])
-        if signals:
-            st.markdown("**Key Signals:** " + ", ".join(f"`{s}`" for s in signals))
+        st.markdown(f"**Literal:** {analysis.get('literal_content', '—')}")
 
-        asks = triage.get("open_asks", [])
-        if asks:
-            st.markdown("**Open Asks:** " + ", ".join(f"`{a}`" for a in asks))
-
-
-def _render_pic_panel(pic):
-    with st.expander("4-Layer PIC Analysis", expanded=False):
-        if not pic:
-            st.info("PIC analysis not cached for this email.")
-            return
-
-        per_email = pic.get("per_email_analysis", [])
-        for j, analysis in enumerate(per_email):
-            sender = analysis.get("from", f"Email {j+1}")
-            risk = analysis.get("risk_level", "safe")
-            st.markdown(f"#### {sender} {_risk_badge_html(risk)}", unsafe_allow_html=True)
-
-            st.markdown(f"**Literal:** {analysis.get('literal_content', '—')}")
-
-            inf = analysis.get("pragmatic_inference", {})
-            if isinstance(inf, dict):
-                violations = inf.get("gricean_violations", [])
-                indirect = inf.get("indirect_speech_acts", [])
-                if violations:
-                    st.markdown("**Gricean Violations:**")
-                    for v in violations:
+        inf = analysis.get("pragmatic_inference", {})
+        if isinstance(inf, dict):
+            violations = _ensure_list(inf.get("gricean_violations"))
+            indirect = _ensure_list(inf.get("indirect_speech_acts"))
+            if violations:
+                st.markdown("**Gricean Violations:**")
+                for v in violations:
+                    if isinstance(v, dict):
+                        st.markdown(f"- **{v.get('maxim', '?').title()} Maxim**: {v.get('description', '')}")
+                    else:
                         st.markdown(f"- {v}")
-                if indirect:
-                    st.markdown("**Indirect Speech Acts:**")
-                    for a in indirect:
-                        st.markdown(f"- {a}")
+            if indirect:
+                st.markdown("**Indirect Speech Acts:**")
+                for a in indirect:
+                    st.markdown(f"- {a}")
+            implicature = inf.get("implicature")
+            if implicature:
+                st.markdown(f"**Implicature:** {implicature}")
 
-            social = analysis.get("social_dynamics", {})
-            if isinstance(social, dict):
-                face = social.get("face_threats", [])
-                power = social.get("power_dynamics", "")
-                if face:
-                    st.markdown("**Face Threats:**")
-                    for f in face:
-                        st.markdown(f"- {f}")
-                if power:
-                    st.markdown(f"**Power Dynamics:** {power}")
+        social = analysis.get("social_dynamics", {})
+        if isinstance(social, dict):
+            face = _ensure_list(social.get("face_threats"))
+            power = social.get("power_relationship", social.get("power_dynamics", ""))
+            if face:
+                st.markdown("**Face Threats:**")
+                for f in face:
+                    st.markdown(f"- {f}")
+            if power:
+                st.markdown(f"**Power Dynamics:** {power}")
 
-            st.markdown(f"**Risk Level:** {risk}")
-            if j < len(per_email) - 1:
-                st.divider()
+        st.markdown(f"**Risk Level:** {risk}")
+        if j < len(per_email) - 1:
+            st.divider()
 
-        # Thread-level
-        thread = pic.get("thread_level", {})
-        if thread:
-            st.markdown("#### Thread-Level Analysis")
-            st.markdown(f"**Tone Trajectory:** {thread.get('tone_trajectory', '—')}")
-            st.markdown(f"**Overall Risk:** {thread.get('overall_risk', '—')}")
-            st.markdown(f"**Recommended Strategy:** {thread.get('recommended_strategy', '—')}")
+    # Thread-level
+    thread = pic.get("thread_level", {})
+    if thread:
+        st.markdown("#### Thread-Level Analysis")
+        st.markdown(f"**Tone Trajectory:** {thread.get('tone_trajectory', '—')}")
+        st.markdown(f"**Overall Risk:** {thread.get('overall_risk', '—')}")
+        st.markdown(f"**Recommended Strategy:** {thread.get('recommended_strategy', '—')}")
 
-
-def _render_drafts_panel(cold, scaffolded):
-    with st.expander("Reply Drafts", expanded=False):
-        if not cold and not scaffolded:
-            st.info("Draft not cached for this email.")
-            return
-
-        c1, c2 = st.columns(2)
-        with c1:
-            st.markdown("**Cold Draft** (no PIC context)")
-            if cold:
-                st.text(cold.get("draft_text", "—"))
-                st.caption(cold.get("rationale", ""))
-            else:
-                st.info("Not cached")
-
-        with c2:
-            st.markdown("**Scaffolded Draft** (PIC + memory context)")
-            if scaffolded:
-                st.text(scaffolded.get("draft_text", "—"))
-                st.caption(scaffolded.get("rationale", ""))
-            else:
-                st.info("Not cached")
-
-
-# ---------------------------------------------------------------------------
-# Phase 2: Memory recall graph
-# ---------------------------------------------------------------------------
 
 def _render_memory_recall(cache_entry, emails):
-    with st.expander("Memory Recall — Similar Past Emails", expanded=False):
-        recalled = cache_entry.get("recalled", []) if cache_entry else []
-        if not recalled:
-            st.info("No recalled emails for this message.")
-            return
+    recalled = cache_entry.get("recalled", []) if cache_entry else []
+    if not recalled:
+        st.info("No recalled emails for this message.")
+        return
 
-        # Similarity graph as HTML (no graphviz dependency)
-        current_subject = emails[st.session_state.selected_idx].get("subject", "Current")[:30]
-        nodes_html = (
-            f'<div style="text-align:center;margin-bottom:12px">'
-            f'<span style="background:#2196F3;color:#fff;padding:4px 12px;'
-            f'border-radius:12px;font-size:0.85em">Current: {current_subject}</span>'
+    # Similarity graph as HTML
+    current_subject = emails[st.session_state.selected_idx].get("subject", "Current")[:30]
+    nodes_html = (
+        f'<div style="text-align:center;margin-bottom:12px">'
+        f'<span style="background:#2196F3;color:#fff;padding:4px 12px;'
+        f'border-radius:12px;font-size:0.85em">Current: {current_subject}</span>'
+    )
+    for j, r in enumerate(recalled):
+        score = r.get("score", 0)
+        pct = f"{score:.0%}"
+        short_from = r.get("from", "?")[:15]
+        nodes_html += (
+            f' <span style="color:var(--text-color,#666)">→</span> '
+            f'<span style="background:#e0e0e0;padding:4px 12px;'
+            f'border-radius:12px;font-size:0.85em">{short_from} ({pct})</span>'
         )
-        for j, r in enumerate(recalled):
-            score = r.get("score", 0)
-            pct = f"{score:.0%}"
-            short_from = r.get("from", "?")[:15]
-            nodes_html += (
-                f' <span style="color:var(--text-color,#666)">→</span> '
-                f'<span style="background:#e0e0e0;padding:4px 12px;'
-                f'border-radius:12px;font-size:0.85em">{short_from} ({pct})</span>'
-            )
-        nodes_html += "</div>"
-        st.markdown(nodes_html, unsafe_allow_html=True)
+    nodes_html += "</div>"
+    st.markdown(nodes_html, unsafe_allow_html=True)
 
-        # Show recalled emails as cards
-        for r in recalled:
-            score = r.get("score", 0)
-            pct = f"{score:.2f}"
-            st.markdown(
-                f'<div style="border:1px solid #ddd;border-radius:6px;padding:8px;'
-                f'margin-bottom:6px;background:#f8f9fa">'
-                f'<b>{r.get("from","?")}</b> ({r.get("date_iso","?")[:10]}) '
-                f'— similarity: <code>{pct}</code><br>'
-                f'<span style="color:var(--text-color,#666);font-size:0.9em">{r.get("snippet","")}</span>'
-                f'</div>',
-                unsafe_allow_html=True,
-            )
-            # Button to jump to this email
-            idx = r.get("idx", -1)
-            if idx >= 0 and idx < len(emails):
-                if st.button(f"Jump to email #{idx}", key=f"jump_{idx}"):
-                    st.session_state.selected_idx = idx
-
-        # Memory context block
-        memory_block = cache_entry.get("memory_block", "") if cache_entry else ""
-        if memory_block:
-            with st.expander("Memory Context Block (injected into PIC)"):
-                st.text(memory_block)
-
-
-# ---------------------------------------------------------------------------
-# Phase 2: Receive next email
-# ---------------------------------------------------------------------------
-
-def _render_receive_next(emails):
-    st.markdown("---")
-    c1, c2 = st.columns([3, 1])
-    with c1:
-        remaining = len(emails) - st.session_state.inbox_cursor
-        st.caption(f"Showing {remaining} of {len(emails)} emails (cursor: {st.session_state.inbox_cursor})")
-    with c2:
-        if st.button("📥 Receive Next Email", use_container_width=True, type="primary"):
-            if st.session_state.inbox_cursor > 0:
-                st.session_state.inbox_cursor -= 1
-                st.session_state._new_email_idx = st.session_state.inbox_cursor
-                st.session_state.selected_idx = st.session_state.inbox_cursor
+    # Show recalled emails as cards
+    for r in recalled:
+        score = r.get("score", 0)
+        pct = f"{score:.2f}"
+        st.markdown(
+            f'<div style="border:1px solid #ddd;border-radius:6px;padding:8px;'
+            f'margin-bottom:6px;background:#f8f9fa">'
+            f'<b>{r.get("from","?")}</b> ({r.get("date_iso","?")[:10]}) '
+            f'— similarity: <code>{pct}</code><br>'
+            f'<span style="color:var(--text-color,#666);font-size:0.9em">{r.get("snippet","")}</span>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+        idx = r.get("idx", -1)
+        if idx >= 0 and idx < len(emails):
+            if st.button(f"Jump to email #{idx}", key=f"jump_{idx}"):
+                st.session_state.selected_idx = idx
                 st.rerun()
 
+    # Memory context block (expander is OK inside a tab)
+    memory_block = cache_entry.get("memory_block", "") if cache_entry else ""
+    if memory_block:
+        with st.expander("Memory Context Block (injected into PIC)"):
+            st.text(memory_block)
 
-# ---------------------------------------------------------------------------
-# Phase 3: Draft + critique + rewrite
-# ---------------------------------------------------------------------------
 
-def _render_draft_critique(email_dict, triage, pic, cache_entry, live):
-    with st.expander("Draft Your Reply + Agent Critique", expanded=False):
-        if not pic:
-            st.info("PIC analysis required for critique. Not cached for this email.")
-            return
+def _render_drafts(cache_entry):
+    cold = cache_entry.get("cold_draft") if cache_entry else None
+    scaffolded = cache_entry.get("scaffolded_draft") if cache_entry else None
 
-        # User draft textarea
-        st.markdown(f"**Write your reply as Jeff Dasovich to {email_dict.get('from','?')}:**")
-        draft = st.text_area(
-            "Your draft",
-            value=st.session_state.user_draft,
-            height=150,
-            key="draft_input",
-            label_visibility="collapsed",
-        )
+    if not cold and not scaffolded:
+        st.info("No draft cached for this email — safe email, no reply needed.")
+        return
 
-        c1, c2 = st.columns(2)
-        with c1:
-            if st.button("Ask Agent to Review My Draft", type="primary", use_container_width=True):
-                if not draft.strip():
-                    st.warning("Please write a draft first.")
-                else:
-                    critique = _run_draft_review(email_dict, triage, pic, cache_entry, draft, live)
-                    st.session_state.critique = critique
-                    st.session_state.user_draft = draft
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown("**Cold Draft** (no PIC context)")
+        if cold:
+            st.text(cold.get("draft_text", "—"))
+            st.caption(cold.get("rationale", ""))
+        else:
+            st.info("Not cached")
 
-        with c2:
-            if st.button("Rewrite to Meet PIC Requirements", use_container_width=True):
-                if not draft.strip():
-                    st.warning("Please write a draft first.")
-                else:
-                    rewritten = _run_rewrite(email_dict, triage, pic, cache_entry, draft, live)
-                    if rewritten:
-                        st.session_state.user_draft = rewritten
+    with c2:
+        st.markdown("**Scaffolded Draft** (PIC + memory context)")
+        if scaffolded:
+            st.text(scaffolded.get("draft_text", "—"))
+            st.caption(scaffolded.get("rationale", ""))
+        else:
+            st.info("Not cached")
 
-        # Show critique results
-        critique = st.session_state.get("critique")
-        if critique:
-            _render_critique_results(critique)
+
+def _render_draft_critique(cache_entry, emails):
+    pic = cache_entry.get("pic") if cache_entry else None
+    selected = st.session_state.selected_idx
+    email_dict = emails[selected]
+    triage = cache_entry.get("triage", {}) if cache_entry else {}
+
+    if not pic:
+        st.info("PIC analysis required for critique. Not cached for this email.")
+        return
+
+    # User draft textarea
+    st.markdown(f"**Write your reply as Jeff Dasovich to {email_dict.get('from','?')}:**")
+    draft = st.text_area(
+        "Your draft",
+        value=st.session_state.user_draft,
+        height=150,
+        key="draft_input",
+        label_visibility="collapsed",
+    )
+
+    c1, c2 = st.columns(2)
+    with c1:
+        if st.button("Ask Agent to Review My Draft", type="primary", use_container_width=True):
+            if not draft.strip():
+                st.warning("Please write a draft first.")
+            else:
+                critique = _run_draft_review(email_dict, triage, pic, cache_entry, draft, live=True)
+                st.session_state.critique = critique
+                st.session_state.user_draft = draft
+
+    with c2:
+        if st.button("Rewrite to Meet PIC Requirements", use_container_width=True):
+            if not draft.strip():
+                st.warning("Please write a draft first.")
+            else:
+                rewritten = _run_rewrite(email_dict, triage, pic, cache_entry, draft, live=True)
+                if rewritten:
+                    st.session_state.user_draft = rewritten
+
+    # Show critique results
+    critique = st.session_state.get("critique")
+    if critique:
+        _render_critique_results(critique)
 
 
 def _render_critique_results(critique):
     st.markdown("#### Agent Critique")
 
-    # Coverage checks
     coverage = critique.get("coverage", {})
     if coverage:
         st.markdown("**Open Asks Coverage:**")
@@ -355,27 +390,23 @@ def _render_critique_results(critique):
             icon = "✅" if covered else "❌"
             st.markdown(f"{icon} `{ask}`")
 
-    # Tone match
     tone = critique.get("tone_match", None)
     if tone is not None:
         st.metric("Tone Match", f"{tone:.0%}")
 
-    # Face threats handled
-    face = critique.get("face_threats_handled", [])
+    face = _ensure_list(critique.get("face_threats_handled"))
     if face:
         st.markdown("**Face Threats Handled:**")
         for f in face:
             st.markdown(f"- {f}")
 
-    # Missing elements
-    missing = critique.get("missing_elements", [])
+    missing = _ensure_list(critique.get("missing_elements"))
     if missing:
         st.markdown("**Missing Elements:**")
         for m in missing:
             st.markdown(f"- ⚠️ {m}")
 
-    # Suggestions
-    suggestions = critique.get("suggestions", [])
+    suggestions = _ensure_list(critique.get("suggestions"))
     if suggestions:
         st.markdown("**Suggestions:**")
         for s in suggestions:
@@ -469,6 +500,23 @@ def _run_rewrite(email_dict, triage, pic, cache_entry, user_draft, live):
 
 
 # ---------------------------------------------------------------------------
+# Receive next email
+# ---------------------------------------------------------------------------
+
+def _render_receive_next(emails):
+    remaining = len(emails) - st.session_state.inbox_cursor
+    if st.button(
+        f"📥 Receive Next Email ({remaining} shown)",
+        use_container_width=True, type="primary",
+    ):
+        if st.session_state.inbox_cursor > 0:
+            st.session_state.inbox_cursor -= 1
+            st.session_state._new_email_idx = st.session_state.inbox_cursor
+            st.session_state.selected_idx = st.session_state.inbox_cursor
+            st.rerun()
+
+
+# ---------------------------------------------------------------------------
 # Main render
 # ---------------------------------------------------------------------------
 
@@ -491,7 +539,7 @@ def render_inbox_simulator():
             if idx is not None:
                 triage_map[idx] = t
 
-    # Header
+    # Header bar
     st.markdown(
         '<div style="background:linear-gradient(90deg,#1a1a2e,#16213e);'
         f'color:#fff;padding:12px 20px;border-radius:8px;margin-bottom:12px">'
@@ -501,15 +549,12 @@ def render_inbox_simulator():
         unsafe_allow_html=True,
     )
 
-    # Receive next email button
-    _render_receive_next(emails)
-
     selected = st.session_state.selected_idx
     email_dict = emails[selected]
-    triage = triage_map.get(selected, {})
     cache_entry = sim_cache.get(str(selected), {})
+    triage = cache_entry.get("triage", triage_map.get(selected, {}))
 
-    # 2-column layout
+    # 2-column layout: inbox list (narrow) | reader + analysis (wide)
     col_list, col_detail = st.columns([2, 5])
 
     with col_list:
@@ -517,15 +562,35 @@ def render_inbox_simulator():
         _render_inbox_list(emails, triage_map, selected)
 
     with col_detail:
-        _render_email_detail(email_dict, triage, cache_entry)
+        # Receive next email — compact, top-right feel
+        _render_receive_next(emails)
 
-        # Agent panels
-        pic = cache_entry.get("pic")
-        cold = cache_entry.get("cold_draft")
-        scaffolded = cache_entry.get("scaffolded_draft")
+        # Email reader pane
+        _render_email_reader(email_dict, triage)
 
-        _render_triage_panel(triage)
-        _render_pic_panel(pic)
-        _render_memory_recall(cache_entry, emails)
-        _render_drafts_panel(cold, scaffolded)
-        _render_draft_critique(email_dict, triage, pic, cache_entry, live=True)
+        # Agent analysis tabs (tabs CAN contain expanders)
+        st.markdown(
+            '<div style="border-top:1px solid #e0e0e0;margin:16px 0 8px 0;'
+            'font-size:11px;color:#999;text-align:center;letter-spacing:0.1em">'
+            'AGENT ANALYSIS</div>',
+            unsafe_allow_html=True,
+        )
+
+        tab_triage, tab_pic, tab_memory, tab_drafts, tab_critique = st.tabs(
+            ["📋 Triage", "🔍 4-Layer PIC", "🧠 Memory Recall", "✏️ Drafts", "🤖 Critique"]
+        )
+
+        with tab_triage:
+            _render_triage(cache_entry)
+
+        with tab_pic:
+            _render_pic_analysis(cache_entry)
+
+        with tab_memory:
+            _render_memory_recall(cache_entry, emails)
+
+        with tab_drafts:
+            _render_drafts(cache_entry)
+
+        with tab_critique:
+            _render_draft_critique(cache_entry, emails)
