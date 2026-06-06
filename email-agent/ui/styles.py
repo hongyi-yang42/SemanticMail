@@ -10,7 +10,7 @@ def inject_styles() -> None:
         <style>
         /* Risk level colors */
         .risk-low { color: #28a745; font-weight: bold; }
-        .risk-medium { color: #ffc107; font-weight: bold; }
+        .risk-medium { color: #d39e00; font-weight: bold; }
         .risk-high { color: #fd7e14; font-weight: bold; }
         .risk-critical { color: #dc3545; font-weight: bold; }
 

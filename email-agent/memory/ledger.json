@@ -1332,6 +1332,45 @@
       "importance": 1,
       "status": "open",
       "_email_idx": 388
+    },
+    {
+      "direction": "inbound",
+      "canonical_ask": "confirm receipt",
+      "implied_deadline": null,
+      "obligor": "Jeff Dasovich",
+      "contact": "James Steffes",
+      "ask_date": "2001-10-22T09:14:00-07:00",
+      "age_days": 0,
+      "norm_subject": "california iso cost allocation",
+      "importance": 1.0,
+      "status": "open",
+      "_email_idx": 400
+    },
+    {
+      "direction": "inbound",
+      "canonical_ask": "provide availability for meeting this week",
+      "implied_deadline": null,
+      "obligor": "Jeff Dasovich",
+      "contact": "James Steffes",
+      "ask_date": "2001-10-22T09:14:00-07:00",
+      "age_days": 0,
+      "norm_subject": "california iso cost allocation",
+      "importance": 1.0,
+      "status": "open",
+      "_email_idx": 400
+    },
+    {
+      "direction": "inbound",
+      "canonical_ask": "sign off on revised tariff language",
+      "implied_deadline": "2001-10-30",
+      "obligor": "Jeff Dasovich",
+      "contact": "James Steffes",
+      "ask_date": "2001-10-22T09:14:00-07:00",
+      "age_days": 0,
+      "norm_subject": "california iso cost allocation",
+      "importance": 1.0,
+      "status": "open",
+      "_email_idx": 400
     }
   ],
   "you_promised": [

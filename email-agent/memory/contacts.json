@@ -2276,5 +2276,20 @@
       "Add Evan Hughes, Murray O'Neill, Brenda Herod to distribution list for this topic",
       "Add Dan Leff to distribution list for all California communication"
     ]
+  },
+  "James Steffes": {
+    "n_interactions": 1,
+    "first_seen": "2001-10-22T09:14:00-07:00",
+    "last_seen": "2001-10-22T09:14:00-07:00",
+    "tone_labels": [
+      "neutral"
+    ],
+    "risk_history": [
+      "caution"
+    ],
+    "open_asks": [
+      "confirm receipt",
+      "availability for meeting this week"
+    ]
   }
 }

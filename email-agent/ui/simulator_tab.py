@@ -21,7 +21,7 @@ _RISK_COLORS = {
 
 _RISK_CSS = {
     "low_risk": "color: #28a745; font-weight: bold;",
-    "medium_risk": "color: #ffc107; font-weight: bold;",
+    "medium_risk": "color: #d39e00; font-weight: bold;",
     "high_risk": "color: #dc3545; font-weight: bold;",
 }
 
