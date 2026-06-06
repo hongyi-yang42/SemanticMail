@@ -17,7 +17,7 @@ from ui.components import email_card, risk_badge, tone_emoji, thread_display
 
 _RISK_COLORS: dict[str, str] = {
     "safe": "#28a745",
-    "caution": "#ffc107",
+    "caution": "#d39e00",
     "warning": "#fd7e14",
     "critical": "#dc3545",
 }

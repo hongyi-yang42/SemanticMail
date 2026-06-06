@@ -34,7 +34,7 @@ _RISK_ORDER = {"safe": 0, "caution": 1, "warning": 2, "critical": 3}
 
 _RISK_COLORS = {
     "safe": "#28a745",
-    "caution": "#ffc107",
+    "caution": "#d39e00",
     "warning": "#fd7e14",
     "critical": "#dc3545",
     "N/A": "#9e9e9e",
@@ -189,7 +189,7 @@ def render_ablation_tab(thread_data: dict) -> None:
     div_note = _divergence_summary(extracts)
     if div_note:
         st.markdown(
-            '<div style="background-color:#fff3cd; border-left:4px solid #ffc107; '
+            '<div style="background-color:#fff3cd; border-left:4px solid #d39e00; '
             'padding:10px 14px; border-radius:6px; margin-bottom:16px;">'
             f'<b>Divergence detected:</b> {div_note}</div>',
             unsafe_allow_html=True,

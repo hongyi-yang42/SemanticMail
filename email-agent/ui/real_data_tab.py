@@ -12,7 +12,7 @@ OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "out")
 
 RISK_COLORS = {
     "safe": "#28a745",
-    "caution": "#ffc107",
+    "caution": "#d39e00",
     "warning": "#fd7e14",
     "critical": "#dc3545",
 }
@@ -43,7 +43,7 @@ def _html_bar(label, value, max_val, color="#4a90d9", height=22):
         f'<span style="font-size:0.85em;width:160px;display:inline-block">{label}</span>'
         f'<span style="display:inline-block;width:{pct}%;min-width:2px;height:{height}px;'
         f'background:{color};border-radius:3px;vertical-align:middle"></span>'
-        f' <span style="font-size:0.8em;color:#666">{value}</span>'
+        f' <span style="font-size:0.8em;color:var(--text-color,#666)">{value}</span>'
         f"</div>"
     )
 
@@ -176,7 +176,7 @@ def _render_triage_distribution(triage):
         st.markdown("**Urgency**")
         total = sum(urgencies.values())
         html = ""
-        for label, color in [("high", "#dc3545"), ("medium", "#ffc107"), ("low", "#28a745")]:
+        for label, color in [("high", "#dc3545"), ("medium", "#d39e00"), ("low", "#28a745")]:
             val = urgencies.get(label, 0)
             html += _html_bar(label, val, total, color)
         st.markdown(html, unsafe_allow_html=True)

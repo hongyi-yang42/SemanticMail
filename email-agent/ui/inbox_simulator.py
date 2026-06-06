@@ -19,7 +19,7 @@ if _AGENT_DIR not in sys.path:
 MEMORY_DIR = os.path.join(_AGENT_DIR, "memory")
 
 RISK_COLORS = {
-    "safe": "#28a745", "caution": "#ffc107",
+    "safe": "#28a745", "caution": "#d39e00",
     "warning": "#fd7e14", "critical": "#dc3545",
 }
 RISK_LABELS = {"safe": "OK", "caution": "!", "warning": "!!", "critical": "!!!"}
@@ -95,7 +95,7 @@ def _render_inbox_list(emails, triage_map, selected_idx):
         # Inline style for selected row
         st.markdown(
             f'<div style="margin-top:-8px;margin-bottom:2px;font-size:0.8em;'
-            f'padding-left:8px;color:#666">{date} {badge} {sender}</div>',
+            f'padding-left:8px;color:var(--text-color,#666)">{date} {badge} {sender}</div>',
             unsafe_allow_html=True,
         )
     st.markdown("</div>", unsafe_allow_html=True)
@@ -116,7 +116,7 @@ def _render_email_detail(email_dict, triage, cache_entry):
         f'<div style="border:1px solid #e0e0e0;border-radius:8px;padding:16px;'
         f'background:#fafafa;margin-bottom:12px">'
         f'<h3 style="margin:0">{badge} {subject}</h3>'
-        f'<p style="color:#666;margin:4px 0"><b>From:</b> {sender} &nbsp;|&nbsp; '
+        f'<p style="color:var(--text-color,#666);margin:4px 0"><b>From:</b> {sender} &nbsp;|&nbsp; '
         f'<b>Date:</b> {date}</p>'
         f'</div>',
         unsafe_allow_html=True,
@@ -247,7 +247,7 @@ def _render_memory_recall(cache_entry, emails):
             pct = f"{score:.0%}"
             short_from = r.get("from", "?")[:15]
             nodes_html += (
-                f' <span style="color:#666">→</span> '
+                f' <span style="color:var(--text-color,#666)">→</span> '
                 f'<span style="background:#e0e0e0;padding:4px 12px;'
                 f'border-radius:12px;font-size:0.85em">{short_from} ({pct})</span>'
             )
@@ -263,7 +263,7 @@ def _render_memory_recall(cache_entry, emails):
                 f'margin-bottom:6px;background:#f8f9fa">'
                 f'<b>{r.get("from","?")}</b> ({r.get("date_iso","?")[:10]}) '
                 f'— similarity: <code>{pct}</code><br>'
-                f'<span style="color:#666;font-size:0.9em">{r.get("snippet","")}</span>'
+                f'<span style="color:var(--text-color,#666);font-size:0.9em">{r.get("snippet","")}</span>'
                 f'</div>',
                 unsafe_allow_html=True,
             )
