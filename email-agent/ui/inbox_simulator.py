@@ -77,6 +77,9 @@ def _init_state(emails):
 # Left pane: Gmail-style inbox list
 # ---------------------------------------------------------------------------
 
+_RISK_DOT = {"safe": "🟢", "caution": "🟡", "warning": "🟠", "critical": "🔴"}
+
+
 def _render_inbox_list(emails, triage_map, selected_idx):
     """Render compact inbox rows styled like Gmail/Apple Mail."""
     st.markdown(
@@ -87,34 +90,15 @@ def _render_inbox_list(emails, triage_map, selected_idx):
         e = emails[i]
         t = triage_map.get(i, {})
         risk = t.get("risk_level", "safe")
-        border_color = RISK_COLORS.get(risk, "#ccc")
-        is_selected = i == selected_idx
-        is_new = i == st.session_state.get("_new_email_idx")
+        dot = _RISK_DOT.get(risk, "⚪")
 
-        sender = e.get("from", "?").split("<")[0].strip()[:25]
-        subject = (e.get("subject", "(no subject)") or "(no subject)")[:40]
-        preview = (e.get("body", "") or "")[:50].replace("\n", " ").strip()
+        sender = e.get("from", "?").split("<")[0].strip()[:22]
+        subject = (e.get("subject", "(no subject)") or "(no subject)")[:38]
         date = e.get("date_iso", "")[:10]
         if not date:
             date = (e.get("date", "") or "")[:10]
 
-        bg = "#e8f0fe" if is_selected else ("#e3f2fd" if is_new else "#fff")
-        font_w = "600" if is_selected else "400"
-
-        # Risk-colored left border via HTML
-        st.markdown(
-            f'<div style="border-left:3px solid {border_color};background:{bg};'
-            f'padding:7px 10px 0 10px;margin-bottom:0;border-radius:0">'
-            f'<span style="font-size:13px;font-weight:{font_w};color:#202124">{sender}</span>'
-            f'&nbsp;&nbsp;<span style="font-size:11px;color:#5f6368;float:right">{date}</span>'
-            f'<br><span style="font-size:12px;color:#5f6368">{subject}'
-            f' <span style="color:#bbb">&mdash;</span> {preview}</span>'
-            f'</div>',
-            unsafe_allow_html=True,
-        )
-
-        # Clickable row — minimal invisible button overlaid
-        label = f"{sender} · {subject}"
+        label = f"{dot}  {sender}    {subject}  ·  {date}"
         if st.button(label, key=f"email_{i}", use_container_width=True):
             st.session_state.selected_idx = i
             st.rerun()

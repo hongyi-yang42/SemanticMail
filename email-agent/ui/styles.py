@@ -45,21 +45,10 @@ def inject_styles() -> None:
             font-size: 1.2rem;
         }
 
-        /* Inbox row buttons — minimal chrome, flat */
-        .stButton > button[kind="secondary"] {
-            min-height: 6px !important;
-            padding: 2px 10px !important;
-            margin-top: -2px !important;
-            margin-bottom: 4px !important;
-            font-size: 0 !important;
-            line-height: 0 !important;
-            border: none !important;
-            background: transparent !important;
-            box-shadow: none !important;
-            color: transparent !important;
-        }
-        .stButton > button[kind="secondary"]:hover {
-            background: rgba(0,0,0,0.03) !important;
+        /* Inbox row buttons — left-align text for email-list feel */
+        .stButton > button {
+            text-align: left !important;
+            justify-content: flex-start !important;
         }
 
         /* Tabs styling — flatter, less boxed */
