@@ -19,6 +19,7 @@ import json
 import mailbox
 import os
 import pickle
+import re
 import sys
 import tempfile
 
@@ -37,7 +38,7 @@ from build_index import load_index, retrieve, head_tail
 from deep_analysis import build_mini_thread
 from triage_pass import format_triage_prompt, parse_triage_json, update_contact, update_thread
 from build_ledger import parse_obligation_json
-from enron_load import normalize_subject, strip_addresses
+from enron_load import normalize_subject, strip_addresses, extract_display_name
 
 MEMORY_DIR = os.path.join(AGENT_DIR, "memory")
 OUT_DIR = os.path.join(AGENT_DIR, "out")
@@ -205,40 +206,64 @@ def _parse_date(date_str):
         return datetime.now(timezone.utc).isoformat()
 
 
-def _extract_body(msg):
+def _extract_body_enhanced(msg):
+    """Decode multipart/plain body and trim Enron-style reply/forward blocks.
+
+    Mirrors `enron_load.parse_email_enhanced` so .eml round-trip preserves
+    the same body bytes that originally populated emails.json — keeping
+    prompt cache keys stable.
+    """
+    body = ""
     if msg.is_multipart():
         for part in msg.walk():
             if part.get_content_type() == "text/plain":
                 payload = part.get_payload(decode=True)
                 if payload:
-                    return payload.decode("utf-8", errors="replace")
-    payload = msg.get_payload(decode=True)
-    if payload:
-        return payload.decode("utf-8", errors="replace")
-    return ""
+                    body = payload.decode("utf-8", errors="replace")
+                    break
+    else:
+        payload = msg.get_payload(decode=True)
+        if payload:
+            body = payload.decode("utf-8", errors="replace")
 
-
-def _addr_list(header):
-    if not header:
-        return ""
-    return ", ".join(name or addr for name, addr in email.utils.getaddresses([header]))
+    body_lines = []
+    for line in body.split("\n"):
+        if re.match(r"^-----Original Message-----", line):
+            break
+        if re.match(r"^-----Forwarded by", line):
+            break
+        if re.match(r"^>.*", line) and len(body_lines) > 3:
+            break
+        body_lines.append(line)
+    return "\n".join(body_lines).strip()
 
 
 def parse_eml(raw_bytes):
+    # Mirror enron_load's full pipeline: parse_email_enhanced (X-From/X-To/X-Cc
+    # preference + extract_display_name) followed by deidentify_email (strip_addresses
+    # on every text field, PHONE_RE on body). Output is byte-identical to what
+    # enron_load.main writes into emails.json — which is what triage_pass.py
+    # originally cached against — so .eml re-ingest hits the same prompt cache keys.
     msg = email.message_from_bytes(raw_bytes)
-    from_display, _ = email.utils.parseaddr(msg.get("From", ""))
-    if not from_display:
-        from_display = msg.get("From", "Unknown")
+    x_from = msg.get("X-From", "") or ""
+    x_to = msg.get("X-To", "") or ""
+    x_cc = msg.get("X-Cc", "") or ""
+    from_display = extract_display_name(x_from) if x_from else (msg.get("From", "") or "Unknown")
+    to_display = extract_display_name(x_to) if x_to else (msg.get("To", "") or "")
+    cc_display = extract_display_name(x_cc) if x_cc else (msg.get("Cc", "") or "")
+    subject_raw = msg.get("Subject", "") or ""
+    body_raw = _extract_body_enhanced(msg)
+    from enron_load import PHONE_RE
     return {
         "message_id":   msg.get("Message-ID", ""),
-        "from":         from_display,
-        "to":           _addr_list(msg.get("To", "")),
-        "cc":           _addr_list(msg.get("Cc", "")),
+        "from":         strip_addresses(from_display),
+        "to":           strip_addresses(to_display),
+        "cc":           strip_addresses(cc_display),
         "date":         msg.get("Date", ""),
         "date_iso":     _parse_date(msg.get("Date", "")),
-        "subject":      msg.get("Subject", ""),
-        "norm_subject": normalize_subject(msg.get("Subject", "")),
-        "body":         _extract_body(msg),
+        "subject":      strip_addresses(subject_raw),
+        "norm_subject": normalize_subject(subject_raw),
+        "body":         PHONE_RE.sub("[PHONE]", strip_addresses(body_raw)),
     }
 
 
@@ -377,12 +402,31 @@ def _build_thread(email_dict, memory):
 def run_pic(email_dict, memory, live, emb_model):
     thread_data = _build_thread(email_dict, memory)
 
+    # Match batch_cache_fill's anti-self-leakage retrieval: if this email is
+    # already in the corpus (same message_id), retrieve only from vectors[:idx]
+    # so the email itself doesn't surface as its own top hit. This keeps the
+    # memory_block byte-identical to what originally warmed the PIC cache.
     recalled = []
     if memory["vectors"] is not None and emb_model is not None:
-        recalled = retrieve(
-            head_tail(email_dict.get("body", "")),
-            memory["vectors"], memory["metadata"], emb_model, k=3,
-        )
+        msg_id = email_dict.get("message_id", "")
+        corpus_idx = None
+        if msg_id:
+            for i, e in enumerate(memory["emails"]):
+                if e.get("message_id") == msg_id:
+                    corpus_idx = i
+                    break
+        if corpus_idx is not None and corpus_idx > 0:
+            recalled = retrieve(
+                head_tail(email_dict.get("body", "")),
+                memory["vectors"][:corpus_idx],
+                memory["metadata"][:corpus_idx],
+                emb_model, k=3,
+            )
+        else:
+            recalled = retrieve(
+                head_tail(email_dict.get("body", "")),
+                memory["vectors"], memory["metadata"], emb_model, k=3,
+            )
 
     memory_block = build_memory_context_block(
         sender=email_dict.get("from", "Unknown"),

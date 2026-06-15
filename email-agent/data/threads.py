@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+import email
+import email.utils
+import hashlib
 from typing import Any
 
 # ---------------------------------------------------------------------------
@@ -1250,4 +1253,66 @@ def get_thread_by_name(name: str) -> dict[str, Any]:
         KeyError: If *name* is not a valid thread display name.
     """
     return THREAD_MAP[name]
+
+
+def build_thread_from_raw(raw_text: str) -> dict[str, Any]:
+    """Parse raw email text into a THREAD_MAP-shaped dict for ad-hoc analysis.
+
+    Accepts RFC 822/.eml-style input (headers + blank line + body) or loose
+    body-only text. Output schema matches THREAD_A/THREAD_B/etc. so all
+    downstream UI tabs render without modification.
+
+    The MD5 digest of the raw input is embedded in the title for traceability
+    and acts as a stable cache key across Streamlit reruns.
+
+    Args:
+        raw_text: Raw email text, optionally with RFC 822 headers.
+
+    Returns:
+        Thread dict with title/description/scenario/pragmatic_signals/messages.
+    """
+    raw_text = (raw_text or "").strip()
+    digest = hashlib.md5(raw_text.encode("utf-8")).hexdigest()[:12]
+
+    msg = email.message_from_string(raw_text)
+
+    from_raw = msg.get("From", "") or "Unknown Sender"
+    from_display, _ = email.utils.parseaddr(from_raw)
+    from_field = from_display or from_raw
+
+    subject = msg.get("Subject", "") or "(no subject)"
+    date = msg.get("Date", "") or "(unknown date)"
+    to = msg.get("To", "") or ""
+
+    if msg.is_multipart():
+        body_parts = []
+        for part in msg.walk():
+            if part.get_content_type() == "text/plain":
+                body_parts.append(part.get_payload(decode=False) or "")
+        body = "\n".join(body_parts).strip()
+    else:
+        body = (msg.get_payload(decode=False) or "").strip()
+
+    if not body:
+        body = raw_text
+
+    return {
+        "title": f"✍️ Pasted Email ({digest})",
+        "scenario": "User-pasted email (ad-hoc analysis)",
+        "description": (
+            "Email pasted directly into the UI for ad-hoc pragmatic analysis. "
+            "Pre-computed pragmatic signals are not available — the PIC chain "
+            "derives everything from the message content."
+        ),
+        "pragmatic_signals": [],
+        "messages": [
+            {
+                "from": from_field,
+                "to": to,
+                "date": date,
+                "subject": subject,
+                "body": body,
+            }
+        ],
+    }
 

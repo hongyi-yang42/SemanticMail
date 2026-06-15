@@ -2,7 +2,7 @@
 
 import streamlit as st
 
-from data.threads import get_thread_display_names, get_thread_by_name
+from data.threads import get_thread_display_names, get_thread_by_name, build_thread_from_raw
 from ui.overview_tab import render_overview_tab
 from ui.subtext_tab import render_subtext_tab
 from ui.simulator_tab import render_simulator_tab
@@ -69,9 +69,31 @@ else:
     st.sidebar.title("SemanticMail")
     st.sidebar.caption("Pragmatic Email Analysis")
 
-    thread_names = get_thread_display_names()
+    PASTE_OPTION = "✍️ Paste your own email..."
+    thread_names = get_thread_display_names() + [PASTE_OPTION]
     selected_thread_name = st.sidebar.selectbox("Select a thread", thread_names)
-    thread_data = get_thread_by_name(selected_thread_name)
+
+    if selected_thread_name == PASTE_OPTION:
+        raw_email = st.sidebar.text_area(
+            "Paste raw email (with headers)",
+            height=220,
+            key="paste_email_input",
+            help=(
+                "Paste an email in RFC 822 / .eml format: From/To/Subject/Date "
+                "headers, then a blank line, then the body. Loose body-only "
+                "paste is also accepted."
+            ),
+        )
+        if raw_email and raw_email.strip():
+            thread_data = build_thread_from_raw(raw_email)
+        else:
+            st.info(
+                "📎 Paste an email in the sidebar to begin ad-hoc pragmatic analysis. "
+                "The PIC chain will derive signals from the message content."
+            )
+            st.stop()
+    else:
+        thread_data = get_thread_by_name(selected_thread_name)
 
     st.sidebar.divider()
     st.sidebar.markdown("### About")
