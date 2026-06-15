@@ -47,7 +47,7 @@ def print_funnel(triage: list[dict]):
 
     flagged = total - risk_counts.get("safe", 0)
     print(f"\n  Flagged (caution+): {flagged} ({flagged/total*100:.1f}%)")
-    print(f"  Cascade ratio (deep/total): ~20/{total} = {20/total*100:.1f}%")
+    print(f"  Cascade ratio (deep/total): {flagged}/{total} = {flagged/total*100:.1f}%")
 
 
 def print_top_contacts(contacts: dict, emails: list[dict], n: int = 5):
@@ -157,7 +157,7 @@ def print_throughput(triage: list[dict], emails: list[dict]):
 
     total = len(emails)
     flagged = sum(1 for t in triage if RISK_ORDER.get(t.get("risk_level", "safe"), 0) >= 1)
-    deep = min(20, flagged)
+    deep = flagged
 
     # Count cache status
     n_cached = sum(1 for t in triage if t.get("_cached", False))
