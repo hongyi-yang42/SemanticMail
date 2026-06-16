@@ -12,3 +12,7 @@ venv/
 *.egg
 node_modules/
 email-agent/out/
+
+# Enron corpus — large dataset (2.9 GB), not source-controlled
+enron_mail_20150507.tar.gz
+maildir/
