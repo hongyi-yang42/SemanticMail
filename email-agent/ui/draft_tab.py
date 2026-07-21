@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 import json
+from typing import Any, Callable, Optional, TypeVar
 
 import streamlit as st
 
-from llm.cache import cached_call_llm, cached_call_baseline_llm
+from llm.cache import LiveCallBlockedError, cached_call_llm, cached_call_baseline_llm
 from prompts.draft import (
     DRAFT_SYSTEM_PROMPT,
     format_draft_user_prompt,
@@ -16,6 +17,7 @@ from prompts.baseline_gptoss import (
     BASELINE_GPTOSS_SYSTEM_PROMPT,
     format_baseline_gptoss_user_prompt,
 )
+from ui.components import gated_call
 
 # ---------------------------------------------------------------------------
 # Try to import the subtext module (may not be available yet if T2 hasn't
@@ -28,6 +30,10 @@ try:
 except ImportError:
     _HAS_SUBTEXT_MODULE = False
 
+T = TypeVar("T")
+
+# Bump when any of the three system prompts or temperatures changes.
+_PROMPT_VERSION = "draft_v1"
 
 # ---------------------------------------------------------------------------
 # Hardcoded signal scorecard (per thread)
@@ -114,6 +120,12 @@ SIGNAL_SCORECARD = {
     },
 }
 
+_BLOCKED_CARD_MSG = (
+    "Cached component not available in the public demo for this thread. "
+    "Pick Thread A, B, or C in the sidebar, or run locally with "
+    "SEMANTICMAIL_RUNTIME=local_dev."
+)
+
 
 # ---------------------------------------------------------------------------
 # Rendering helpers
@@ -195,6 +207,19 @@ def _render_baseline_section(text: str, border_color: str, bg_color: str) -> Non
     st.markdown("</div>", unsafe_allow_html=True)
 
 
+def _render_blocked_section(title: str, icon: str) -> None:
+    """Render a 'blocked in public demo' card in place of a missing component."""
+    st.markdown(
+        '<div style="border-left: 4px solid #adb5bd; '
+        'background-color: #f8f9fa; padding: 16px; border-radius: 4px; '
+        'margin-bottom: 8px;">',
+        unsafe_allow_html=True,
+    )
+    st.markdown(f"### {icon} {title}")
+    st.info(_BLOCKED_CARD_MSG)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
 def _render_scorecard(thread_title: str) -> None:
     """Render the hardcoded signal scorecard for the given thread."""
     data = SIGNAL_SCORECARD.get(thread_title)
@@ -240,6 +265,77 @@ def _render_scorecard(thread_title: str) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Pipeline
+# ---------------------------------------------------------------------------
+
+
+def _try_call(fn: Callable[[], T]) -> Optional[T]:
+    """Run fn; return None on LiveCallBlockedError. Other exceptions propagate."""
+    try:
+        return fn()
+    except LiveCallBlockedError:
+        return None
+
+
+def _generate_comparison(thread_data: dict) -> dict[str, Any]:
+    """Run baseline + subtext + draft; return a dict of components. Each
+    component is None if its individual call was blocked by the runtime."""
+    # ---- Column 1: GPT-OSS Baseline ----
+    baseline_text: Optional[str] = None
+    try:
+        baseline_user_prompt = format_baseline_gptoss_user_prompt(thread_data)
+        baseline_text = _try_call(
+            lambda: cached_call_baseline_llm(
+                BASELINE_GPTOSS_SYSTEM_PROMPT, baseline_user_prompt, temperature=0.3
+            )
+        )
+    except Exception:
+        baseline_text = None
+
+    # ---- Column 2 & 3 input: Subtext analysis ----
+    subtext_analysis: Optional[str] = None
+    try:
+        if _HAS_SUBTEXT_MODULE:
+            subtext_user_prompt = format_subtext_user_prompt(thread_data)
+            subtext_analysis = _try_call(
+                lambda: cached_call_llm(
+                    SUBTEXT_SYSTEM_PROMPT, subtext_user_prompt, temperature=0.3
+                )
+            )
+        else:
+            sys_prompt, usr_prompt = get_inline_subtext_prompt(thread_data)
+            subtext_analysis = _try_call(
+                lambda: cached_call_llm(sys_prompt, usr_prompt, temperature=0.3)
+            )
+    except Exception:
+        subtext_analysis = None
+
+    # ---- Column 2 & 3: Drafts (depends on subtext) ----
+    draft_result: Optional[dict] = None
+    if subtext_analysis is not None:
+        user_prompt = format_draft_user_prompt(thread_data, subtext_analysis)
+        raw = _try_call(
+            lambda: cached_call_llm(
+                DRAFT_SYSTEM_PROMPT, user_prompt, temperature=0.5
+            )
+        )
+        if raw is not None:
+            try:
+                draft_result = json.loads(raw)
+            except json.JSONDecodeError as e:
+                st.error(f"Failed to parse draft results: {e}")
+                with st.expander("Raw response"):
+                    st.text(raw)
+                draft_result = None
+
+    return {
+        "baseline": baseline_text,
+        "subtext": subtext_analysis,
+        "draft_result": draft_result,
+    }
+
+
+# ---------------------------------------------------------------------------
 # Main tab renderer
 # ---------------------------------------------------------------------------
 
@@ -248,6 +344,9 @@ def render_draft_tab(thread_data: dict) -> None:
     """Render the Baseline Comparison tab with 3-column side-by-side.
 
     Columns: GPT-OSS Baseline | DeepSeek Naive | SemanticMail PIC Smart.
+    Each component is rendered independently; a component whose call was
+    blocked by the runtime mode renders a placeholder card instead of
+    aborting the whole tab.
 
     Args:
         thread_data: The full thread dictionary.
@@ -258,109 +357,94 @@ def render_draft_tab(thread_data: dict) -> None:
         "and the SemanticMail PIC smart reply side by side."
     )
 
-    thread_title = thread_data.get("title", "")
+    result = gated_call(
+        feature="baseline_comparison",
+        thread_data=thread_data,
+        prompt_version=_PROMPT_VERSION,
+        model="deepseek-chat",
+        button_label="Generate comparison",
+        placeholder=(
+            "Click **Generate comparison** to produce the 3-way side-by-side: "
+            "GPT-OSS baseline, DeepSeek naive, SemanticMail smart."
+        ),
+        generate_fn=lambda: _generate_comparison(thread_data),
+    )
+    if result is None:
+        return
 
-    # ---- Column 1: GPT-OSS Baseline ----
-    baseline_text = ""
-    try:
-        baseline_user_prompt = format_baseline_gptoss_user_prompt(thread_data)
-        baseline_text = cached_call_baseline_llm(
-            BASELINE_GPTOSS_SYSTEM_PROMPT, baseline_user_prompt, temperature=0.3
-        )
-    except Exception:
-        baseline_text = ""
+    baseline_text: Optional[str] = result.get("baseline")
+    subtext_analysis: Optional[str] = result.get("subtext")
+    draft_result: Optional[dict] = result.get("draft_result") or {}
 
-    # ---- Column 2 & 3: DeepSeek Naive + Smart ----
-    subtext_analysis = ""
-    try:
-        if _HAS_SUBTEXT_MODULE:
-            subtext_user_prompt = format_subtext_user_prompt(thread_data)
-            subtext_analysis = cached_call_llm(
-                SUBTEXT_SYSTEM_PROMPT, subtext_user_prompt, temperature=0.3
-            )
-        else:
-            sys_prompt, usr_prompt = get_inline_subtext_prompt(thread_data)
-            subtext_analysis = cached_call_llm(
-                sys_prompt, usr_prompt, temperature=0.3
-            )
-    except Exception:
-        subtext_analysis = ""
+    naive = draft_result.get("naive_draft", {}) if draft_result else {}
+    smart = draft_result.get("smart_draft", {}) if draft_result else {}
 
-    user_prompt = format_draft_user_prompt(thread_data, subtext_analysis)
-
-    with st.spinner("Generating naive & smart drafts..."):
-        try:
-            raw = cached_call_llm(
-                DRAFT_SYSTEM_PROMPT, user_prompt, temperature=0.5
-            )
-            result = json.loads(raw)
-        except json.JSONDecodeError as e:
-            st.error(f"Failed to parse draft results: {e}")
-            with st.expander("Raw response"):
-                st.text(raw if "raw" in dir() else "No response")
-            return
-        except Exception as e:
-            st.error(f"Error generating drafts: {e}")
-            return
-
-    naive = result.get("naive_draft", {})
-    smart = result.get("smart_draft", {})
-
-    if not naive and not smart:
+    if not baseline_text and not naive and not smart:
         st.warning("No drafts were generated.")
         return
 
-    # Render 3-column side-by-side
+    # Render 3-column side-by-side; each column may show a blocked card
     col_baseline, col_naive, col_smart = st.columns(3)
 
     with col_baseline:
-        _render_baseline_section(
-            baseline_text,
-            border_color="#6c757d",
-            bg_color="#f8f9fa",
-        )
+        if baseline_text:
+            _render_baseline_section(
+                baseline_text,
+                border_color="#6c757d",
+                bg_color="#f8f9fa",
+            )
+        else:
+            _render_blocked_section("GPT-OSS Baseline", "🤖")
 
     with col_naive:
-        _render_draft_section(
-            label="DeepSeek Naive",
-            icon="😐",
-            draft=naive,
-            tag_color="#dc3545",
-            tag_prefix="❌",
-            border_color="#adb5bd",
-            bg_color="#f8f9fa",
-        )
+        if naive:
+            _render_draft_section(
+                label="DeepSeek Naive",
+                icon="😐",
+                draft=naive,
+                tag_color="#dc3545",
+                tag_prefix="❌",
+                border_color="#adb5bd",
+                bg_color="#f8f9fa",
+            )
+        else:
+            _render_blocked_section("DeepSeek Naive", "😐")
 
     with col_smart:
-        _render_draft_section(
-            label="SemanticMail Smart",
-            icon="🧠",
-            draft=smart,
-            tag_color="#28a745",
-            tag_prefix="✅",
-            border_color="#28a745",
-            bg_color="#f0fff4",
-        )
+        if smart:
+            _render_draft_section(
+                label="SemanticMail Smart",
+                icon="🧠",
+                draft=smart,
+                tag_color="#28a745",
+                tag_prefix="✅",
+                border_color="#28a745",
+                bg_color="#f0fff4",
+            )
+        else:
+            _render_blocked_section("SemanticMail Smart", "🧠")
 
-    # Explanation section
-    st.markdown("---")
-    st.markdown("### 💡 Why the Smart Draft is Better")
+    # Explanation section — only if we have a smart draft with addressed signals
+    if smart:
+        thread_title = thread_data.get("title", "")
+        st.markdown("---")
+        st.markdown("### 💡 Why the Smart Draft is Better")
 
-    naive_missed = naive.get("pragmatic_awareness", [])
-    smart_addressed = smart.get("pragmatic_awareness", [])
+        naive_missed = naive.get("pragmatic_awareness", []) if naive else []
+        smart_addressed = smart.get("pragmatic_awareness", [])
 
-    if smart_addressed:
-        st.markdown(
-            "The SemanticMail smart draft leverages pragmatic signals that "
-            "both the GPT-OSS baseline and DeepSeek naive draft overlook:"
-        )
-        for signal in smart_addressed:
-            st.markdown(f"- ✅ **{signal}**")
+        if smart_addressed:
+            st.markdown(
+                "The SemanticMail smart draft leverages pragmatic signals that "
+                "both the GPT-OSS baseline and DeepSeek naive draft overlook:"
+            )
+            for signal in smart_addressed:
+                st.markdown(f"- ✅ **{signal}**")
 
-    if naive_missed:
-        with st.expander("See what the naive draft missed"):
-            for signal in naive_missed:
-                st.markdown(f"- ❌ {signal}")
+        if naive_missed:
+            with st.expander("See what the naive draft missed"):
+                for signal in naive_missed:
+                    st.markdown(f"- ❌ {signal}")
 
-    # Signal scorecard
-    _render_scorecard(thread_title)
+        # Signal scorecard
+        _render_scorecard(thread_title)

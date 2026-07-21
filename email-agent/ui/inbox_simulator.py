@@ -12,6 +12,8 @@ import sys
 import streamlit as st
 import pandas as pd
 
+from llm.cache import LiveCallBlockedError
+
 _AGENT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if _AGENT_DIR not in sys.path:
     sys.path.insert(0, _AGENT_DIR)
@@ -345,18 +347,32 @@ def _render_draft_critique(cache_entry, emails):
             if not draft.strip():
                 st.warning("Please write a draft first.")
             else:
-                critique = _run_draft_review(email_dict, triage, pic, cache_entry, draft, live=True)
-                st.session_state.critique = critique
-                st.session_state.user_draft = draft
+                try:
+                    critique = _run_draft_review(email_dict, triage, pic, cache_entry, draft, live=True)
+                except LiveCallBlockedError:
+                    st.error(
+                        "Live draft critique isn't available in the public demo. "
+                        "Run the app locally with SEMANTICMAIL_RUNTIME=local_dev to enable."
+                    )
+                else:
+                    st.session_state.critique = critique
+                    st.session_state.user_draft = draft
 
     with c2:
         if st.button("Rewrite to Meet PIC Requirements", use_container_width=True):
             if not draft.strip():
                 st.warning("Please write a draft first.")
             else:
-                rewritten = _run_rewrite(email_dict, triage, pic, cache_entry, draft, live=True)
-                if rewritten:
-                    st.session_state.user_draft = rewritten
+                try:
+                    rewritten = _run_rewrite(email_dict, triage, pic, cache_entry, draft, live=True)
+                except LiveCallBlockedError:
+                    st.error(
+                        "Live rewrite isn't available in the public demo. "
+                        "Run the app locally with SEMANTICMAIL_RUNTIME=local_dev to enable."
+                    )
+                else:
+                    if rewritten:
+                        st.session_state.user_draft = rewritten
 
     # Show critique results
     critique = st.session_state.get("critique")

@@ -453,4 +453,8 @@ def main():
 
 
 if __name__ == "__main__":
+    # Opt this script into live LLM calls. Set inside __main__ so that
+    # importing this module from elsewhere does not silently authorize
+    # billable calls.
+    os.environ.setdefault("SEMANTICMAIL_RUNTIME", "cli_warmer")
     main()

@@ -62,3 +62,52 @@ Four Streamlit tabs: Overview, Subtext Analysis (core PIC visualization), Reply 
 - Risk levels use a fixed vocabulary: safe, caution, warning, critical
 - Demo emails are Chinese; analysis output is English
 - The `baseline_client.py` uses OpenRouter; `client.py` uses DeepSeek directly — both use the OpenAI SDK interface
+
+## Runtime Modes (live-call authorization)
+
+Live (billable) LLM calls are gated by the `SEMANTICMAIL_RUNTIME` env var.
+The system is **fail-closed**: unset or unknown values block live calls.
+
+| Value | Behavior on cache miss |
+|---|---|
+| `public_demo` | Raises `LiveCallBlockedError` — cache-only operation |
+| `local_dev` | Live call allowed, subject to per-session cap (default 20) |
+| `cli_warmer` | Live call allowed, no cap (used by offline warmers) |
+| **unset / unknown** | Same as `public_demo` — fail closed |
+
+- The public deployment must set `SEMANTICMAIL_RUNTIME = "public_demo"` in `.streamlit/secrets.toml`.
+- For local dev: `export SEMANTICMAIL_RUNTIME=local_dev` before `streamlit run`.
+- CLI warmers (`warm_cache.py`, `warm_cache_v2.py`, `warm_cache_ablation.py`,
+  `batch_cache_fill.py`, `run_agent.py`) set `SEMANTICMAIL_RUNTIME=cli_warmer`
+  inside their `if __name__ == "__main__":` block — so importing them as
+  modules does NOT authorize live calls.
+
+### Per-session rate limit
+
+`local_dev` mode enforces a per-browser-session cap of 20 live calls via
+`st.session_state["_live_llm_calls"]`. Override with the
+`SEMANTICMAIL_RATE_LIMIT` env var. This is **runaway protection for a single
+session**, not a global cost ceiling — concurrent clients and new sessions
+are not constrained.
+
+### Paste mode
+
+"✍️ Paste your own email..." is visible in the sidebar only when
+`SEMANTICMAIL_RUNTIME=local_dev`. The public demo is cache-only and does
+not expose ad-hoc email analysis.
+
+### Tests
+
+`email-agent/tests/` contains pytest tests (mocked at the `call_llm` /
+`call_baseline_llm` boundary, NOT at the OpenAI client) covering: cache-hit
+no-network, public_demo/unset/unknown block-on-miss, local_dev
+calls-network-once, cli_warmer bypass, baseline routing, rate-limit cap,
+default-load dispatch, and Simulator/Baseline zero-calls-before-Generate.
+
+```
+cd email-agent
+pytest tests/ -v
+```
+
+See `docs/incidents/2026-07-public-demo-cost-leak.md` for the production
+incident that motivated this layering.

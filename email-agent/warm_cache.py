@@ -55,17 +55,28 @@ MODULES = [
     ('simulate',   SIMULATE_SYSTEM_PROMPT,   format_simulate_user_prompt),
     ('draft',      DRAFT_SYSTEM_PROMPT,      format_draft_user_prompt),
 ]
-print(f'Warming cache for {len(get_thread_display_names())} threads x {len(MODULES)} modules...')
-for name in get_thread_display_names():
-    thread = get_thread_by_name(name)
-    print(f'\n=== {name} ===')
-    for mod_name, sys_prompt, fmt_fn in MODULES:
-        print(f'  {mod_name}...', end=' ', flush=True)
-        try:
-            result = cached_call_llm(sys_prompt, fmt_fn(thread))
-            print(f'OK ({len(result)} chars)')
-        except Exception as e:
-            print(f'FAILED: {e}')
-import glob
-cache_files = glob.glob(os.path.join(os.path.dirname(__file__), 'data', 'cache', '*.json'))
-print(f'\nDone! Cache files: {len(cache_files)}')
+
+
+def main():
+    print(f'Warming cache for {len(get_thread_display_names())} threads x {len(MODULES)} modules...')
+    for name in get_thread_display_names():
+        thread = get_thread_by_name(name)
+        print(f'\n=== {name} ===')
+        for mod_name, sys_prompt, fmt_fn in MODULES:
+            print(f'  {mod_name}...', end=' ', flush=True)
+            try:
+                result = cached_call_llm(sys_prompt, fmt_fn(thread))
+                print(f'OK ({len(result)} chars)')
+            except Exception as e:
+                print(f'FAILED: {e}')
+    import glob
+    cache_files = glob.glob(os.path.join(os.path.dirname(__file__), 'data', 'cache', '*.json'))
+    print(f'\nDone! Cache files: {len(cache_files)}')
+
+
+if __name__ == "__main__":
+    # Opt this script into live LLM calls. Set inside __main__ so that
+    # importing this module from elsewhere does not silently authorize
+    # billable calls.
+    os.environ.setdefault("SEMANTICMAIL_RUNTIME", "cli_warmer")
+    main()

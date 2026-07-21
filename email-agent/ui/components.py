@@ -2,9 +2,13 @@
 
 from __future__ import annotations
 
-from typing import Any
+import hashlib
+import json
+from typing import Any, Callable, Optional, TypeVar
 
 import streamlit as st
+
+T = TypeVar("T")
 
 
 # ---------------------------------------------------------------------------
@@ -155,3 +159,77 @@ def render_summary(result: dict[str, Any]) -> None:
     if participants:
         st.markdown("### 👥 Participants")
         st.write(", ".join(participants))
+
+
+# ---------------------------------------------------------------------------
+# LLM call gating
+# ---------------------------------------------------------------------------
+
+
+def _gated_session_key(feature: str, thread_data: dict, prompt_version: str, model: str) -> str:
+    """Build a session_state key that captures everything that would change the
+    LLM output. Prompt or model bumps invalidate stale entries automatically."""
+    digest = hashlib.md5(
+        json.dumps(thread_data, sort_keys=True, default=str).encode()
+    ).hexdigest()[:12]
+    return f"{feature}|{digest}|{prompt_version}|{model}"
+
+
+def gated_call(
+    *,
+    feature: str,
+    thread_data: dict,
+    prompt_version: str,
+    model: str,
+    button_label: str,
+    placeholder: str,
+    generate_fn: Callable[[], T],
+) -> Optional[T]:
+    """Render a placeholder + button; cache only successful results.
+
+    The session key is derived from ``feature``, a hash of ``thread_data``,
+    ``prompt_version``, and ``model`` so prompt or model bumps invalidate
+    stale entries.
+
+    Args:
+        feature: Short identifier of the calling feature (e.g. ``"simulator"``).
+        thread_data: The thread dict the call depends on.
+        prompt_version: A version string bumped when the prompt or temperature
+            changes.
+        model: The model identifier used in the cache key.
+        button_label: Visible button text.
+        placeholder: Visible info text rendered before the button is clicked.
+        generate_fn: Zero-arg callable that performs the call(s). Should raise
+            ``LiveCallBlockedError`` if the runtime refuses — that exception is
+            shown inline and never cached.
+
+    Returns:
+        The cached/generated result, or ``None`` if the user hasn't clicked
+        the button yet (or the call was blocked).
+    """
+    from llm.cache import LiveCallBlockedError, RateLimitError
+
+    key = _gated_session_key(feature, thread_data, prompt_version, model)
+
+    cached = st.session_state.get(key)
+    if cached is not None:
+        return cached  # type: ignore[no-any-return]
+
+    st.info(placeholder)
+    if st.button(button_label, key=f"btn|{key}", type="primary"):
+        try:
+            result = generate_fn()
+        except LiveCallBlockedError as exc:
+            st.error(
+                f"{exc}\n\n"
+                "Live analysis isn't available in the public demo for this thread. "
+                "Cached results for Threads A, B, C are available — pick one in the sidebar."
+            )
+            return None
+        except RateLimitError as exc:
+            st.error(str(exc))
+            return None
+        # Cache only on success
+        st.session_state[key] = result
+        st.rerun()
+    return None

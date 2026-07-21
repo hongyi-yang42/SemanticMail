@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 import json
+from typing import Any
 
 import streamlit as st
 
 from llm.cache import cached_call_llm
 from prompts.simulate import SIMULATE_SYSTEM_PROMPT, format_simulate_user_prompt
+from ui.components import gated_call
 
 # ---------------------------------------------------------------------------
 # Risk badge helpers
@@ -30,6 +32,10 @@ _STRATEGY_ICONS = {
     "diplomatic": "🤝",
     "strategic_concession": "🎯",
 }
+
+# Bump when SIMULATE_SYSTEM_PROMPT or temperature changes — invalidates
+# any in-flight session_state entries so a stale result is never shown.
+_PROMPT_VERSION = "simulate_v1"
 
 
 # ---------------------------------------------------------------------------
@@ -112,22 +118,25 @@ def render_simulator_tab(thread_data: dict) -> None:
         "pragmatic analysis."
     )
 
-    user_prompt = format_simulate_user_prompt(thread_data)
+    def _generate() -> dict[str, Any]:
+        user_prompt = format_simulate_user_prompt(thread_data)
+        raw = cached_call_llm(SIMULATE_SYSTEM_PROMPT, user_prompt, temperature=0.3)
+        return json.loads(raw)  # raises JSONDecodeError on bad output — caller sees raw error
 
-    with st.spinner("Generating reply strategies... (this may take a moment)"):
-        try:
-            raw = cached_call_llm(
-                SIMULATE_SYSTEM_PROMPT, user_prompt, temperature=0.3
-            )
-            result = json.loads(raw)
-        except json.JSONDecodeError as e:
-            st.error(f"Failed to parse simulation results: {e}")
-            with st.expander("Raw response"):
-                st.text(raw if "raw" in dir() else "No response")
-            return
-        except Exception as e:
-            st.error(f"Error generating simulation: {e}")
-            return
+    result = gated_call(
+        feature="simulator",
+        thread_data=thread_data,
+        prompt_version=_PROMPT_VERSION,
+        model="deepseek-chat",
+        button_label="Generate reply strategies",
+        placeholder=(
+            "Click **Generate reply strategies** to produce 3 alternative "
+            "replies with risk assessment and pragmatic analysis."
+        ),
+        generate_fn=_generate,
+    )
+    if result is None:
+        return
 
     strategies = result.get("strategies", [])
     if not strategies or len(strategies) < 3:

@@ -7,9 +7,14 @@ from typing import Any
 
 import streamlit as st
 
-from llm.cache import cached_call_llm
+from llm.cache import LiveCallBlockedError, cached_call_llm
 from prompts.subtext import SUBTEXT_SYSTEM_PROMPT, format_subtext_user_prompt
 from ui.components import email_card, risk_badge, tone_emoji, thread_display
+
+_BLOCKED_MSG = (
+    "Live analysis isn't available in the public demo for this thread. "
+    "Cached results for Threads A, B, C are available — pick one in the sidebar."
+)
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -212,6 +217,9 @@ def render_subtext_tab(thread_data: dict) -> None:
             raw_response = cached_call_llm(
                 SUBTEXT_SYSTEM_PROMPT, user_prompt, temperature=0.3
             )
+        except LiveCallBlockedError:
+            st.info(_BLOCKED_MSG)
+            return
         except Exception as exc:
             st.error(f"LLM call failed: {exc}")
             return

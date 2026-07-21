@@ -28,10 +28,6 @@ from prompts.ablation import (
 )
 from prompts.subtext import SUBTEXT_SYSTEM_PROMPT, format_subtext_user_prompt
 
-if not os.environ.get("DEEPSEEK_API_KEY"):
-    print("ERROR: DEEPSEEK_API_KEY not set.")
-    sys.exit(1)
-
 MODEL = "deepseek-chat"  # routes to V4-Flash
 
 CONDITIONS = [
@@ -40,40 +36,54 @@ CONDITIONS = [
     ("C_no_analysis", NO_ANALYSIS_SYSTEM_PROMPT, format_no_analysis_user_prompt),
 ]
 
-# Filter to threads that have actual messages
-threads_with_content = {
-    name: t for name, t in THREAD_MAP.items() if t.get("messages")
-}
 
-print(
-    f"Ablation: {len(threads_with_content)} threads x {len(CONDITIONS)} conditions "
-    f"= {len(threads_with_content) * len(CONDITIONS)} calls"
-)
-print(f"Model: {MODEL}\n")
+def main():
+    if not os.environ.get("DEEPSEEK_API_KEY"):
+        print("ERROR: DEEPSEEK_API_KEY not set.")
+        sys.exit(1)
 
-results = []
-for name, thread in threads_with_content.items():
-    print(f"=== {name} ===")
-    for cond_name, sys_prompt, fmt_fn in CONDITIONS:
-        label = f"  {cond_name}..."
-        print(label, end=" ", flush=True)
-        try:
-            result = cached_call_llm(
-                sys_prompt, fmt_fn(thread), temperature=0.3, model=MODEL
-            )
-            print(f"OK ({len(result)} chars)")
-            results.append((name, cond_name, "ok", len(result)))
-        except Exception as e:
-            print(f"FAILED: {e}")
-            results.append((name, cond_name, "failed", str(e)))
+    # Filter to threads that have actual messages
+    threads_with_content = {
+        name: t for name, t in THREAD_MAP.items() if t.get("messages")
+    }
 
-print(f"\n{'='*60}")
-ok = sum(1 for _, _, s, _ in results if s == "ok")
-failed = sum(1 for _, _, s, _ in results if s == "failed")
-print(f"Done: {ok} OK, {failed} failed out of {len(results)} total")
+    print(
+        f"Ablation: {len(threads_with_content)} threads x {len(CONDITIONS)} conditions "
+        f"= {len(threads_with_content) * len(CONDITIONS)} calls"
+    )
+    print(f"Model: {MODEL}\n")
 
-if failed:
-    print("\nFailures:")
-    for name, cond, status, detail in results:
-        if status == "failed":
-            print(f"  {name} / {cond}: {detail}")
+    results = []
+    for name, thread in threads_with_content.items():
+        print(f"=== {name} ===")
+        for cond_name, sys_prompt, fmt_fn in CONDITIONS:
+            label = f"  {cond_name}..."
+            print(label, end=" ", flush=True)
+            try:
+                result = cached_call_llm(
+                    sys_prompt, fmt_fn(thread), temperature=0.3, model=MODEL
+                )
+                print(f"OK ({len(result)} chars)")
+                results.append((name, cond_name, "ok", len(result)))
+            except Exception as e:
+                print(f"FAILED: {e}")
+                results.append((name, cond_name, "failed", str(e)))
+
+    print(f"\n{'='*60}")
+    ok = sum(1 for _, _, s, _ in results if s == "ok")
+    failed = sum(1 for _, _, s, _ in results if s == "failed")
+    print(f"Done: {ok} OK, {failed} failed out of {len(results)} total")
+
+    if failed:
+        print("\nFailures:")
+        for name, cond, status, detail in results:
+            if status == "failed":
+                print(f"  {name} / {cond}: {detail}")
+
+
+if __name__ == "__main__":
+    # Opt this script into live LLM calls. Set inside __main__ so that
+    # importing this module from elsewhere does not silently authorize
+    # billable calls.
+    os.environ.setdefault("SEMANTICMAIL_RUNTIME", "cli_warmer")
+    main()

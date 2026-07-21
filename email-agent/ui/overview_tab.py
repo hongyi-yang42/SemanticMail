@@ -3,12 +3,12 @@
 from __future__ import annotations
 
 import json
-from typing import Any
+from typing import Any, Optional
 
 import streamlit as st
 
 from data.threads import get_thread_display_names, get_thread_by_name
-from llm.cache import cached_call_llm
+from llm.cache import LiveCallBlockedError, cached_call_llm
 from prompts.classify import CLASSIFY_SYSTEM_PROMPT, CLASSIFY_USER_PROMPT_TEMPLATE
 from prompts.decompose import DECOMPOSE_SYSTEM_PROMPT, DECOMPOSE_USER_PROMPT_TEMPLATE
 from prompts.summarize import SUMMARIZE_SYSTEM_PROMPT, SUMMARIZE_USER_PROMPT_TEMPLATE
@@ -17,6 +17,11 @@ from ui.components import (
     render_classification_result,
     render_action_items,
     render_summary,
+)
+
+_BLOCKED_MSG = (
+    "Live analysis isn't available in the public demo for this thread. "
+    "Cached results for Threads A, B, C are available — pick one in the sidebar."
 )
 
 
@@ -32,6 +37,17 @@ def _format_messages(messages: list[dict[str, Any]]) -> str:
             f"{msg['body']}"
         )
     return "\n\n---\n\n".join(parts)
+
+
+def _safe_cached_call(system_prompt: str, user_prompt: str, spinner_label: str) -> Optional[str]:
+    """Run a cached LLM call. On LiveCallBlockedError, render the info card
+    once and return None so the caller can short-circuit."""
+    try:
+        with st.spinner(spinner_label):
+            return cached_call_llm(system_prompt, user_prompt)
+    except LiveCallBlockedError:
+        st.info(_BLOCKED_MSG)
+        return None
 
 
 def render_overview_tab(thread_data: dict[str, Any]) -> None:
@@ -66,11 +82,14 @@ def render_overview_tab(thread_data: dict[str, Any]) -> None:
 
     # --- Module 1: Classification ---
     st.subheader("🏷️ Module 1: Intent & Urgency Classification")
-    with st.spinner("Running classification..."):
-        classify_user = CLASSIFY_USER_PROMPT_TEMPLATE.format(
-            subject=subject, messages=messages_text
-        )
-        classify_raw = cached_call_llm(CLASSIFY_SYSTEM_PROMPT, classify_user)
+    classify_user = CLASSIFY_USER_PROMPT_TEMPLATE.format(
+        subject=subject, messages=messages_text
+    )
+    classify_raw = _safe_cached_call(
+        CLASSIFY_SYSTEM_PROMPT, classify_user, "Running classification..."
+    )
+    if classify_raw is None:
+        return
     try:
         classify_result = json.loads(classify_raw)
         render_classification_result(classify_result)
@@ -82,11 +101,14 @@ def render_overview_tab(thread_data: dict[str, Any]) -> None:
 
     # --- Module 2: Task Extraction ---
     st.subheader("✅ Module 2: Task Extraction")
-    with st.spinner("Extracting action items..."):
-        decompose_user = DECOMPOSE_USER_PROMPT_TEMPLATE.format(
-            subject=subject, messages=messages_text
-        )
-        decompose_raw = cached_call_llm(DECOMPOSE_SYSTEM_PROMPT, decompose_user)
+    decompose_user = DECOMPOSE_USER_PROMPT_TEMPLATE.format(
+        subject=subject, messages=messages_text
+    )
+    decompose_raw = _safe_cached_call(
+        DECOMPOSE_SYSTEM_PROMPT, decompose_user, "Extracting action items..."
+    )
+    if decompose_raw is None:
+        return
     try:
         decompose_result = json.loads(decompose_raw)
         render_action_items(decompose_result)
@@ -98,11 +120,14 @@ def render_overview_tab(thread_data: dict[str, Any]) -> None:
 
     # --- Module 3: Summary ---
     st.subheader("📝 Module 3: Thread Summary")
-    with st.spinner("Generating summary..."):
-        summarize_user = SUMMARIZE_USER_PROMPT_TEMPLATE.format(
-            subject=subject, messages=messages_text
-        )
-        summarize_raw = cached_call_llm(SUMMARIZE_SYSTEM_PROMPT, summarize_user)
+    summarize_user = SUMMARIZE_USER_PROMPT_TEMPLATE.format(
+        subject=subject, messages=messages_text
+    )
+    summarize_raw = _safe_cached_call(
+        SUMMARIZE_SYSTEM_PROMPT, summarize_user, "Generating summary..."
+    )
+    if summarize_raw is None:
+        return
     try:
         summarize_result = json.loads(summarize_raw)
         render_summary(summarize_result)

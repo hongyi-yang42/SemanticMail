@@ -3,6 +3,7 @@
 import streamlit as st
 
 from data.threads import get_thread_display_names, get_thread_by_name, build_thread_from_raw
+from llm.cache import RUNTIME_LOCAL_DEV, _runtime
 from ui.overview_tab import render_overview_tab
 from ui.subtext_tab import render_subtext_tab
 from ui.simulator_tab import render_simulator_tab
@@ -69,11 +70,16 @@ else:
     st.sidebar.title("SemanticMail")
     st.sidebar.caption("Pragmatic Email Analysis")
 
+    # Paste mode requires local_dev runtime — public_demo is cache-only.
+    runtime_allows_live = _runtime() == RUNTIME_LOCAL_DEV
+
     PASTE_OPTION = "✍️ Paste your own email..."
-    thread_names = get_thread_display_names() + [PASTE_OPTION]
+    thread_names = get_thread_display_names()
+    if runtime_allows_live:
+        thread_names = thread_names + [PASTE_OPTION]
     selected_thread_name = st.sidebar.selectbox("Select a thread", thread_names)
 
-    if selected_thread_name == PASTE_OPTION:
+    if runtime_allows_live and selected_thread_name == PASTE_OPTION:
         raw_email = st.sidebar.text_area(
             "Paste raw email (with headers)",
             height=220,
@@ -103,27 +109,33 @@ else:
     )
 
     # -------------------------------------------------------------------
-    # Main area: tabs
+    # Main area: section dispatcher (replaces st.tabs so only the
+    # selected section's render function runs on each rerun — no
+    # background LLM calls from hidden tabs).
     # -------------------------------------------------------------------
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
-        "📋 Overview",
-        "🔍 Subtext",
-        "🎮 Simulator",
-        "📊 Baseline Comparison",
-        "⚖️ Ablation",
-    ])
+    SECTION_OPTIONS = ["overview", "subtext", "simulator", "baseline", "ablation"]
+    SECTION_LABELS = {
+        "overview": "📋 Overview",
+        "subtext": "🔍 Subtext",
+        "simulator": "🎮 Simulator",
+        "baseline": "📊 Baseline Comparison",
+        "ablation": "⚖️ Ablation",
+    }
+    section = st.radio(
+        "Section",
+        SECTION_OPTIONS,
+        format_func=lambda s: SECTION_LABELS[s],
+        horizontal=True,
+        label_visibility="collapsed",
+    )
 
-    with tab1:
+    if section == "overview":
         render_overview_tab(thread_data)
-
-    with tab2:
+    elif section == "subtext":
         render_subtext_tab(thread_data)
-
-    with tab3:
+    elif section == "simulator":
         render_simulator_tab(thread_data)
-
-    with tab4:
+    elif section == "baseline":
         render_draft_tab(thread_data)
-
-    with tab5:
+    elif section == "ablation":
         render_ablation_tab(thread_data)
